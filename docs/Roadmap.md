@@ -2,24 +2,21 @@
 
 ## Estado Atual
 
-- [x] `cli.ps1` com menu interativo e execução por `-Command`
-- [x] `clean.ps1` remove histórico, cookies e cache do Chrome e Edge
-- [x] `open.ps1` abre Chrome com URLs fixas em abas separadas
+- [x] `cli.ps1` com menu interativo (opções 1, 2, 0) e execução por `-Command`
+- [x] `clean.ps1` remove histórico, cookies, cache, senhas e autofill do Chrome e Edge
+- [x] `open.ps1` abre Chrome com URLs fixas em abas na mesma janela (`--new-window`)
+- [x] `open.ps1` detecta Chrome → Edge → navegador padrão, nessa ordem
 
-## Melhorias Imediatas (próxima iteração)
+## Pendências (próxima iteração)
 
 ### clean.ps1
-- [ ] Adicionar remoção de senhas salvas (`Login Data`) no Chrome e Edge
-- [ ] Adicionar remoção de autofill (`Web Data`) no Chrome e Edge
-- [ ] Exibir resumo do que foi removido ao final
+- [x] Exibir resumo do que foi removido ao final (quais arquivos existiam e foram deletados)
 
 ### open.ps1
-- [ ] Garantir que todas as URLs abram na mesma janela (flag `--new-window url1 url2`)
-- [ ] Validar comportamento quando o Chrome já está aberto
+- [x] Validar comportamento quando o Chrome já está aberto — encerra o processo antes de abrir para garantir `--new-window` limpo
 
 ### cli.ps1
-- [ ] Corrigir opção 3 do menu (hoje não está mapeada para nenhum módulo)
-- [ ] Adicionar mensagem de ajuda (`-Help`) listando comandos disponíveis
+- [x] Adicionar flag `-Help` listando comandos disponíveis
 
 ---
 
@@ -58,7 +55,7 @@ try {
 **Formato do JSON esperado:**
 ```json
 {
-  "data": "2026-04-02",
+  "data": "2026-04-07",
   "urls": [
     "https://app.portalsaseducacao.com.br/entrar/",
     "https://www.digipuzzle.net/pt/jogoseducativos/"

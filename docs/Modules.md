@@ -44,6 +44,7 @@ irm https://raw.githubusercontent.com/petersonros/irm/main/cli.ps1 -Command clea
 | Cookies (`Cookies`) | ✅ | ✅ |
 | Cache (`Cache\*`) | ✅ | ✅ |
 | Senhas salvas (`Login Data`) | ✅ | ✅ |
+| Journal de senhas (`Login Data-journal`) | ✅ | ✅ |
 | Preenchimento automático (`Web Data`) | ✅ | ✅ |
 
 **Comportamento:**
