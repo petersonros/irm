@@ -1,8 +1,18 @@
 Write-Host "🧹 Limpando navegadores..." -ForegroundColor Yellow
 
-# Fechar navegadores
-Stop-Process -Name chrome -Force -ErrorAction SilentlyContinue
-Stop-Process -Name msedge -Force -ErrorAction SilentlyContinue
+# Fechar navegadores de forma limpa (evita mensagem de "fechado inesperadamente")
+function Close-Browser {
+    param ($name)
+    $procs = Get-Process -Name $name -ErrorAction SilentlyContinue
+    if ($procs) {
+        $procs | ForEach-Object { $_.CloseMainWindow() | Out-Null }
+        Start-Sleep -Seconds 2
+        Stop-Process -Name $name -Force -ErrorAction SilentlyContinue
+    }
+}
+
+Close-Browser "chrome"
+Close-Browser "msedge"
 
 $removed = @()
 
@@ -22,6 +32,11 @@ Remove-IfExists "$chrome\Cache\*"            "Chrome: cache"
 Remove-IfExists "$chrome\Login Data"         "Chrome: senhas"
 Remove-IfExists "$chrome\Login Data-journal" "Chrome: senhas (journal)"
 Remove-IfExists "$chrome\Web Data"           "Chrome: autofill"
+Remove-IfExists "$chrome\Current Session"    "Chrome: sessão atual"
+Remove-IfExists "$chrome\Current Tabs"       "Chrome: guias atuais"
+Remove-IfExists "$chrome\Last Session"       "Chrome: última sessão"
+Remove-IfExists "$chrome\Last Tabs"          "Chrome: últimas guias"
+Remove-IfExists "$chrome\Sessions\*"         "Chrome: histórico de sessões"
 
 # Edge
 $edge = "$env:LOCALAPPDATA\Microsoft\Edge\User Data\Default"
@@ -31,6 +46,11 @@ Remove-IfExists "$edge\Cache\*"              "Edge: cache"
 Remove-IfExists "$edge\Login Data"           "Edge: senhas"
 Remove-IfExists "$edge\Login Data-journal"   "Edge: senhas (journal)"
 Remove-IfExists "$edge\Web Data"             "Edge: autofill"
+Remove-IfExists "$edge\Current Session"      "Edge: sessão atual"
+Remove-IfExists "$edge\Current Tabs"         "Edge: guias atuais"
+Remove-IfExists "$edge\Last Session"         "Edge: última sessão"
+Remove-IfExists "$edge\Last Tabs"            "Edge: últimas guias"
+Remove-IfExists "$edge\Sessions\*"           "Edge: histórico de sessões"
 
 # Resumo
 Write-Host ""
