@@ -2,11 +2,10 @@ Write-Host "🚀 Abrindo URLs da aula..." -ForegroundColor Cyan
 
 # URLs da aula
 $urls = @(
-    "https://www.digipuzzle.net/digipuzzle/kids/puzzles/phototurn.htm?language=portuguese&linkback=../../../pt/jogoseducativos/infantil/index.htm#google_vignette",
-    "https://www.digipuzzle.net/minigames/snake/snake_additions_zero_to_ten.htm?language=portuguese&linkback=../../pt/jogoseducativos/matematica-ate-10/index.htm",
-    "https://www.digipuzzle.net/kids/animalcartoons/puzzles/lines_math_till_ten.htm?language=portuguese&linkback=../../../pt/jogoseducativos/matematica-ate-10/index.htm",
-    "https://wordwall.net/pt/resource/54499719/formas-geom%C3%A9tricas",
-    "https://wordwall.net/pt/resource/3680303/jogo-das-vogais"
+    "https://wordwall.net/pt/resource/18749562/quebra-cabe%C3%A7a-animais-dom%C3%A9sticos",
+    "https://www.digipuzzle.net/digipuzzle/kids/puzzles/linkpuzzle_alphabet_pt.htm?language=portuguese&linkback=../../../pt/jogoseducativos/alfabeto/index.htm",
+    "https://www.digipuzzle.net/digipuzzle/kids/puzzles/linkpuzzle_animals_shadows.htm?language=portuguese&linkback=../../../pt/jogoseducativos/infantil/index.htm",
+    "https://wordwall.net/pt/resource/54499719/formas-geom%C3%A9tricas"
 )
 
 # Detectar navegador
