@@ -2,9 +2,8 @@ Write-Host "🚀 Abrindo URLs da aula..." -ForegroundColor Cyan
 
 # URLs da aula
 $urls = @(
-    "https://www.digipuzzle.net/minigames/pictureinpicture/pictureinpicture_autumn.htm?language=portuguese&linkback=../../pt/jogoseducativos/outono/index.htm",
-    "https://www.digipuzzle.net/minigames/codedwords/codedwords_animals.htm?language=portuguese&linkback=../../pt/jogoseducativos/palavras/index.htm",
-    "https://www.digipuzzle.net/minigames/matchtheword/matchtheword_pt.htm?language=portuguese&linkback=../../pt/jogoseducativos/palavras/index.htm"
+    "https://www.digipuzzle.net/kids/backtoschool/puzzles/hiddenicons.htm?language=english&linkback=../../../main/kids/index.htm#google_vignette",
+    "https://www.digipuzzle.net/digipuzzle/kids/puzzles/puzzle_clutter.htm?language=english&https://www.digipuzzle.net/digipuzzle/kids/puzzles/puzzle_clutter.htm?language=english&linkback=../../../main/kids/index.htm#google_vignette/../main/kids/index.htm#google_vignette"
 )
 
 # Detectar navegador
