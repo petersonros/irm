@@ -6,14 +6,14 @@ param(
 function Show-Menu {
     Clear-Host
     Write-Host "==== CONQUISTA CLI ====" -ForegroundColor Cyan
-    Write-Host "1 - Limpar navegadores"
-    Write-Host "2 - Abrir URLs da aula (genérico)"
-    Write-Host "3 - Abrir URLs — Infantil 1"
-    Write-Host "4 - Abrir URLs — Infantil 2"
-    Write-Host "5 - Abrir URLs — Infantil 3"
-    Write-Host "6 - Abrir URLs — Infantil 4"
-    Write-Host "7 - Abrir URLs — Infantil 5"
-    Write-Host "0 - Sair"
+    Write-Host "1 - Abrir URLs — Infantil 1"
+    Write-Host "2 - Abrir URLs — Infantil 2"
+    Write-Host "3 - Abrir URLs — Infantil 3"
+    Write-Host "4 - Abrir URLs — Infantil 4"
+    Write-Host "5 - Abrir URLs — Infantil 5"
+    Write-Host "6 - Abrir URLs da aula (genérico)"
+    Write-Host "0 - Limpar navegadores"
+    Write-Host "9 - Sair"
 }
 
 function Show-Help {
@@ -27,7 +27,7 @@ function Show-Help {
     Write-Host ""
     Write-Host "Comandos disponíveis:" -ForegroundColor Yellow
     Write-Host "  clean    Fecha Chrome/Edge e remove histórico, cookies, cache, senhas e autofill"
-    Write-Host "  open     Abre as URLs da aula no Chrome (ou Edge) em uma janela nova"
+    Write-Host "  open     Abre as URLs genéricas da aula no Chrome (ou Edge) em uma janela nova"
     Write-Host "  open-i1  Abre as URLs do Infantil 1"
     Write-Host "  open-i2  Abre as URLs do Infantil 2"
     Write-Host "  open-i3  Abre as URLs do Infantil 3"
@@ -94,14 +94,14 @@ do {
     $op = Read-Host "Escolha"
 
     switch ($op) {
-        "1" { Run-Module $commands["clean"] }
-        "2" { Run-Module $commands["open"] }
-        "3" { Run-Module $commands["open-i1"] }
-        "4" { Run-Module $commands["open-i2"] }
-        "5" { Run-Module $commands["open-i3"] }
-        "6" { Run-Module $commands["open-i4"] }
-        "7" { Run-Module $commands["open-i5"] }
+        "1" { Run-Module $commands["open-i1"] }
+        "2" { Run-Module $commands["open-i2"] }
+        "3" { Run-Module $commands["open-i3"] }
+        "4" { Run-Module $commands["open-i4"] }
+        "5" { Run-Module $commands["open-i5"] }
+        "6" { Run-Module $commands["open"] }
+        "0" { Run-Module $commands["clean"] }
     }
 
-    Pause
-} while ($op -ne "0")
+    if ($op -ne "9") { Pause }
+} while ($op -ne "9")
