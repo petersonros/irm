@@ -2,9 +2,7 @@ Write-Host "🚀 Abrindo URLs da aula — Infantil 5..." -ForegroundColor Cyan
 
 # URLs da aula — Infantil 5
 $urls = @(
-    "https://www.digipuzzle.net/minigames/bubblechain/bubblechain_alphabet.htm?language=portuguese&linkback=../../pt/jogoseducativos/alfabeto/index.htm",
-    "https://www.digipuzzle.net/digipuzzle/kids/puzzles/linkpuzzle_alphabet_pt.htm?language=portuguese&linkback=../../../pt/jogoseducativos/alfabeto/index.htm",
-    "https://www.digipuzzle.net/kids/animalcartoons/puzzles/countit.htm?language=portuguese&linkback=../../../pt/jogoseducativos/index.htm"
+    "https://www.escolagames.com.br/jogos/monta-monta-bicho",
 )
 
 # Detectar navegador
