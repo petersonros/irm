@@ -2,7 +2,7 @@ Write-Host "🚀 Abrindo URLs da aula — Infantil 5..." -ForegroundColor Cyan
 
 # URLs da aula — Infantil 5
 $urls = @(
-    "https://www.escolagames.com.br/jogos/monta-monta-bicho",
+    "https://www.escolagames.com.br/jogos/monta-monta-bicho"
 )
 
 # Detectar navegador
