@@ -8,6 +8,7 @@
 - [x] `clean.ps1` exibe resumo do que foi removido ao final
 - [x] `open.ps1` detecta Chrome → Edge → navegador padrão, nessa ordem
 - [x] `open.ps1` encerra o navegador se já estiver aberto antes de usar `--new-window`
+- [x] `setup.ps1` cria usuários `aluno` (sem senha, perfil temporário) e `admin`, migra auto-login do Pichau e desativa a conta
 
 ## Pendências
 
@@ -64,12 +65,19 @@ try {
 
 - **Perfis de aula:** Diferentes conjuntos de URLs para diferentes turmas ou disciplinas
 - **Log de execução:** Registrar quando e em qual máquina o script foi executado (útil para auditoria)
-- **Módulo de setup:** Configurar uma máquina nova do zero (instalar Chrome, definir página inicial, etc.)
 - **Agendamento automático:** Tarefa agendada no Windows que roda o `clean.ps1` ao desligar
 
 ---
 
 ## Changelog
+
+### 2026-05-13
+**feat(setup): módulo de configuração inicial de máquina**
+- `setup.ps1`: cria usuário `aluno` (sem senha, perfil temporário via ProfileList)
+- `setup.ps1`: migra auto-login do Pichau para `aluno` via registro Winlogon
+- `setup.ps1`: cria usuário `admin` com senha segura e adiciona ao grupo Administradores
+- `setup.ps1`: desativa o usuário Pichau ao final
+- `cli.ps1`: adicionada opção `[7] Configurar máquina` no menu e comando `setup` no modo direto
 
 ### 2026-04-07 — `d261edc`
 **fix(clean): fechamento gracioso do navegador e remoção de sessões**

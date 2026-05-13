@@ -12,7 +12,7 @@ Cada arquivo em `/modules` é um script PowerShell independente. Pode ser chamad
 
 | Parâmetro | Tipo | Descrição |
 |---|---|---|
-| `-Command` | string | Nome do módulo a executar (`clean`, `open`) |
+| `-Command` | string | Nome do módulo a executar (`clean`, `open`, `open-i1`…`open-i5`, `setup`) |
 | `-Help` | switch | Exibe uso, comandos disponíveis e exemplos |
 
 **Exemplos:**
@@ -30,9 +30,15 @@ irm https://raw.githubusercontent.com/petersonros/irm/main/cli.ps1 -Help | iex
 **Opções do menu:**
 | Opção | Ação |
 |---|---|
-| 1 | Executa `clean.ps1` |
-| 2 | Executa `open.ps1` |
-| 0 | Sair |
+| 1 | Executa `open-inf1.ps1` |
+| 2 | Executa `open-inf2.ps1` |
+| 3 | Executa `open-inf3.ps1` |
+| 4 | Executa `open-inf4.ps1` |
+| 5 | Executa `open-inf5.ps1` |
+| 6 | Executa `open.ps1` |
+| 0 | Executa `clean.ps1` |
+| 7 | Executa `setup.ps1` |
+| 9 | Sair |
 
 ---
 
@@ -85,6 +91,38 @@ https://www.digipuzzle.net/pt/jogoseducativos/
 **Exemplo de uso direto:**
 ```powershell
 irm https://raw.githubusercontent.com/petersonros/irm/main/modules/open.ps1 | iex
+```
+
+---
+
+## modules/setup.ps1
+
+**Papel:** Configura uma máquina do laboratório do zero — cria os usuários `aluno` e `admin`, migra o auto-login e desativa a conta `Pichau`.
+
+**Requisito:** deve ser executado com privilégios de administrador. O script verifica isso no início e aborta com mensagem clara se não estiver elevado.
+
+**O que faz, em ordem:**
+
+| Etapa | Ação |
+|---|---|
+| 1 | Solicita senha para o novo usuário `admin` via `Read-Host -AsSecureString` |
+| 2 | Cria usuário `aluno` sem senha (conta padrão, sem privilégios de administrador) |
+| 3 | Migra o auto-login do `Pichau` para `aluno` via `HKLM:\…\Winlogon` |
+| 4 | Marca o perfil do `aluno` como temporário via `ProfileList` (State=0x08) |
+| 5 | Cria usuário `admin` com a senha fornecida |
+| 6 | Adiciona `admin` ao grupo `Administradores` |
+| 7 | Desativa o usuário `Pichau` |
+| 8 | Exibe resumo de tudo que foi feito |
+
+**Comportamento:**
+- Usa `-ErrorAction Stop` em todas as operações críticas
+- Se `aluno` ou `admin` já existirem, adapta sem abortar (atualiza senha do admin; ignora criação do aluno)
+- A etapa de perfil temporário é não-fatal: exibe aviso amarelo se falhar (perfil ainda não existe no primeiro run)
+- Informa ao final que é necessário reiniciar para aplicar o auto-login
+
+**Exemplo de uso direto:**
+```powershell
+irm https://raw.githubusercontent.com/petersonros/irm/main/modules/setup.ps1 | iex
 ```
 
 ---
