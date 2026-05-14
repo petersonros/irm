@@ -107,17 +107,21 @@ irm https://raw.githubusercontent.com/petersonros/irm/main/modules/open.ps1 | ie
 |---|---|
 | 1 | Solicita senha para o novo usuário `admin` via `Read-Host -AsSecureString` |
 | 2 | Cria usuário `aluno` sem senha (conta padrão, sem privilégios de administrador) |
-| 3 | Migra o auto-login do `Pichau` para `aluno` via `HKLM:\…\Winlogon` |
-| 4 | Marca o perfil do `aluno` como temporário via `ProfileList` (State=0x08) |
-| 5 | Cria usuário `admin` com a senha fornecida |
-| 6 | Adiciona `admin` ao grupo `Administradores` |
-| 7 | Desativa o usuário `Pichau` |
-| 8 | Exibe resumo de tudo que foi feito |
+| 3 | Baixa o papel de parede da escola para `C:\Users\aluno\AppData\Roaming\wallpaper.jpg` |
+| 4 | Carrega o hive `NTUSER.DAT` do `aluno` via `reg load` e aplica papel de parede (`WallpaperStyle=10`, Fill) e oculta ícones do sistema na área de trabalho |
+| 5 | Remove ícones de `C:\Users\Public\Desktop\*` |
+| 6 | Cria `chrome_default.xml` e aplica via DISM para definir Chrome como padrão para HTTP, HTTPS e PDF |
+| 7 | Migra o auto-login do `Pichau` para `aluno` via `HKLM:\…\Winlogon` |
+| 8 | Cria usuário `admin` com a senha fornecida |
+| 9 | Adiciona `admin` ao grupo `Administradores` |
+| 10 | Desativa o usuário `Pichau` |
+| 11 | Exibe resumo de tudo que foi feito |
 
 **Comportamento:**
-- Usa `-ErrorAction Stop` em todas as operações críticas
+- Usa `-ErrorAction Stop` em operações críticas (criação de usuários, auto-login, desativação do Pichau)
 - Se `aluno` ou `admin` já existirem, adapta sem abortar (atualiza senha do admin; ignora criação do aluno)
-- A etapa de perfil temporário é não-fatal: exibe aviso amarelo se falhar (perfil ainda não existe no primeiro run)
+- Etapas de perfil visual (papel de parede, ícones, Chrome) são não-fatais: exibem aviso amarelo se falharem
+- Se o `aluno` nunca tiver feito login (sem `NTUSER.DAT`), copia o hive do perfil `Default` como base antes de carregar
 - Informa ao final que é necessário reiniciar para aplicar o auto-login
 
 **Exemplo de uso direto:**
