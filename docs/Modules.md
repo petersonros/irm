@@ -103,23 +103,27 @@ irm https://raw.githubusercontent.com/petersonros/irm/main/modules/open.ps1 | ie
 
 **O que faz, em ordem:**
 
-| Etapa | Ação |
-|---|---|
-| 1 | Solicita senha para o novo usuário `admin` via `Read-Host -AsSecureString` |
-| 2 | Cria usuário `aluno` sem senha (conta padrão, sem privilégios de administrador) |
-| 3 | Baixa o papel de parede da escola para `C:\Users\aluno\AppData\Roaming\wallpaper.jpg` |
-| 4 | Carrega o hive `NTUSER.DAT` do `aluno` via `reg load` e aplica papel de parede (`WallpaperStyle=10`, Fill) e oculta ícones do sistema na área de trabalho |
-| 5 | Remove ícones de `C:\Users\Public\Desktop\*` |
-| 6 | Cria `chrome_default.xml` e aplica via DISM para definir Chrome como padrão para HTTP, HTTPS e PDF |
-| 7 | Migra o auto-login do `Pichau` para `aluno` via `HKLM:\…\Winlogon` |
-| 8 | Cria usuário `admin` com a senha fornecida |
-| 9 | Adiciona `admin` ao grupo `Administradores` |
-| 10 | Desativa o usuário `Pichau` |
-| 11 | Exibe resumo de tudo que foi feito |
+| Fase | Etapa | Ação |
+|---|---|---|
+| 1 — Criação | 1 | Cria usuário `aluno` sem senha |
+| 1 — Criação | 2 | Cria usuário `admin` com a senha fornecida |
+| 1 — Criação | 3 | Adiciona `admin` ao grupo `Administradores` |
+| 1 — Criação | 4 | Verifica com `Get-LocalUser` que `admin` realmente existe — aborta se não encontrar |
+| 1 — Criação | 5 | Ativa o `Administrador` embutido do Windows como fallback de emergência (sem senha) |
+| 2 — Perfil | 6 | Baixa o papel de parede da escola para `C:\Users\aluno\AppData\Roaming\wallpaper.jpg` |
+| 2 — Perfil | 7 | Carrega o hive `NTUSER.DAT` do `aluno` via `reg load` e aplica papel de parede (`WallpaperStyle=10`, Fill) e oculta ícones do sistema na área de trabalho |
+| 2 — Perfil | 8 | Remove ícones de `C:\Users\Public\Desktop\*` |
+| 2 — Perfil | 9 | Cria `chrome_default.xml` e aplica via DISM para definir Chrome como padrão para HTTP, HTTPS e PDF |
+| 2 — Perfil | 10 | Migra o auto-login do `Pichau` para `aluno` via `HKLM:\…\Winlogon` |
+| 3 — Pichau | 11 | Pede confirmação explícita (`S/N`) antes de desativar o `Pichau` |
+| 3 — Pichau | 12 | Desativa o usuário `Pichau` (somente se confirmado) |
+| — | 13 | Exibe resumo de tudo que foi feito |
 
 **Comportamento:**
-- Usa `-ErrorAction Stop` em operações críticas (criação de usuários, auto-login, desativação do Pichau)
-- Se `aluno` ou `admin` já existirem, adapta sem abortar (atualiza senha do admin; ignora criação do aluno)
+- **Ordem segura:** usuários `aluno` e `admin` são criados e verificados *antes* de qualquer etapa de perfil ou desativação do `Pichau` — se a criação falhar, o `Pichau` nunca é desativado
+- Após a criação, ativa o `Administrador` embutido do Windows (tenta `"Administrador"` e `"Administrator"`) como saída de emergência independente
+- Pede confirmação explícita (`S/N`) antes de desativar o `Pichau`; se recusar, o script finaliza sem desativar
+- Usa `-ErrorAction Stop` em operações críticas; aborta com mensagem clara mencionando que o `Pichau` não foi desativado
 - Etapas de perfil visual (papel de parede, ícones, Chrome) são não-fatais: exibem aviso amarelo se falharem
 - Se o `aluno` nunca tiver feito login (sem `NTUSER.DAT`), copia o hive do perfil `Default` como base antes de carregar
 - Informa ao final que é necessário reiniciar para aplicar o auto-login
