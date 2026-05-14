@@ -80,12 +80,14 @@ try {
 
 # 3. ADICIONAR admin AO GRUPO ADMINISTRADORES
 try {
-    Add-LocalGroupMember -Group "Administradores" -Member "admin" -ErrorAction Stop
-    $feito += "Usuario 'admin' adicionado ao grupo Administradores"
+    $adminGroup = Get-LocalGroup | Where-Object { $_.SID -eq 'S-1-5-32-544' } | Select-Object -ExpandProperty Name
+    if (-not $adminGroup) { throw "Grupo Administradores (SID S-1-5-32-544) nao encontrado." }
+    Add-LocalGroupMember -Group $adminGroup -Member "admin" -ErrorAction Stop
+    $feito += "Usuario 'admin' adicionado ao grupo $adminGroup"
 } catch {
     if ($_.Exception -is [Microsoft.PowerShell.Commands.MemberExistsException] -or
         $_.Exception.Message -match "already a member|ja e membro|ja membro") {
-        $feito += "Usuario 'admin' ja era membro de Administradores — ignorado"
+        $feito += "Usuario 'admin' ja era membro de $adminGroup — ignorado"
     } else {
         Write-Host "  ERRO ao adicionar 'admin' ao grupo Administradores: $_" -ForegroundColor Red
         Write-Host "  Abortando. Usuario 'Pichau' NAO foi desativado." -ForegroundColor Yellow
@@ -229,7 +231,7 @@ try {
 </DefaultAssociations>
 "@ | Set-Content -Path $xmlPath -Encoding UTF8 -ErrorAction Stop
 
-    $dism = dism /Online /Import-DefaultAppAssociations:$xmlPath 2>&1
+    $dism = dism /Online "/Import-DefaultAppAssociations:$xmlPath" 2>&1
     if ($LASTEXITCODE -ne 0) { throw "DISM saiu com codigo $LASTEXITCODE: $dism" }
 
     Remove-Item $xmlPath -ErrorAction SilentlyContinue
