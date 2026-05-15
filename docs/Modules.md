@@ -149,16 +149,21 @@ irm https://raw.githubusercontent.com/petersonros/irm/main/modules/setup.ps1 | i
 | Etapa | Ação |
 |---|---|
 | 1 | Solicita senha para o usuário `admin` via `Read-Host -AsSecureString` |
-| 2 | Remove usuários problemáticos (`Pichau`, `admin`, `user`) com `-ErrorAction SilentlyContinue` — sem falhar se não existirem |
-| 3 | Garante que `aluno` existe e está ativo — cria se não existir, ativa se estiver desativado |
-| 4 | Cria o usuário `admin` limpo com a senha informada |
-| 5 | Adiciona `admin` ao grupo Administradores |
-| 6 | Remove `aluno` do grupo Administradores |
-| 7 | Configura auto-login para `aluno` via `HKLM:\…\Winlogon` |
-| 8 | Ativa o `Administrador` embutido do Windows como fallback de emergência (sem senha) |
-| 9 | Exibe resumo de tudo que foi feito |
+| 2 | Desativa o auto-login existente — seta `AutoAdminLogon=0` e apaga `DefaultUserName`/`DefaultPassword` em `Winlogon` |
+| 3 | Remove a flag de perfil temporário do `aluno` — localiza o SID em `ProfileList` e apaga o valor `State` |
+| 4 | Remove usuários problemáticos (`Pichau`, `admin`, `user`) com `-ErrorAction SilentlyContinue` — sem falhar se não existirem |
+| 5 | Garante que `aluno` existe e está ativo — cria se não existir, ativa se estiver desativado |
+| 6 | Cria o usuário `admin` limpo com a senha informada |
+| 7 | Adiciona `admin` ao grupo Administradores |
+| 8 | Remove `aluno` do grupo Administradores |
+| 9 | Configura auto-login para `aluno` via `HKLM:\…\Winlogon` |
+| 10 | Ativa o `Administrador` embutido do Windows como fallback de emergência (sem senha) |
+| 11 | Exibe resumo de tudo que foi feito |
 
 **Comportamento:**
+- Limpeza do auto-login e do ProfileList são não-fatais: exibem aviso amarelo se falharem
+- Se o `aluno` ainda não existir na etapa 3, o ProfileList é ignorado silenciosamente
+- Se o valor `State` não existir em `ProfileList\<SID>`, a etapa é ignorada sem erro
 - Remoção dos usuários problemáticos é silenciosa — não aborta se o usuário não existir
 - Criação de `aluno` e `admin` usa `-ErrorAction Stop` — aborta com mensagem clara em caso de falha
 - Remoção de `aluno` do grupo Administradores é não-fatal: exibe aviso amarelo se falhar (ex.: já não era membro)

@@ -17,6 +17,8 @@ Write-Host ""
 Write-Host "  ==== CORRECAO DE USUARIOS ====" -ForegroundColor Cyan
 Write-Host ""
 Write-Host "  Este script ira:" -ForegroundColor Yellow
+Write-Host "   - Desativar o auto-login existente no registro"
+Write-Host "   - Remover a flag de perfil temporario do 'aluno' no ProfileList"
 Write-Host "   - Remover usuarios problematicos (Pichau, admin, user) se existirem"
 Write-Host "   - Garantir que o usuario 'aluno' existe e esta ativo"
 Write-Host "   - Criar o usuario 'admin' limpo com a senha informada"
@@ -33,6 +35,46 @@ $adminPassword = Read-Host "  Senha para o usuario admin" -AsSecureString
 Write-Host ""
 
 $feito = @()
+
+# =========================
+# REMOVER AUTO-LOGIN EXISTENTE
+# =========================
+try {
+    $winlogon = "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon"
+    Set-ItemProperty -Path $winlogon -Name "AutoAdminLogon" -Value "0" -ErrorAction Stop
+    Remove-ItemProperty -Path $winlogon -Name "DefaultUserName" -ErrorAction SilentlyContinue
+    Remove-ItemProperty -Path $winlogon -Name "DefaultPassword" -ErrorAction SilentlyContinue
+    $feito += "Auto-login desativado (AutoAdminLogon=0, DefaultUserName e DefaultPassword removidos)"
+} catch {
+    Write-Host "  AVISO: nao foi possivel limpar o auto-login no registro: $_" -ForegroundColor Yellow
+    $feito += "Remocao do auto-login — falhou (ver aviso acima)"
+}
+
+# =========================
+# REMOVER FLAG DE PERFIL TEMPORÁRIO DO aluno
+# =========================
+try {
+    $alunoSid = (Get-LocalUser -Name "aluno" -ErrorAction SilentlyContinue).SID.Value
+    if ($alunoSid) {
+        $profileKey = "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList\$alunoSid"
+        if (Test-Path $profileKey) {
+            $state = Get-ItemProperty -Path $profileKey -Name "State" -ErrorAction SilentlyContinue
+            if ($state) {
+                Remove-ItemProperty -Path $profileKey -Name "State" -ErrorAction Stop
+                $feito += "Flag de perfil temporario do 'aluno' removida (State apagado, SID: $alunoSid)"
+            } else {
+                $feito += "Perfil do 'aluno' no ProfileList ja nao tinha State — ignorado"
+            }
+        } else {
+            $feito += "ProfileList do 'aluno' nao encontrado no registro — ignorado"
+        }
+    } else {
+        $feito += "Usuario 'aluno' nao encontrado para limpeza do ProfileList — ignorado"
+    }
+} catch {
+    Write-Host "  AVISO: nao foi possivel limpar o ProfileList do 'aluno': $_" -ForegroundColor Yellow
+    $feito += "Remocao da flag de perfil temporario — falhou (ver aviso acima)"
+}
 
 # =========================
 # REMOVER USUÁRIOS PROBLEMÁTICOS
