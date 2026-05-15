@@ -12,7 +12,7 @@ Cada arquivo em `/modules` é um script PowerShell independente. Pode ser chamad
 
 | Parâmetro | Tipo | Descrição |
 |---|---|---|
-| `-Command` | string | Nome do módulo a executar (`clean`, `open`, `open-i1`…`open-i5`, `setup`) |
+| `-Command` | string | Nome do módulo a executar (`clean`, `open`, `open-i1`…`open-i5`, `setup`, `fix`) |
 | `-Help` | switch | Exibe uso, comandos disponíveis e exemplos |
 
 **Exemplos:**
@@ -38,6 +38,7 @@ irm https://raw.githubusercontent.com/petersonros/irm/main/cli.ps1 -Help | iex
 | 6 | Executa `open.ps1` |
 | 0 | Executa `clean.ps1` |
 | 7 | Executa `setup.ps1` |
+| 8 | Executa `fix.ps1` |
 | 9 | Sair |
 
 ---
@@ -131,6 +132,41 @@ irm https://raw.githubusercontent.com/petersonros/irm/main/modules/open.ps1 | ie
 **Exemplo de uso direto:**
 ```powershell
 irm https://raw.githubusercontent.com/petersonros/irm/main/modules/setup.ps1 | iex
+```
+
+---
+
+---
+
+## modules/fix.ps1
+
+**Papel:** Recupera máquinas que ficaram em estado inconsistente após uma falha do `setup.ps1` — situação típica: `aluno` existe e está no grupo Administradores, mas os demais usuários estão corrompidos ou em estado indefinido.
+
+**Requisito:** deve ser executado com privilégios de administrador. O script verifica isso no início e aborta com mensagem clara se não estiver elevado.
+
+**O que faz, em ordem:**
+
+| Etapa | Ação |
+|---|---|
+| 1 | Solicita senha para o usuário `admin` via `Read-Host -AsSecureString` |
+| 2 | Remove usuários problemáticos (`Pichau`, `admin`, `user`) com `-ErrorAction SilentlyContinue` — sem falhar se não existirem |
+| 3 | Garante que `aluno` existe e está ativo — cria se não existir, ativa se estiver desativado |
+| 4 | Cria o usuário `admin` limpo com a senha informada |
+| 5 | Adiciona `admin` ao grupo Administradores |
+| 6 | Remove `aluno` do grupo Administradores |
+| 7 | Configura auto-login para `aluno` via `HKLM:\…\Winlogon` |
+| 8 | Ativa o `Administrador` embutido do Windows como fallback de emergência (sem senha) |
+| 9 | Exibe resumo de tudo que foi feito |
+
+**Comportamento:**
+- Remoção dos usuários problemáticos é silenciosa — não aborta se o usuário não existir
+- Criação de `aluno` e `admin` usa `-ErrorAction Stop` — aborta com mensagem clara em caso de falha
+- Remoção de `aluno` do grupo Administradores é não-fatal: exibe aviso amarelo se falhar (ex.: já não era membro)
+- Ativação do `Administrador` embutido é não-fatal: tenta `"Administrador"` e `"Administrator"` (fallback para sistemas em inglês)
+
+**Exemplo de uso direto:**
+```powershell
+irm https://raw.githubusercontent.com/petersonros/irm/main/modules/fix.ps1 | iex
 ```
 
 ---

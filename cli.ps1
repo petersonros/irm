@@ -18,6 +18,7 @@ function Show-Menu {
     Write-Host ""
     Write-Host "  [0]" -ForegroundColor Red -NoNewline; Write-Host " Limpar navegadores"
     Write-Host "  [7]" -ForegroundColor Magenta -NoNewline; Write-Host " Configurar máquina"
+    Write-Host "  [8]" -ForegroundColor Yellow  -NoNewline; Write-Host " Corrigir usuários"
     Write-Host "  [9]" -ForegroundColor DarkGray -NoNewline; Write-Host " Sair"
     Write-Host ""
 }
@@ -40,6 +41,7 @@ function Show-Help {
     Write-Host "  open-i4  Abre as URLs do Infantil 4"
     Write-Host "  open-i5  Abre as URLs do Infantil 5"
     Write-Host "  setup    Configura a máquina: cria usuários aluno/admin e desativa Pichau"
+    Write-Host "  fix      Corrige usuários em estado inconsistente após falha do setup"
     Write-Host ""
     Write-Host "Exemplos:" -ForegroundColor Yellow
     Write-Host "  ... -Command clean"
@@ -70,6 +72,7 @@ $commands = @{
     "open-i4" = "$base/open-inf4.ps1"
     "open-i5" = "$base/open-inf5.ps1"
     "setup"   = "$base/setup.ps1"
+    "fix"     = "$base/fix.ps1"
 }
 
 # =========================
@@ -110,6 +113,7 @@ do {
         "6" { Run-Module $commands["open"] }
         "0" { Run-Module $commands["clean"] }
         "7" { Run-Module $commands["setup"] }
+        "8" { Run-Module $commands["fix"] }
     }
 
     if ($op -ne "9") { Pause }

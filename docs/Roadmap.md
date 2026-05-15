@@ -9,6 +9,7 @@
 - [x] `open.ps1` detecta Chrome → Edge → navegador padrão, nessa ordem
 - [x] `open.ps1` encerra o navegador se já estiver aberto antes de usar `--new-window`
 - [x] `setup.ps1` cria usuários `aluno` (sem senha, perfil temporário) e `admin`, migra auto-login do Pichau e desativa a conta
+- [x] `fix.ps1` recupera máquinas em estado inconsistente: remove usuários corrompidos, recria `admin`, remove `aluno` do grupo Administradores e reaplica auto-login
 
 ## Pendências
 
@@ -70,6 +71,20 @@ try {
 ---
 
 ## Changelog
+
+### 2026-05-15
+**fix(users): módulo de correção para máquinas em estado inconsistente**
+
+**Incidente:** após falha parcial do `setup.ps1` em algumas máquinas, o usuário `aluno` ficou ativo e temporariamente no grupo Administradores enquanto usuários como `Pichau`, `admin` e `user` permaneceram em estado indefinido. Apenas o `aluno` conseguia fazer login com sucesso, mas com privilégios indevidos.
+
+**Solução implementada:**
+- `fix.ps1`: remove silenciosamente usuários problemáticos (`Pichau`, `admin`, `user`)
+- `fix.ps1`: garante que `aluno` existe e está ativo
+- `fix.ps1`: cria `admin` limpo com senha fornecida pelo operador
+- `fix.ps1`: adiciona `admin` ao grupo Administradores e remove `aluno` desse grupo
+- `fix.ps1`: reaplica auto-login para `aluno` via registro Winlogon
+- `fix.ps1`: ativa o Administrador embutido do Windows como fallback de emergência
+- `cli.ps1`: adicionada opção `[8] Corrigir usuários` no menu e comando `fix` no modo direto
 
 ### 2026-05-13
 **feat(setup): módulo de configuração inicial de máquina**
