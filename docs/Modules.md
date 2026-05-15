@@ -156,9 +156,8 @@ irm https://raw.githubusercontent.com/petersonros/irm/main/modules/setup.ps1 | i
 | 6 | Cria o usuário `admin` limpo com a senha informada |
 | 7 | Adiciona `admin` ao grupo Administradores |
 | 8 | Remove `aluno` do grupo Administradores |
-| 9 | Configura auto-login para `aluno` via `HKLM:\…\Winlogon` |
-| 10 | Ativa o `Administrador` embutido do Windows como fallback de emergência (sem senha) |
-| 11 | Exibe resumo de tudo que foi feito |
+| 9 | Ativa o `Administrador` embutido do Windows como fallback de emergência (sem senha) |
+| 10 | Exibe resumo de tudo que foi feito |
 
 **Comportamento:**
 - Limpeza do auto-login e do ProfileList são não-fatais: exibem aviso amarelo se falharem

@@ -24,7 +24,6 @@ Write-Host "   - Garantir que o usuario 'aluno' existe e esta ativo"
 Write-Host "   - Criar o usuario 'admin' limpo com a senha informada"
 Write-Host "   - Adicionar 'admin' ao grupo Administradores"
 Write-Host "   - Remover 'aluno' do grupo Administradores"
-Write-Host "   - Configurar auto-login para 'aluno'"
 Write-Host "   - Ativar o Administrador embutido do Windows como fallback de emergencia"
 Write-Host ""
 
@@ -162,22 +161,6 @@ try {
 }
 
 # =========================
-# CONFIGURAR AUTO-LOGIN PARA aluno
-# =========================
-try {
-    $winlogon = "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon"
-    Set-ItemProperty -Path $winlogon -Name "AutoAdminLogon"    -Value "1"     -ErrorAction Stop
-    Set-ItemProperty -Path $winlogon -Name "DefaultUserName"   -Value "aluno" -ErrorAction Stop
-    Set-ItemProperty -Path $winlogon -Name "DefaultPassword"   -Value ""      -ErrorAction Stop
-    Set-ItemProperty -Path $winlogon -Name "DefaultDomainName" -Value "."     -ErrorAction Stop
-    $feito += "Auto-login configurado para 'aluno'"
-} catch {
-    Write-Host "  ERRO ao configurar auto-login no registro: $_" -ForegroundColor Red
-    Write-Host "  Abortando." -ForegroundColor Yellow
-    exit 1
-}
-
-# =========================
 # ATIVAR ADMINISTRADOR EMBUTIDO (fallback de emergência)
 # =========================
 try {
@@ -204,5 +187,5 @@ foreach ($item in $feito) {
 }
 Write-Host ""
 Write-Host "  Correcao concluida." -ForegroundColor Cyan
-Write-Host "  Reinicie a maquina para aplicar o auto-login com o usuario 'aluno'." -ForegroundColor Cyan
+Write-Host "  Reinicie a maquina — a tela de selecao de usuarios deve aparecer." -ForegroundColor Cyan
 Write-Host ""
