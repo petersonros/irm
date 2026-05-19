@@ -2,8 +2,12 @@ Write-Host "🚀 Abrindo URLs da aula..." -ForegroundColor Cyan
 
 # URLs da aula
 $urls = @(
-    "https://www.digipuzzle.net/digipuzzle/animals/puzzles/shapepuzzle.htm?language=portuguese&linkback=../../../pt/jogoseducativos/infantil/index.htm",
-    "https://www.digipuzzle.net/kids/cartoons/puzzles/linkpuzzle_shapes_numbers.htm?language=portuguese&linkback=../../../pt/jogoseducativos/infantil/index.htm"
+    "https://wordwall.net/pt/resource/34757094/ler-palavras-silabas-simples",
+    "https://wordwall.net/pt/resource/5503948/vogais",
+    "https://wordwall.net/pt/resource/73160047/comunica%C3%A7%C3%A3o/alfamatchza%C3%A7%C3%A3o",
+    "https://wordwall.net/pt/resource/2867409/alfabetiza%C3%A7%C3%A3o/vogais-e-consoantes",
+    "https://wordwall.net/pt/resource/17053394/jogo-alfabetiza%C3%A7%C3%A3o",
+    "https://wordwall.net/pt/resource/5114866/alfabetiza%C3%A7%C3%A3o"
 )
 
 # Detectar navegador
