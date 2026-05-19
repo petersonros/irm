@@ -54,10 +54,12 @@ function Run-Module {
     param ($url)
 
     try {
-        irm $url | iex
+        Invoke-RestMethod $url | Invoke-Expression
     } catch {
-        Write-Host "Erro ao executar módulo" -ForegroundColor Red
-    }
+    Write-Host ""
+    Write-Host "Erro ao executar módulo:" -ForegroundColor Red
+    Write-Host $_.Exception.Message -ForegroundColor Yellow
+}
 }
 
 # URLs dos módulos (RAW do GitHub)
