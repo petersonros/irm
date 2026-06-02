@@ -109,8 +109,8 @@ do {
     switch ($op) {
         "1" { Run-Module $commands["open-i1"] }
         "2" { Run-Module $commands["open-i2"] }
-        "3" { Run-Module $commands["open-i3"] }
-        "4" { Run-Module $commands["open-i4"] }
+        "Sueli" { Run-Module $commands["open-i3"] }
+        "Camila" { Run-Module $commands["open-i4"] }
         "5" { Run-Module $commands["open-i5"] }
         "6" { Run-Module $commands["open"] }
         "0" { Run-Module $commands["clean"] }
