@@ -10,7 +10,7 @@ function Show-Menu {
     Write-Host ""
     Write-Host "  [1]" -ForegroundColor Cyan -NoNewline; Write-Host " Abrir URLs — Infantil 1"
     Write-Host "  [2]" -ForegroundColor Cyan -NoNewline; Write-Host " Abrir URLs — Infantil 2"
-    Write-Host "  [3]" -ForegroundColor Cyan -NoNewline; Write-Host " Abrir URLs — Infantil 3"
+    Write-Host "  [3]" -ForegroundColor Cyan -NoNewline; Write-Host " Abrir URLs — Sueli 3"
     Write-Host "  [4]" -ForegroundColor Cyan -NoNewline; Write-Host " Abrir URLs — Infantil 4"
     Write-Host "  [5]" -ForegroundColor Cyan -NoNewline; Write-Host " Abrir URLs — Infantil 5"
     Write-Host ""
@@ -109,8 +109,8 @@ do {
     switch ($op) {
         "1" { Run-Module $commands["open-i1"] }
         "2" { Run-Module $commands["open-i2"] }
-        "Sueli" { Run-Module $commands["open-i3"] }
-        "Camila" { Run-Module $commands["open-i4"] }
+        "3" { Run-Module $commands["open-i3"] }
+        "4" { Run-Module $commands["open-i4"] }
         "5" { Run-Module $commands["open-i5"] }
         "6" { Run-Module $commands["open"] }
         "0" { Run-Module $commands["clean"] }
