@@ -2,11 +2,10 @@ Write-Host "🚀 Abrindo URLs da aula — Infantil 5..." -ForegroundColor Cyan
 
 # URLs da aula — Infantil 5
 $urls = @(
-    "https://wordwall.net/pt/resource/5421540/jogo-da-mem%C3%B3ria-meios-de-comunica%C3%A7%C3%A3o",
-    "https://wordwall.net/pt/resource/33354360/rimas/jogo-do-rimas",
-    "https://wordwall.net/pt/resource/89539742/jogo-da-mem%C3%B3ria-dos-n%C3%BAmeros-at%C3%A9-30",
-    "https://wordwall.net/pt/resource/23501070/mathematics/1%C2%BA-ano-complete-a-sequ%C3%AAncia-num%C3%A9rica-de-0-at%C3%A9-30",
-    "https://wordwall.net/pt/resource/53581478/vamos-organizar-o-alfabeto"
+    "https://wordwall.net/pt/resource/17425603/jogo-da-memoria-festa-junina",
+    "https://www.digipuzzle.net/minigames/snake/snake_alphabet_order.htm?language=portuguese&linkback=../../pt/jogoseducativos/alfabeto/index.htm",
+    "https://wordwall.net/pt/resource/17436101/jogo-da-mem%C3%B3ria-festa-junina",
+    "https://www.digipuzzle.net/digipuzzle/kids/puzzles/matrix_shape_color.htm?language=portuguese&linkback=../../../pt/jogoseducativos/infantil/index.htm"
 )
 
 # Detectar navegador
