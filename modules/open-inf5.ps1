@@ -2,13 +2,13 @@ Write-Host "🚀 Abrindo URLs da aula — Infantil 5..." -ForegroundColor Cyan
 
 # URLs da aula — Infantil 5
 $urls = @(
-    "https://wordwall.net/pt/resource/13739343/o-alfabeto",
-    "https://wordwall.net/pt/resource/7896115/complete-o-alfabeto",
-    "https://wordwall.net/pt/resource/4008719/sequ%C3%AAncia-l%C3%B3gica-pintura"
+#    "https://wordwall.net/pt/resource/13739343/o-alfabeto",
+#    "https://wordwall.net/pt/resource/7896115/complete-o-alfabeto",
+#    "https://wordwall.net/pt/resource/4008719/sequ%C3%AAncia-l%C3%B3gica-pintura"
 #    "https://wordwall.net/pt/resource/6516234/pintura",
-#   "https://wordwall.net/pt/resource/14753080/vamos-escrever-o-seu-nome",
-#    "https://wordwall.net/pt/resource/16067454/o-alfabeto",
-#    "https://wordwall.net/pt/resource/24159303/dessembaralhando-o-alfabeto",
+    "https://wordwall.net/pt/resource/14753080/vamos-escrever-o-seu-nome",
+    "https://wordwall.net/pt/resource/16067454/o-alfabeto",
+    "https://wordwall.net/pt/resource/24159303/dessembaralhando-o-alfabeto"
 #    "https://wordwall.net/pt/resource/13456792/jogo-da-mem%C3%B3ria-o-som-das-consoantes",
 #    "https://wordwall.net/pt/resource/3958938/acerte-o-nome-das-figuras-vogais",
 #    "https://wordwall.net/pt/resource/13814773/lista-de-itens-para-o-anivers%C3%A1rio-do-senhor-alfabeto",
