@@ -2,7 +2,7 @@ Write-Host "🚀 Abrindo URLs da aula..." -ForegroundColor Cyan
 
 # URLs da aula
 $urls = @(
-    "https://www.canva.com/design/DAHTDzb-stM/TK8MFS2joK2L-axuANcB2w/edit"
+    "https://canva.link/g3mmon84gw06myl"
 )
 
 # Detectar navegador
