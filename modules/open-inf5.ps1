@@ -6,9 +6,9 @@ $urls = @(
 #    "https://wordwall.net/pt/resource/7896115/complete-o-alfabeto",
 #    "https://wordwall.net/pt/resource/4008719/sequ%C3%AAncia-l%C3%B3gica-pintura"
 #    "https://wordwall.net/pt/resource/6516234/pintura",
-    "https://wordwall.net/pt/resource/14753080/vamos-escrever-o-seu-nome",
-    "https://wordwall.net/pt/resource/16067454/o-alfabeto",
-    "https://wordwall.net/pt/resource/24159303/dessembaralhando-o-alfabeto"
+#    "https://wordwall.net/pt/resource/14753080/vamos-escrever-o-seu-nome",
+#    "https://wordwall.net/pt/resource/16067454/o-alfabeto",
+#    "https://wordwall.net/pt/resource/24159303/dessembaralhando-o-alfabeto"
 #    "https://wordwall.net/pt/resource/13456792/jogo-da-mem%C3%B3ria-o-som-das-consoantes",
 #    "https://wordwall.net/pt/resource/3958938/acerte-o-nome-das-figuras-vogais",
 #    "https://wordwall.net/pt/resource/13814773/lista-de-itens-para-o-anivers%C3%A1rio-do-senhor-alfabeto",
@@ -21,6 +21,9 @@ $urls = @(
 #    "https://wordwall.net/pt/resource/21805313/n%C3%BAmeros-letras-e-objetos",
 #    "https://wordwall.net/pt/resource/4144752/reconhecimento-de-n%C3%BAmeros-1-ao-30",
 #    "https://wordwall.net/pt/resource/6341502/s%C3%ADlabas"
+    "https://wordwall.net/pt/resource/12268466/par-e-%C3%ADmpar",
+    "https://wordwall.net/pt/resource/13456792/jogo-da-mem%C3%B3ria-o-som-das-consoantes",
+    "https://wordwall.net/pt/resource/21662290/matem%C3%A1tica/n%C3%BAmeros-e-quantidades-at%C3%A9-20"
 )
 
 # Detectar navegador
