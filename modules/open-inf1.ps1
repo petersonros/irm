@@ -4,6 +4,7 @@ Write-Host "🚀 Abrindo URLs da aula — Infantil 1..." -ForegroundColor Cyan
 $urls = @(
  #   "https://www.digipuzzle.net/digipuzzle/kids/puzzles/hiddenobjects.htm?language=portuguese&linkback=../../../pt/jogoseducativos/palavras/index.htm",
 #    "https://www.digipuzzle.net/minigames/codegrid/codegrid_images_shapes.htm?language=portuguese&linkback=../../pt/jogoseducativos/ciencias/index.htm"
+    "https://wordwall.net/pt/resource/4191449/m-ou-n-eccavp",
     "https://www.digipuzzle.net/minigames/flashmath/finderrors_texts_pt_mn.htm?language=portuguese&linkback=../../pt/jogoseducativos/palavras/index.htm",
     "https://www.digipuzzle.net/kids/animalcartoons/puzzles/photosearch.htm?language=portuguese&linkback=../../../pt/jogoseducativos/jogos/index.htm"
 )
