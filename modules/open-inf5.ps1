@@ -25,6 +25,7 @@ $urls = @(
     "https://wordwall.net/pt/resource/13814773/lista-de-itens-para-o-anivers%C3%A1rio-do-senhor-alfabeto",
     "https://wordwall.net/pt/resource/11937169/contagem",
     "https://wordwall.net/pt/resource/4980262/letras-e-n%C3%BAmeros"
+    # aula do dia 2026-09-08
 )
 
 # Detectar navegador
