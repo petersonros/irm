@@ -6,7 +6,10 @@ $urls = @(
     "https://wordwall.net/pt/resource/17128941/jogo-da-mem%C3%B3ria-dinossauro",
     "https://wordwall.net/pt/resource/17070730/percep%C3%A7%C3%A3o-e-mem%C3%B3ria/jogo-da-mem%C3%B3ria-s%C3%ADtio-do",
     "https://wordwall.net/pt/resource/4044063/jogo-da-mem%C3%B3ria-animais",
-    "https://wordwall.net/pt/resource/32416546/educa%C3%A7%C3%A3o-e-treinamento/jogos-da-mem%C3%B3ria-animais"
+    "https://wordwall.net/pt/resource/32416546/educa%C3%A7%C3%A3o-e-treinamento/jogos-da-mem%C3%B3ria-animais",
+    "https://www.digipuzzle.net/minigames/draw/mysterypictures_alphabet.htm?language=portuguese&linkback=../../pt/jogoseducativos/alfabeto/index.htm",
+    "https://www.digipuzzle.net/animals/monkeys/puzzles/puzzle_jigsaw.htm?language=english&linkback=../../../main/animals/index.htm",
+    "https://www.digipuzzle.net/digipuzzle/animals/puzzles/puzzle_jigsaw.htm?language=english&linkback=../../../main/animals/index.htm"
 )
 
 # Detectar navegador
