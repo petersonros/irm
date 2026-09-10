@@ -2,6 +2,7 @@ Write-Host "🚀 Abrindo URLs da aula — Infantil 2..." -ForegroundColor Cyan
 
 # URLs da aula — Infantil 2
 $urls = @(
+    # 09-09-2026
     "https://www.digipuzzle.net/minigames/tangram/tangram_animals.htm?language=portuguese&linkback=../../pt/jogoseducativos/jogos/index.htm",
     "https://view.genially.com/6053423d73b6bb0daafb567b",
     "https://www.digipuzzle.net/minigames/tangram/tangram_shapes.htm?language=portuguese&linkback=../../pt/jogoseducativos/jogos/index.htm"
