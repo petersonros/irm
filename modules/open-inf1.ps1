@@ -2,11 +2,13 @@ Write-Host "🚀 Abrindo URLs da aula — Infantil 1..." -ForegroundColor Cyan
 
 # URLs da aula — Infantil 1
 $urls = @(
- #   "https://www.digipuzzle.net/digipuzzle/kids/puzzles/hiddenobjects.htm?language=portuguese&linkback=../../../pt/jogoseducativos/palavras/index.htm",
-#    "https://www.digipuzzle.net/minigames/codegrid/codegrid_images_shapes.htm?language=portuguese&linkback=../../pt/jogoseducativos/ciencias/index.htm"
- #   "https://wordwall.net/pt/resource/4191449/m-ou-n-eccavp",
- #   "https://www.digipuzzle.net/minigames/flashmath/finderrors_texts_pt_mn.htm?language=portuguese&linkback=../../pt/jogoseducativos/palavras/index.htm",
- #   "https://www.digipuzzle.net/kids/animalcartoons/puzzles/photosearch.htm?language=portuguese&linkback=../../../pt/jogoseducativos/jogos/index.htm"
+    # 03-09-2026
+    #   "https://www.digipuzzle.net/digipuzzle/kids/puzzles/hiddenobjects.htm?language=portuguese&linkback=../../../pt/jogoseducativos/palavras/index.htm",
+    #    "https://www.digipuzzle.net/minigames/codegrid/codegrid_images_shapes.htm?language=portuguese&linkback=../../pt/jogoseducativos/ciencias/index.htm"
+    #   "https://wordwall.net/pt/resource/4191449/m-ou-n-eccavp",
+    #   "https://www.digipuzzle.net/minigames/flashmath/finderrors_texts_pt_mn.htm?language=portuguese&linkback=../../pt/jogoseducativos/palavras/index.htm",
+    #   "https://www.digipuzzle.net/kids/animalcartoons/puzzles/photosearch.htm?language=portuguese&linkback=../../../pt/jogoseducativos/jogos/index.htm"
+    # 10-09-2026
     "https://wordwall.net/pt/resource/116240486/leitura-de-frases",
     "https://wordwall.net/pt/resource/4081465/leitura",
     "https://wordwall.net/pt/resource/16831120/leitura-de-frases-1ano",
@@ -15,12 +17,14 @@ $urls = @(
 
 # Detectar navegador
 if (Get-Command chrome.exe -ErrorAction SilentlyContinue) {
-    $browser     = "chrome.exe"
+    $browser = "chrome.exe"
     $processName = "chrome"
-} elseif (Get-Command msedge.exe -ErrorAction SilentlyContinue) {
-    $browser     = "msedge.exe"
+}
+elseif (Get-Command msedge.exe -ErrorAction SilentlyContinue) {
+    $browser = "msedge.exe"
     $processName = "msedge"
-} else {
+}
+else {
     foreach ($url in $urls) {
         Start-Process $url
     }
