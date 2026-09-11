@@ -9,10 +9,13 @@ $urls = @(
     #   "https://www.digipuzzle.net/minigames/flashmath/finderrors_texts_pt_mn.htm?language=portuguese&linkback=../../pt/jogoseducativos/palavras/index.htm",
     #   "https://www.digipuzzle.net/kids/animalcartoons/puzzles/photosearch.htm?language=portuguese&linkback=../../../pt/jogoseducativos/jogos/index.htm"
     # 10-09-2026
-    "https://wordwall.net/pt/resource/116240486/leitura-de-frases",
-    "https://wordwall.net/pt/resource/4081465/leitura",
-    "https://wordwall.net/pt/resource/16831120/leitura-de-frases-1ano",
-    "https://wordwall.net/pt/resource/77901051/leitura/interpreta%C3%A7%C3%A3o-de-frases"
+#    "https://wordwall.net/pt/resource/116240486/leitura-de-frases",
+ #   "https://wordwall.net/pt/resource/4081465/leitura",
+  #  "https://wordwall.net/pt/resource/16831120/leitura-de-frases-1ano",
+   # "https://wordwall.net/pt/resource/77901051/leitura/interpreta%C3%A7%C3%A3o-de-frases"
+    "https://www.digipuzzle.net/minigames/findtheletter/findtheletter_pt.htm?language=portuguese&linkback=../../pt/jogoseducativos/alfabeto/index.htm",
+    "https://www.digipuzzle.net/digipuzzle/animals/puzzles/clutter_animal_skins.htm?language=portuguese&linkback=../../../pt/jogoseducativos/jogos/index.htm",
+    "https://www.digipuzzle.net/digipuzzle/animals/puzzles/clutter.htm?language=portuguese&linkback=../../../pt/jogoseducativos/jogos/index.htm"
 )
 
 # Detectar navegador
