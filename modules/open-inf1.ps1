@@ -24,6 +24,7 @@ $urls = @(
     "https://wordwall.net/pt/resource/14357894/avi%C3%A3o-acertando-a-soma",
     "https://wordwall.net/pt/resource/77901051/leitura/interpreta%C3%A7%C3%A3o-de-frases",
     "https://wordwall.net/pt/resource/51829825/organizar-frases-fonema-s",
+    "https://wordwall.net/pt/resource/3648364/soma",
     "https://wordwall.net/pt/resource/36730359/fonemas/organizar-as-frases-fonema-sz"
 )
 
