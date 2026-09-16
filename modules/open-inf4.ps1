@@ -9,7 +9,11 @@ $urls = @(
     "https://wordwall.net/pt/resource/32416546/educa%C3%A7%C3%A3o-e-treinamento/jogos-da-mem%C3%B3ria-animais",
     "https://www.digipuzzle.net/minigames/draw/mysterypictures_alphabet.htm?language=portuguese&linkback=../../pt/jogoseducativos/alfabeto/index.htm",
     "https://www.digipuzzle.net/animals/monkeys/puzzles/puzzle_jigsaw.htm?language=english&linkback=../../../main/animals/index.htm",
-    "https://www.digipuzzle.net/digipuzzle/animals/puzzles/puzzle_jigsaw.htm?language=english&linkback=../../../main/animals/index.htm"
+    "https://www.digipuzzle.net/digipuzzle/animals/puzzles/puzzle_jigsaw.htm?language=english&linkback=../../../main/animals/index.htm",
+
+    "https://wordwall.net/pt/resource/4980262/letras-e-n%C3%BAmeros",
+    "https://wordwall.net/pt/resource/21805313/n%C3%BAmeros-letras-e-objetos"
+
 )
 
 # Detectar navegador
