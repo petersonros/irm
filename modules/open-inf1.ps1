@@ -21,11 +21,16 @@ $urls = @(
     #   "https://www.digipuzzle.net/digipuzzle/animals/puzzles/clutter.htm?language=portuguese&linkback=../../../pt/jogoseducativos/jogos/index.htm"
 
     # 15-09-2026 (Soraria primero ano B)
-    "https://wordwall.net/pt/resource/14357894/avi%C3%A3o-acertando-a-soma",
-    "https://wordwall.net/pt/resource/77901051/leitura/interpreta%C3%A7%C3%A3o-de-frases",
-    "https://wordwall.net/pt/resource/51829825/organizar-frases-fonema-s",
-    "https://wordwall.net/pt/resource/3648364/soma",
-    "https://wordwall.net/pt/resource/36730359/fonemas/organizar-as-frases-fonema-sz"
+    #"https://wordwall.net/pt/resource/14357894/avi%C3%A3o-acertando-a-soma",
+    #"https://wordwall.net/pt/resource/77901051/leitura/interpreta%C3%A7%C3%A3o-de-frases",
+    #"https://wordwall.net/pt/resource/51829825/organizar-frases-fonema-s",
+    #"https://wordwall.net/pt/resource/3648364/soma",
+    #"https://wordwall.net/pt/resource/36730359/fonemas/organizar-as-frases-fonema-sz"
+
+    # 17-09-2026 (Andreia primeiro ano C)
+    "https://wordwall.net/pt/resource/4081465/leitura",
+    "https://wordwall.net/pt/resource/75023720/portuguesa/complete-as-frases",
+    "https://wordwall.net/pt/resource/19448684/completar-frases"
 )
 
 # Detectar navegador
