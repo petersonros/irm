@@ -3,9 +3,9 @@ Write-Host "🚀 Abrindo URLs da aula..." -ForegroundColor Cyan
 # URLs da aula
 $urls = @(
     # 03-09-2026 (Mariana 5 ano B)
-    #"https://canva.link/g3mmon84gw06myl",
-    #"https://wordwall.net/pt/resource/12879527/sistema-digest%C3%B3rio",
-    #"https://wordwall.net/pt/resource/4132309/sistema-digest%C3%B3rio"
+    "https://canva.link/g3mmon84gw06myl",
+    "https://wordwall.net/pt/resource/12879527/sistema-digest%C3%B3rio",
+    "https://wordwall.net/pt/resource/4132309/sistema-digest%C3%B3rio",
 
     # 17-09-2026 (Mariana 5 ano B)
     #"https://wordwall.net/pt/resource/3327204/sistema-respirat%C3%B3rio",
