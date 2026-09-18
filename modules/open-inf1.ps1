@@ -32,6 +32,10 @@ $urls = @(
     "https://wordwall.net/pt/resource/75023720/portuguesa/complete-as-frases",
     "https://wordwall.net/pt/resource/3398369/pareamento-de-frases-imagens",
     "https://wordwall.net/pt/resource/19448684/completar-frases"
+
+    # 18-09-2026 (Andreia primeiro ano C)
+    "https://www.digipuzzle.net/minigames/flashmath/finderrors_texts_pt_mn.htm?language=portuguese&linkback=../../pt/jogoseducativos/palavras/index.htm",
+    "https://www.digipuzzle.net/kids/animalcartoons/puzzles/photosearch.htm?language=portuguese&linkback=../../../pt/jogoseducativos/jogos/index.htm"
 )
 
 # Detectar navegador
