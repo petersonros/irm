@@ -8,8 +8,15 @@ $urls = @(
     #"https://wordwall.net/pt/resource/4132309/sistema-digest%C3%B3rio"
 
     # 17-09-2026 (Mariana 5 ano B)
-    "https://wordwall.net/pt/resource/3327204/sistema-respirat%C3%B3rio",
-    "https://wordwall.net/pt/resource/6663282/sistema-respirat%C3%B3rio"
+    #"https://wordwall.net/pt/resource/3327204/sistema-respirat%C3%B3rio",
+    #"https://wordwall.net/pt/resource/6663282/sistema-respirat%C3%B3rio"
+
+    # 18-09-2026 (Valeria 4 ano A)
+    "https://wordwall.net/pt/resource/58283470/fra%C3%A7%C3%B5es-equivalentes-4%C2%BA-ano",
+    "https://wordwall.net/pt/resource/21796051/fra%C3%A7%C3%A3o-4%C2%BA-ano",
+    "https://wordwall.net/resource/100202594/matem%C3%A1tica/fra%C3%A7%C3%B5es-equivalentes-4-ano",
+    "https://wordwall.net/pt/resource/101360367/fra%C3%A7%C3%B5es-equivalentes-4%C2%BA-ano",
+    "https://wordwall.net/pt/resource/35993201/fra%C3%A7%C3%A3o-equivalente-4%C2%BA-ano"
 )
 
 # Detectar navegador

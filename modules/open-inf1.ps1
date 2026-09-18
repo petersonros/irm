@@ -27,9 +27,10 @@ $urls = @(
     #"https://wordwall.net/pt/resource/3648364/soma",
     #"https://wordwall.net/pt/resource/36730359/fonemas/organizar-as-frases-fonema-sz"
 
-    # 17-09-2026 (Andreia primeiro ano C)
+    # 17-09-2026 (Cintia primeiro ano A)
     "https://wordwall.net/pt/resource/4081465/leitura",
     "https://wordwall.net/pt/resource/75023720/portuguesa/complete-as-frases",
+    "https://wordwall.net/pt/resource/3398369/pareamento-de-frases-imagens",
     "https://wordwall.net/pt/resource/19448684/completar-frases"
 )
 
