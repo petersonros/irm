@@ -34,8 +34,14 @@ $urls = @(
     #"https://wordwall.net/pt/resource/19448684/completar-frases"
 
     # 18-09-2026 (Andreia primeiro ano C)
-    "https://www.digipuzzle.net/minigames/flashmath/finderrors_texts_pt_mn.htm?language=portuguese&linkback=../../pt/jogoseducativos/palavras/index.htm",
-    "https://www.digipuzzle.net/kids/animalcartoons/puzzles/photosearch.htm?language=portuguese&linkback=../../../pt/jogoseducativos/jogos/index.htm"
+    #"https://www.digipuzzle.net/minigames/flashmath/finderrors_texts_pt_mn.htm?language=portuguese&linkback=../../pt/jogoseducativos/palavras/index.htm",
+    #"https://www.digipuzzle.net/kids/animalcartoons/puzzles/photosearch.htm?language=portuguese&linkback=../../../pt/jogoseducativos/jogos/index.htm"
+
+    # 22-09-2026 (Soraia primeiro ano B)
+    "https://wordwall.net/pt/resource/8243546/quiz-alfabetiza%C3%A7%C3%A3o-1-ano",
+    "https://wordwall.net/pt/resource/23237180/jogo-de-rimar",
+    "https://wordwall.net/pt/resource/14239519/interpreta%C3%A7%C3%A3o-de-tabelas-e-gr%C3%A1ficos",
+    "https://wordwall.net/pt/resource/1052057/completa-as-frases"
 )
 
 # Detectar navegador
