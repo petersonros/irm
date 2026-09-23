@@ -9,14 +9,10 @@ $urls = @(
     #    "https://wordwall.net/pt/resource/14753080/vamos-escrever-o-seu-nome",
     #    "https://wordwall.net/pt/resource/16067454/o-alfabeto",
     #    "https://wordwall.net/pt/resource/24159303/dessembaralhando-o-alfabeto"
-    #    "https://wordwall.net/pt/resource/3555591/atividade-de-n%C3%BAmeros-e-quantidades",
-    #    "https://www.wordwall.net/pt/resource/17969963/alfabetiza%C3%A7%C3%A3o",
-    #    "https://wordwall.net/pt/resource/21805313/n%C3%BAmeros-letras-e-objetos",
-    #    "https://wordwall.net/pt/resource/4144752/reconhecimento-de-n%C3%BAmeros-1-ao-30",
-    #    "https://wordwall.net/pt/resource/6341502/s%C3%ADlabas"
     #    "https://wordwall.net/pt/resource/12268466/par-e-%C3%ADmpar",
     #    "https://wordwall.net/pt/resource/13456792/jogo-da-mem%C3%B3ria-o-som-das-consoantes",
     #    "https://wordwall.net/pt/resource/21662290/matem%C3%A1tica/n%C3%BAmeros-e-quantidades-at%C3%A9-20"
+
     # 08-09-2026
     # "https://wordwall.net/pt/resource/3958938/acerte-o-nome-das-figuras-vogais",
     # "https://wordwall.net/pt/resource/13814773/lista-de-itens-para-o-anivers%C3%A1rio-do-senhor-alfabeto",
@@ -30,10 +26,15 @@ $urls = @(
     # "https://wordwall.net/pt/resource/6341502/s%C3%ADlabas"
 
     # 22-09-2026 (Tanea Infantil 5B)
-    "https://www.wordwall.net/pt/resource/17969963/alfabetiza%C3%A7%C3%A3o",
-    "https://wordwall.net/pt/resource/3555591/atividade-de-n%C3%BAmeros-e-quantidades",
+    # "https://www.wordwall.net/pt/resource/17969963/alfabetiza%C3%A7%C3%A3o",
+    # "https://wordwall.net/pt/resource/3555591/atividade-de-n%C3%BAmeros-e-quantidades",
+    # "https://wordwall.net/pt/resource/13814773/lista-de-itens-para-o-anivers%C3%A1rio-do-senhor-alfabeto",
+    # "https://wordwall.net/pt/resource/3958938/acerte-o-nome-das-figuras-vogais"
+
+    # 23-09-2026 (Patricia Infantil 5A)
+    "https://wordwall.net/pt/resource/3958938/acerte-o-nome-das-figuras-vogais",
     "https://wordwall.net/pt/resource/13814773/lista-de-itens-para-o-anivers%C3%A1rio-do-senhor-alfabeto",
-    "https://wordwall.net/pt/resource/3958938/acerte-o-nome-das-figuras-vogais"
+    "https://wordwall.net/pt/resource/3555591/atividade-de-n%C3%BAmeros-e-quantidades"
 )
 
 # Detectar navegador
