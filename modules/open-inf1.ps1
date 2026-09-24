@@ -38,10 +38,14 @@ $urls = @(
     #"https://www.digipuzzle.net/kids/animalcartoons/puzzles/photosearch.htm?language=portuguese&linkback=../../../pt/jogoseducativos/jogos/index.htm"
 
     # 22-09-2026 (Soraia primeiro ano B)
-    "https://wordwall.net/pt/resource/8243546/quiz-alfabetiza%C3%A7%C3%A3o-1-ano",
-    "https://wordwall.net/pt/resource/23237180/jogo-de-rimar",
-    "https://wordwall.net/pt/resource/14239519/interpreta%C3%A7%C3%A3o-de-tabelas-e-gr%C3%A1ficos",
-    "https://wordwall.net/pt/resource/1052057/completa-as-frases"
+    #"https://wordwall.net/pt/resource/8243546/quiz-alfabetiza%C3%A7%C3%A3o-1-ano",
+    #"https://wordwall.net/pt/resource/23237180/jogo-de-rimar",
+    #"https://wordwall.net/pt/resource/14239519/interpreta%C3%A7%C3%A3o-de-tabelas-e-gr%C3%A1ficos",
+    #"https://wordwall.net/pt/resource/1052057/completa-as-frases"
+
+    # 24-09-2026 (Cintia primeiro ano A)
+    "https://wordwall.net/pt/resource/21978075/d%C3%BAzia-e-meia-d%C3%BAzia",
+    "https://wordwall.net/pt/resource/26444444/lh-nh-ch-2%C2%BA-ano"
 )
 
 # Detectar navegador
