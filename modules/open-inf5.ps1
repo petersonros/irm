@@ -26,15 +26,15 @@ $urls = @(
     # "https://wordwall.net/pt/resource/6341502/s%C3%ADlabas"
 
     # 22-09-2026 (Tanea Infantil 5B)
-    # "https://www.wordwall.net/pt/resource/17969963/alfabetiza%C3%A7%C3%A3o",
-    # "https://wordwall.net/pt/resource/3555591/atividade-de-n%C3%BAmeros-e-quantidades",
-    # "https://wordwall.net/pt/resource/13814773/lista-de-itens-para-o-anivers%C3%A1rio-do-senhor-alfabeto",
-    # "https://wordwall.net/pt/resource/3958938/acerte-o-nome-das-figuras-vogais"
+     "https://www.wordwall.net/pt/resource/17969963/alfabetiza%C3%A7%C3%A3o",
+     "https://wordwall.net/pt/resource/3555591/atividade-de-n%C3%BAmeros-e-quantidades",
+     "https://wordwall.net/pt/resource/13814773/lista-de-itens-para-o-anivers%C3%A1rio-do-senhor-alfabeto",
+     "https://wordwall.net/pt/resource/3958938/acerte-o-nome-das-figuras-vogais"
 
     # 23-09-2026 (Patricia Infantil 5A)
-    "https://wordwall.net/pt/resource/3958938/acerte-o-nome-das-figuras-vogais",
-    "https://wordwall.net/pt/resource/13814773/lista-de-itens-para-o-anivers%C3%A1rio-do-senhor-alfabeto",
-    "https://wordwall.net/pt/resource/3555591/atividade-de-n%C3%BAmeros-e-quantidades"
+    #"https://wordwall.net/pt/resource/3958938/acerte-o-nome-das-figuras-vogais",
+    #"https://wordwall.net/pt/resource/13814773/lista-de-itens-para-o-anivers%C3%A1rio-do-senhor-alfabeto",
+    #"https://wordwall.net/pt/resource/3555591/atividade-de-n%C3%BAmeros-e-quantidades"
 )
 
 # Detectar navegador
