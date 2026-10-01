@@ -39,6 +39,7 @@ elseif (Get-Command msedge.exe -ErrorAction SilentlyContinue) {
 else {
     foreach ($url in $urls) {
         Start-Process $url
+        Start-Sleep -Milliseconds 800
     }
     Write-Host "✅ Ambiente pronto!"
     exit
@@ -51,7 +52,12 @@ if (Get-Process -Name $processName -ErrorAction SilentlyContinue) {
     Start-Sleep -Seconds 1
 }
 
-# Abrir todas as URLs na mesma janela
-Start-Process $browser ("--new-window " + ($urls -join " "))
+# Abrir as URLs na mesma janela, uma por vez, para manter a ordem da lista
+Start-Process $browser ("--new-window `"" + $urls[0] + "`"")
+Start-Sleep -Seconds 2
+foreach ($url in ($urls | Select-Object -Skip 1)) {
+    Start-Process $browser ("`"" + $url + "`"")
+    Start-Sleep -Milliseconds 800
+}
 
 Write-Host "✅ Ambiente pronto!"

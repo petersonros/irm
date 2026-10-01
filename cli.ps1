@@ -14,7 +14,7 @@ function Show-Menu {
     Write-Host "  [2]" -ForegroundColor Cyan -NoNewline; Write-Host " Abrir URLs — 2º ano"
     Write-Host "  [3]" -ForegroundColor Cyan -NoNewline; Write-Host " Abrir URLs — 3º ano"
     Write-Host ""
-    Write-Host "  [6]" -ForegroundColor Green -NoNewline; Write-Host " Abrir URLs da aula (genérico)"
+    Write-Host "  [6]" -ForegroundColor Green -NoNewline; Write-Host " Abrir URLs da aula"
     Write-Host ""
     Write-Host "  [0]" -ForegroundColor Red -NoNewline; Write-Host " Limpar navegadores"
     Write-Host "  [7]" -ForegroundColor Magenta -NoNewline; Write-Host " Configurar máquina"
