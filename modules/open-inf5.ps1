@@ -26,11 +26,11 @@ $urls = @(
     # "https://wordwall.net/pt/resource/6341502/s%C3%ADlabas"
 
     # 22-09-2026 (Tanea Infantil 5B)
-     "https://wordwall.net/pt/resource/4980262/letras-e-n%C3%BAmeros",
-     "https://www.wordwall.net/pt/resource/17969963/alfabetiza%C3%A7%C3%A3o",
-     "https://wordwall.net/pt/resource/3555591/atividade-de-n%C3%BAmeros-e-quantidades",
-     "https://wordwall.net/pt/resource/13814773/lista-de-itens-para-o-anivers%C3%A1rio-do-senhor-alfabeto",
-     "https://wordwall.net/pt/resource/3958938/acerte-o-nome-das-figuras-vogais"
+    # "https://wordwall.net/pt/resource/4980262/letras-e-n%C3%BAmeros",
+    # "https://www.wordwall.net/pt/resource/17969963/alfabetiza%C3%A7%C3%A3o",
+    # "https://wordwall.net/pt/resource/3555591/atividade-de-n%C3%BAmeros-e-quantidades",
+    # "https://wordwall.net/pt/resource/13814773/lista-de-itens-para-o-anivers%C3%A1rio-do-senhor-alfabeto",
+    # "https://wordwall.net/pt/resource/3958938/acerte-o-nome-das-figuras-vogais"
 
     # 23-09-2026 (Patricia Infantil 5A)
     #"https://wordwall.net/pt/resource/3958938/acerte-o-nome-das-figuras-vogais",
@@ -46,6 +46,12 @@ $urls = @(
     #https://wordwall.net/pt/resource/5375507/n%C3%BAmeros-de-1-a-10/jogo-da-mem%C3%B3ria-de-0-a-10
     #https://wordwall.net/pt/resource/19290429/l%C3%ADngua-portuguesa/sequ%C3%AAncia-do-b-esteira
     #https://wordwall.net/pt/resource/24213757/alfabetiza%C3%A7%C3%A3o/1%C2%BA-ano-vamos-somar
+
+    # 06-10-2026 (Tanea Infantil 5B)
+    "https://wordwall.net/pt/resource/27200428/l%C3%ADngua-portuguesa/desembaralhe-as-letras-animais",
+    "https://wordwall.net/pt/resource/38551133/animais-em-ingl%C3%AAs/animais-1ano",
+    "https://wordwall.net/pt/resource/17438307/atividades-1%C2%BA-ano-alfabetiza%C3%A7%C3%A3o",
+    "https://wordwall.net/pt/resource/12313686/percep%C3%A7%C3%A3o-visual"
 
 )
 
