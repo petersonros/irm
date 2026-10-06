@@ -46,6 +46,10 @@ $urls = @(
     #https://wordwall.net/pt/resource/5375507/n%C3%BAmeros-de-1-a-10/jogo-da-mem%C3%B3ria-de-0-a-10
     #https://wordwall.net/pt/resource/19290429/l%C3%ADngua-portuguesa/sequ%C3%AAncia-do-b-esteira
     #https://wordwall.net/pt/resource/24213757/alfabetiza%C3%A7%C3%A3o/1%C2%BA-ano-vamos-somar
+    #https://wordwall.net/pt/resource/18203503/portugu%C3%AAs-do-1%C2%BA-ao-5%C2%BA-ano/atividade-1-ano
+    #https://wordwall.net/pt/resource/57777162/l%C3%ADngua-portuguesa/alfabetiza%C3%A7%C3%A3o
+    #https://wordwall.net/pt/resource/4977748/alfabetiza%C3%A7%C3%A3o
+    #https://wordwall.net/pt/resource/4553388/alfabetiza%C3%A7%C3%A3o
 
     # 06-10-2026 (Tanea Infantil 5B)
     "https://wordwall.net/pt/resource/27200428/l%C3%ADngua-portuguesa/desembaralhe-as-letras-animais",
