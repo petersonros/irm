@@ -48,10 +48,16 @@ $urls = @(
     # "https://wordwall.net/pt/resource/26444444/lh-nh-ch-2%C2%BA-ano"
 
     # 01-10-2026 (Cintia primeiro ano A)
-    "https://wordwall.net/pt/resource/4474837/aee-leitura-e-compreens%C3%A3o-frases",
-    "https://wordwall.net/es/resource/8500928/portugu%C3%AAs-completar-frases",
-    "https://wordwall.net/pt/resource/16831120/leitura-de-frases-1ano",
-    "https://wordwall.net/pt/resource/15603114/frases-simples"
+    # "https://wordwall.net/pt/resource/4474837/aee-leitura-e-compreens%C3%A3o-frases",
+    # "https://wordwall.net/es/resource/8500928/portugu%C3%AAs-completar-frases",
+    # "https://wordwall.net/pt/resource/16831120/leitura-de-frases-1ano",
+    # "https://wordwall.net/pt/resource/15603114/frases-simples"
+
+    # 06-10-2026 (Soraia primeiro ano B)
+    "https://www.digipuzzle.net/digipuzzle/kids/puzzles/connectpieces_wordinword_pt.htm?language=portuguese&linkback=../../../pt/jogoseducativos/palavras/index.htm#google_vignette",
+    "https://www.digipuzzle.net/minigames/mathmemory/memory_wildanimals_pt.htm?language=portuguese&linkback=../../pt/jogoseducativos/palavras/index.htm",
+    "https://wordwall.net/pt/resource/74359025/ci%C3%AAncias/jogo-da-mem%C3%B3ria-animais-da-selva",
+    "https://wordwall.net/pt/resource/32011829/portuguese-language/palavras-simples-1ano"
 
 
 )
