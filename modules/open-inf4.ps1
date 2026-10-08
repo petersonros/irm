@@ -22,7 +22,9 @@ $urls = @(
     "https://www.digipuzzle.net/digipuzzle/autumn/puzzles/lines.htm?language=german&linkback=../../../de/lernspiele/herbst/index.htm",
     "https://www.digipuzzle.net/digipuzzle/halloween/puzzles/lines.htm?language=german&linkback=../../../de/lernspiele/halloween/index.htm",
     "https://www.digipuzzle.net/kids/cartoons/puzzles/lines_21_till_40.htm?language=german&linkback=../../../de/lernspiele/mathe-zahlen/index.htm",
-    "https://www.digipuzzle.net/minigames/decorate/potatoheads/potatoheads.htm?language=english&linkback=../../../education/games/index.htm"
+    "https://www.digipuzzle.net/minigames/decorate/mathgirl/mathgirl_multiplications.htm?language=portuguese&linkback=../../../pt/jogoseducativos/matematica-multiplicacao/index.htm",
+    "https://www.digipuzzle.net/digipuzzle/halloween/puzzles/tictactoe.htm?language=german&linkback=../../../de/lernspiele/halloween/index.htm"
+    # "https://www.digipuzzle.net/minigames/decorate/potatoheads/potatoheads.htm?language=english&linkback=../../../education/games/index.htm"
 
 )
 
