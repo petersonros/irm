@@ -54,11 +54,14 @@ $urls = @(
     # "https://wordwall.net/pt/resource/15603114/frases-simples"
 
     # 06-10-2026 (Soraia primeiro ano B)
-    "https://www.digipuzzle.net/digipuzzle/kids/puzzles/connectpieces_wordinword_pt.htm?language=portuguese&linkback=../../../pt/jogoseducativos/palavras/index.htm#google_vignette",
-    "https://www.digipuzzle.net/minigames/mathmemory/memory_wildanimals_pt.htm?language=portuguese&linkback=../../pt/jogoseducativos/palavras/index.htm",
-    "https://wordwall.net/pt/resource/74359025/ci%C3%AAncias/jogo-da-mem%C3%B3ria-animais-da-selva",
-    "https://wordwall.net/pt/resource/32011829/portuguese-language/palavras-simples-1ano"
+    # "https://www.digipuzzle.net/digipuzzle/kids/puzzles/connectpieces_wordinword_pt.htm?language=portuguese&linkback=../../../pt/jogoseducativos/palavras/index.htm#google_vignette",
+    # "https://www.digipuzzle.net/minigames/mathmemory/memory_wildanimals_pt.htm?language=portuguese&linkback=../../pt/jogoseducativos/palavras/index.htm",
+    # "https://wordwall.net/pt/resource/74359025/ci%C3%AAncias/jogo-da-mem%C3%B3ria-animais-da-selva",
+    # "https://wordwall.net/pt/resource/32011829/portuguese-language/palavras-simples-1ano"
 
+    # 08-10-2026 (Cintia primeiro ano A)
+    "https://wordwall.net/pt/resource/13653718/n%C3%BAmeros-por-extenso",
+    "https://wordwall.net/pt/resource/3866318/n%C3%BAmeros-por-extenso"
 
 )
 
