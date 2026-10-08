@@ -61,6 +61,7 @@ $urls = @(
 
     # 08-10-2026 (Cintia primeiro ano A)
     "https://wordwall.net/pt/resource/13653718/n%C3%BAmeros-por-extenso",
+    "https://wordwall.net/pt/resource/36375146/matem%C3%A1tica/n%C3%BAmeros-por-extenso",
     "https://wordwall.net/pt/resource/3866318/n%C3%BAmeros-por-extenso"
 
 )
