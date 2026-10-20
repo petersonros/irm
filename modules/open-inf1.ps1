@@ -65,11 +65,15 @@ $urls = @(
     # "https://wordwall.net/pt/resource/3866318/n%C3%BAmeros-por-extenso"
 
     # 06-10-2026 (Andreia primeiro ano C)
-    "https://www.digipuzzle.net/digipuzzle/kids/puzzles/connectpieces_wordinword_pt.htm?language=portuguese&linkback=../../../pt/jogoseducativos/palavras/index.htm#google_vignette",
-    "https://www.digipuzzle.net/minigames/mathmemory/memory_wildanimals_pt.htm?language=portuguese&linkback=../../pt/jogoseducativos/palavras/index.htm",
-    "https://wordwall.net/pt/resource/74359025/ci%C3%AAncias/jogo-da-mem%C3%B3ria-animais-da-selva",
-    "https://wordwall.net/pt/resource/32011829/portuguese-language/palavras-simples-1ano"
+    # "https://www.digipuzzle.net/digipuzzle/kids/puzzles/connectpieces_wordinword_pt.htm?language=portuguese&linkback=../../../pt/jogoseducativos/palavras/index.# htm#google_vignette",
+    # "https://www.digipuzzle.net/minigames/mathmemory/memory_wildanimals_pt.htm?language=portuguese&linkback=../../pt/jogoseducativos/palavras/index.htm",# 
+    # "https://wordwall.net/pt/resource/74359025/ci%C3%AAncias/jogo-da-mem%C3%B3ria-animais-da-selva",# 
+    # "https://wordwall.net/pt/resource/32011829/portuguese-language/palavras-simples-1ano"
 
+    # 20-10-2026 (Soraia primeiro ano B)
+    "https://wordwall.net/pt/resource/11938969/trem-da-soma",
+    "https://wordwall.net/pt/resource/35337918/fonoaudiologia-educacional/o-pato-e-o-sapo",
+    "https://wordwall.net/pt/resource/34981773/alfabetiza%C3%A7%C3%A3o/surda-sonora"
 )
 
 # Detectar navegador
