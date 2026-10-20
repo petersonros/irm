@@ -51,6 +51,15 @@ $urls = @(
     #https://wordwall.net/pt/resource/4977748/alfabetiza%C3%A7%C3%A3o
     #https://wordwall.net/pt/resource/4553388/alfabetiza%C3%A7%C3%A3o
 
+    # lista nova da Tanea Infantil 5B 20-10-2026
+    # "https://wordwall.net/pt/resource/88269528/sequ%C3%AAncia-num%C3%A9rica-at%C3%A9-50",
+    # "https://wordwall.net/pt/resource/5240422/s%C3%ADlabas-simples",
+    # "https://wordwall.net/pt/resource/4293574/s%C3%ADlabas-simples",
+    # "https://wordwall.net/pt/resource/14601065/silabas-simples",
+    # "https://wordwall.net/pt/resource/25169898/organize-o-alfabeto",
+    # "https://wordwall.net/pt/resource/3748150/formas",
+    # "https://wordwall.net/pt/resource/15889447/n%C3%BAmeros-de-0-at%C3%A9-30"
+
     # 06-10-2026 (Tanea Infantil 5B)
     # "https://wordwall.net/pt/resource/27200428/l%C3%ADngua-portuguesa/desembaralhe-as-letras-animais",
     # "https://wordwall.net/pt/resource/38551133/animais-em-ingl%C3%AAs/animais-1ano",
