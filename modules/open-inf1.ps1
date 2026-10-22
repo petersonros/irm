@@ -71,9 +71,14 @@ $urls = @(
     # "https://wordwall.net/pt/resource/32011829/portuguese-language/palavras-simples-1ano"
 
     # 20-10-2026 (Soraia primeiro ano B)
-    "https://wordwall.net/pt/resource/11938969/trem-da-soma",
-    "https://wordwall.net/pt/resource/35337918/fonoaudiologia-educacional/o-pato-e-o-sapo",
-    "https://wordwall.net/pt/resource/34981773/alfabetiza%C3%A7%C3%A3o/surda-sonora"
+    # "https://wordwall.net/pt/resource/11938969/trem-da-soma",
+    # "https://wordwall.net/pt/resource/35337918/fonoaudiologia-educacional/o-pato-e-o-sapo",
+    # "https://wordwall.net/pt/resource/34981773/alfabetiza%C3%A7%C3%A3o/surda-sonora"
+
+    # 22-10-2026 (Cintia primeiro ano A)
+    "https://wordwall.net/pt/resource/17744387/ortografias-brcrdrtrgrdr",
+    "https://wordwall.net/pt/resource/23237180/jogo-de-rimar",
+    "https://wordwall.net/pt/resource/32502986/portugu%C3%AAs-leitura-de-palavras-ii"
 )
 
 # Detectar navegador
