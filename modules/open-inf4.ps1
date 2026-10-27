@@ -17,14 +17,14 @@ $urls = @(
     "https://wordwall.net/pt/resource/17128941/jogo-da-mem%C3%B3ria-dinossauro",
     "https://www.digipuzzle.net/minigames/draw/mysterypictures_alphabet.htm?language=portuguese&linkback=../../pt/jogoseducativos/alfabeto/index.htm#google_vignette",
     "https://www.digipuzzle.net/digipuzzle/animals/puzzles/puzzle_jigsaw.htm?language=english&linkback=../../../main/animals/index.htm#google_vignette",
-    "https://www.digipuzzle.net/digipuzzle/autumn/puzzles/lines.htm?language=english&linkback=../../../education/autumn/index.htm",
-    "https://www.digipuzzle.net/minigames/decorate/purplehorse/purplehorse.htm?language=english&linkback=../../../education/games/index.htm",
-    "https://www.digipuzzle.net/digipuzzle/autumn/puzzles/lines.htm?language=german&linkback=../../../de/lernspiele/herbst/index.htm",
-    "https://www.digipuzzle.net/digipuzzle/halloween/puzzles/lines.htm?language=german&linkback=../../../de/lernspiele/halloween/index.htm",
+    # "https://www.digipuzzle.net/digipuzzle/autumn/puzzles/lines.htm?language=english&linkback=../../../education/autumn/index.htm",
+    # "https://www.digipuzzle.net/minigames/decorate/purplehorse/purplehorse.htm?language=english&linkback=../../../education/games/index.htm",
+    # "https://www.digipuzzle.net/digipuzzle/autumn/puzzles/lines.htm?language=german&linkback=../../../de/lernspiele/herbst/index.htm",
+    # "https://www.digipuzzle.net/digipuzzle/halloween/puzzles/lines.htm?language=german&linkback=../../../de/lernspiele/halloween/index.htm",
     "https://www.digipuzzle.net/kids/cartoons/puzzles/lines_21_till_40.htm?language=german&linkback=../../../de/lernspiele/mathe-zahlen/index.htm",
     "https://www.digipuzzle.net/minigames/decorate/mathgirl/mathgirl_multiplications.htm?language=portuguese&linkback=../../../pt/jogoseducativos/matematica-multiplicacao/index.htm",
     "https://www.digipuzzle.net/digipuzzle/halloween/puzzles/tictactoe.htm?language=german&linkback=../../../de/lernspiele/halloween/index.htm"
-    # "https://www.digipuzzle.net/minigames/decorate/potatoheads/potatoheads.htm?language=english&linkback=../../../education/games/index.htm"
+    "https://www.digipuzzle.net/minigames/decorate/potatoheads/potatoheads.htm?language=english&linkback=../../../education/games/index.htm"
 
 )
 
