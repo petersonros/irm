@@ -76,7 +76,7 @@ $urls = @(
     # "https://wordwall.net/pt/resource/34981773/alfabetiza%C3%A7%C3%A3o/surda-sonora"
 
     # 22-10-2026 (Cintia primeiro ano A)
-    "https://wordwall.net/pt/resource/17744387/ortografias-brcrdrtrgrdr",
+    # "https://wordwall.net/pt/resource/17744387/ortografias-brcrdrtrgrdr",
     "https://wordwall.net/pt/resource/23237180/jogo-de-rimar",
     "https://wordwall.net/pt/resource/32502986/portugu%C3%AAs-leitura-de-palavras-ii"
 
@@ -85,7 +85,7 @@ $urls = @(
     "https://wordwall.net/pt/resource/5709592/vamos-fazer-contas"
 
     # 30-10-2026 Andreia primeiro ano C
-    "https://wordwall.net/pt/teacher/7548259",
+    # "https://wordwall.net/pt/teacher/7548259",
     "https://wordwall.net/pt/resource/17006917/jogos"
 )
 
