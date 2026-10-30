@@ -32,8 +32,8 @@ $urls = @(
     "https://wordwall.net/pt/resource/5554007/%C3%A1rea-e-per%C3%ADmetro",
     "https://wordwall.net/pt/resource/14049177/%C3%A1rea-e-per%C3%ADmetro-4%C2%BA-ano",
     "https://wordwall.net/pt/resource/16134834/per%C3%ADmetro-%C3%A1rea-e-volume",
-    "https://wordwall.net/pt/resource/24494762/%C3%A1rea-e-per%C3%ADmetro",
-    "https://phet.colorado.edu/sims/html/area-model-introduction/latest/area-model-introduction_all.html?locale=pt_BR"
+    "https://wordwall.net/pt/resource/24494762/%C3%A1rea-e-per%C3%ADmetro"
+    # "https://phet.colorado.edu/sims/html/area-model-introduction/latest/area-model-introduction_all.html?locale=pt_BR"
     
 )
 
