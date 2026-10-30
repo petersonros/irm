@@ -25,6 +25,13 @@ $urls = @(
     # 01-10-2026 (Mariana 5 ano B)
     "https://wordwall.net/pt/resource/12131645/5ano-sistema-cardiovascular",
     "https://wordwall.net/pt/resource/113054138/sistema-cardiovascular"
+
+    # 30-10-2026 (Valeria 4 ano A)
+    "https://www.escolagames.com.br/jogos/area-na-malha",
+    "https://wordwall.net/pt/resource/13375400/%C3%A1rea-e-per%C3%ADmetro-2",
+    "https://wordwall.net/pt/resource/5554007/%C3%A1rea-e-per%C3%ADmetro",
+    "https://wordwall.net/pt/resource/14049177/%C3%A1rea-e-per%C3%ADmetro-4%C2%BA-ano"
+    
 )
 
 # Detectar navegador
