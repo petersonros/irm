@@ -28,15 +28,26 @@ $urls = @(
 
     # 30-10-2026 (Valeria 4 ano A)
     # "https://www.escolagames.com.br/jogos/area-na-malha",
-    "https://wordwall.net/pt/resource/13375400/%C3%A1rea-e-per%C3%ADmetro-2",
-    "https://wordwall.net/pt/resource/5554007/%C3%A1rea-e-per%C3%ADmetro",
-    "https://wordwall.net/pt/resource/14049177/%C3%A1rea-e-per%C3%ADmetro-4%C2%BA-ano",
-    "https://wordwall.net/pt/resource/16134834/per%C3%ADmetro-%C3%A1rea-e-volume",
-    "https://wordwall.net/pt/resource/24494762/%C3%A1rea-e-per%C3%ADmetro"
+    # "https://wordwall.net/pt/resource/13375400/%C3%A1rea-e-per%C3%ADmetro-2",
+    # "https://wordwall.net/pt/resource/5554007/%C3%A1rea-e-per%C3%ADmetro",
+    # "https://wordwall.net/pt/resource/14049177/%C3%A1rea-e-per%C3%ADmetro-4%C2%BA-ano",
+    # "https://wordwall.net/pt/resource/16134834/per%C3%ADmetro-%C3%A1rea-e-volume",
+    # "https://wordwall.net/pt/resource/24494762/%C3%A1rea-e-per%C3%ADmetro"
     # "https://phet.colorado.edu/sims/html/area-model-introduction/latest/area-model-introduction_all.html?locale=pt_BR"
 
     # 2026-11-03 Viviam
-    "https://forms.gle/ruQjDHdSsyxN72cN7"
+    # Pesquisa de Satisfação — 6º ano — Manhã
+    "https://forms.gle/ruQjDHdSsyxN72cN7",
+    # Pesquisa de Satisfação — 6º ano — Tarde
+    "https://forms.gle/SCCteGorax3ANu8w7",
+    # Pesquisa de Satisfação — 7º ano — Manhã
+    "https://forms.gle/t8MmqwWKxwUp6uq9A",
+    # Pesquisa de Satisfação — 7º ano — Tarde
+    "https://forms.gle/Cd9tnQJztPY3cPKr8",
+    # Pesquisa de Satisfação — 8º ano — Manhã
+    "https://forms.gle/P3PPTyfhvp3ZMG5Z9",
+    # Pesquisa de Satisfação — 8º ano — Tarde
+    "https://forms.gle/KYm6AZHnvGmoVkR58"
     
 )
 
