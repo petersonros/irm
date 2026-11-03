@@ -110,7 +110,7 @@ function Open-AllUrls {
 function Show-OpenMenu {
     Clear-Host
     Write-Host ""
-    Write-Host "  ==== URLs DA AULA ====" -ForegroundColor Cyan
+    Write-Host "  ==== URLs da Pesquisa ====" -ForegroundColor Cyan
     Write-Host ""
     for ($i = 0; $i -lt $links.Count; $i++) {
         $mark  = if ($links[$i].Opened) { "✓" } else { " " }
