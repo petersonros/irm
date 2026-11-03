@@ -34,6 +34,9 @@ $urls = @(
     "https://wordwall.net/pt/resource/16134834/per%C3%ADmetro-%C3%A1rea-e-volume",
     "https://wordwall.net/pt/resource/24494762/%C3%A1rea-e-per%C3%ADmetro"
     # "https://phet.colorado.edu/sims/html/area-model-introduction/latest/area-model-introduction_all.html?locale=pt_BR"
+
+    # 2026-11-03 Viviam
+    "https://forms.gle/ruQjDHdSsyxN72cN7"
     
 )
 
