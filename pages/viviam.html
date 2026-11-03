@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pesquisa de Satisfação</title>
+<style>
+  :root {
+    --bg: #f4f6fb;
+    --card: #ffffff;
+    --text: #1d2433;
+    --muted: #6b7489;
+    --border: #dfe3ec;
+    --accent: #2f6fed;
+    --accent-text: #ffffff;
+    --done: #1f9d55;
+    --done-bg: #e8f6ee;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #12151c;
+      --card: #1b2029;
+      --text: #e6e9ef;
+      --muted: #9aa3b5;
+      --border: #2c3340;
+      --accent: #5b8cff;
+      --accent-text: #0d1120;
+      --done: #4ccf86;
+      --done-bg: #183225;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.4;
+  }
+  main { max-width: 640px; margin: 0 auto; padding: 32px 16px 48px; }
+  h1 { font-size: 1.6rem; margin: 0 0 4px; }
+  .sub { color: var(--muted); margin: 0 0 24px; }
+  .toolbar { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+  button {
+    font: inherit;
+    border-radius: 10px;
+    padding: 10px 16px;
+    cursor: pointer;
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--text);
+  }
+  button.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-text); font-weight: 600; }
+  button:disabled { opacity: .5; cursor: default; }
+  h2 { font-size: .85rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 24px 0 8px; }
+  ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+  a.link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--card);
+    color: var(--text);
+    text-decoration: none;
+    font-size: 1.05rem;
+  }
+  a.link:hover { border-color: var(--accent); }
+  .num {
+    flex: none;
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    display: grid; place-items: center;
+    background: var(--accent); color: var(--accent-text);
+    font-weight: 700;
+  }
+  .label { flex: 1; }
+  .state { color: var(--muted); font-size: .85rem; }
+  a.link.opened { background: var(--done-bg); border-color: var(--done); }
+  a.link.opened .num { background: var(--done); }
+  a.link.opened .state { color: var(--done); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Pesquisa de Satisfação</h1>
+  <p class="sub">Clique em um link para abrir em uma nova aba</p>
+
+  <div class="toolbar">
+    <button class="primary" id="next">Abrir o próximo</button>
+    <button id="reset">Limpar marcações</button>
+  </div>
+
+  <div id="list"></div>
+</main>
+
+<script>
+  // Mesmos links do submenu da tecla 6 (modules/open.ps1)
+  const LINKS = [
+    { grupo: "6º ano", turno: "Manhã", url: "https://forms.gle/ruQjDHdSsyxN72cN7" },
+    { grupo: "6º ano", turno: "Tarde", url: "https://forms.gle/SCCteGorax3ANu8w7" },
+    { grupo: "7º ano", turno: "Manhã", url: "https://forms.gle/t8MmqwWKxwUp6uq9A" },
+    { grupo: "7º ano", turno: "Tarde", url: "https://forms.gle/Cd9tnQJztPY3cPKr8" },
+    { grupo: "8º ano", turno: "Manhã", url: "https://forms.gle/P3PPTyfhvp3ZMG5Z9" },
+    { grupo: "8º ano", turno: "Tarde", url: "https://forms.gle/KYm6AZHnvGmoVkR58" },
+  ];
+
+  const KEY = "viviam-abertos";
+  let opened = new Set();
+  try { opened = new Set(JSON.parse(localStorage.getItem(KEY)) || []); } catch (e) {}
+
+  function save() {
+    try { localStorage.setItem(KEY, JSON.stringify([...opened])); } catch (e) {}
+  }
+
+  function markOpened(url) {
+    opened.add(url);
+    save();
+    render();
+  }
+
+  function render() {
+    const list = document.getElementById("list");
+    list.innerHTML = "";
+    let currentGroup = null, ul = null;
+
+    LINKS.forEach((link, i) => {
+      if (link.grupo !== currentGroup) {
+        currentGroup = link.grupo;
+        const h2 = document.createElement("h2");
+        h2.textContent = currentGroup;
+        ul = document.createElement("ul");
+        list.append(h2, ul);
+      }
+      const isOpen = opened.has(link.url);
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      a.className = "link" + (isOpen ? " opened" : "");
+      a.href = link.url;
+      a.target = "_blank";
+      a.rel = "noopener";
+      a.innerHTML =
+        `<span class="num">${isOpen ? "✓" : i + 1}</span>` +
+        `<span class="label">${link.grupo} — ${link.turno}</span>` +
+        `<span class="state">${isOpen ? "aberto" : "abrir ↗"}</span>`;
+      a.addEventListener("click", () => markOpened(link.url));
+      li.append(a);
+      ul.append(li);
+    });
+
+    document.getElementById("next").disabled = LINKS.every(l => opened.has(l.url));
+  }
+
+  document.getElementById("next").addEventListener("click", () => {
+    const next = LINKS.find(l => !opened.has(l.url));
+    if (!next) return;
+    window.open(next.url, "_blank", "noopener");
+    markOpened(next.url);
+  });
+
+  document.getElementById("reset").addEventListener("click", () => {
+    opened.clear();
+    save();
+    render();
+  });
+
+  render();
+</script>
+</body>
+</html>
