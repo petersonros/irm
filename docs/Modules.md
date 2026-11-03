@@ -75,12 +75,17 @@ irm https://raw.githubusercontent.com/petersonros/irm/main/modules/clean.ps1 | i
 
 ## modules/open.ps1
 
-**Papel:** Abre o Chrome com um conjunto de URLs em abas separadas na mesma janela.
+**Papel:** Mostra um submenu com as URLs da aula para abri-las uma a uma ou todas de uma vez.
+
+**Submenu:**
+- `[1..N]` abre aquele link específico em uma nova aba (sem fechar o navegador)
+- `[Enter]` abre o próximo link ainda não aberto (links abertos ficam marcados com ✓)
+- `[T]` abre todos de uma vez (comportamento antigo: encerra o navegador e abre tudo em uma janela nova, em ordem)
+- `[V]` volta ao menu principal
 
 **Comportamento:**
 - Detecta Chrome → Edge → navegador padrão do sistema, nessa ordem
-- Se o navegador já estiver aberto, encerra o processo antes de abrir (garante `--new-window` limpo)
-- Abre todas as URLs em uma única janela com `--new-window url1 url2 ...`
+- Cada item da lista pode ser só a URL ou `"Rótulo | URL"` — o rótulo é o que aparece no submenu
 - URLs fixas no código-fonte (ver roadmap para a versão dinâmica via API)
 
 **URLs configuradas atualmente:**

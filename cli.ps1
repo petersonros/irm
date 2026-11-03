@@ -34,7 +34,7 @@ function Show-Help {
     Write-Host ""
     Write-Host "Comandos disponíveis:" -ForegroundColor Yellow
     Write-Host "  clean    Fecha Chrome/Edge e remove histórico, cookies, cache, senhas e autofill"
-    Write-Host "  open     Abre as URLs genéricas da aula no Chrome (ou Edge) em uma janela nova"
+    Write-Host "  open     Submenu com as URLs da aula: abre uma a uma ou todas de uma vez"
     Write-Host "  open-i1  Abre as URLs do Infantil 1"
     Write-Host "  open-i2  Abre as URLs do Infantil 2"
     Write-Host "  open-i3  Abre as URLs do Infantil 3"
