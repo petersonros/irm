@@ -77,16 +77,20 @@ $urls = @(
 
     # 22-10-2026 (Cintia primeiro ano A)
     # "https://wordwall.net/pt/resource/17744387/ortografias-brcrdrtrgrdr",
-    "https://wordwall.net/pt/resource/23237180/jogo-de-rimar",
-    "https://wordwall.net/pt/resource/32502986/portugu%C3%AAs-leitura-de-palavras-ii"
+    # "https://wordwall.net/pt/resource/23237180/jogo-de-rimar",
+    # "https://wordwall.net/pt/resource/32502986/portugu%C3%AAs-leitura-de-palavras-ii"
 
     # 29-10-2026 (Cintia primeiro ano A)
-    "https://wordwall.net/pt/resource/12028737/associa-as-frases-ao-desenho",
-    "https://wordwall.net/pt/resource/5709592/vamos-fazer-contas"
+    # "https://wordwall.net/pt/resource/12028737/associa-as-frases-ao-desenho",
+    # "https://wordwall.net/pt/resource/5709592/vamos-fazer-contas"
 
     # 30-10-2026 Andreia primeiro ano C
     # "https://wordwall.net/pt/teacher/7548259",
-    "https://wordwall.net/pt/resource/17006917/jogos"
+    # "https://wordwall.net/pt/resource/17006917/jogos"
+
+    # 05-11-2026 (Cintia primeiro ano A)
+    "https://wordwall.net/pt/resource/12028737/associa-as-frases-ao-desenho",
+    "https://wordwall.net/pt/resource/5709592/vamos-fazer-contas"
 )
 
 # Detectar navegador
