@@ -89,8 +89,12 @@ $urls = @(
     # "https://wordwall.net/pt/resource/17006917/jogos"
 
     # 05-11-2026 (Cintia primeiro ano A)
-    "https://wordwall.net/pt/resource/12028737/associa-as-frases-ao-desenho",
-    "https://wordwall.net/pt/resource/5709592/vamos-fazer-contas"
+    # "https://wordwall.net/pt/resource/12028737/associa-as-frases-ao-desenho",
+    # "https://wordwall.net/pt/resource/5709592/vamos-fazer-contas"
+
+    # 10-11-2026 (Soraia primeiro ano B)
+    "https://www.digipuzzle.net/animals/collection/puzzles/clutter_images_texts_pt.htm?language=portuguese&linkback=../../../pt/jogoseducativos/palavras/index.htm",
+    "https://www.digipuzzle.net/animals/collection/puzzles/wordquiz_shadows_pt.htm?language=portuguese&linkback=../../../pt/jogoseducativos/palavras/index.htm"
 )
 
 # Detectar navegador
