@@ -33,16 +33,16 @@ $urls = @(
     # "https://wordwall.net/pt/resource/3958938/acerte-o-nome-das-figuras-vogais"
 
     # Aula 23-09-2026 (Patricia Infantil 5A)
-    #"https://wordwall.net/pt/resource/3958938/acerte-o-nome-das-figuras-vogais",
-    #"https://wordwall.net/pt/resource/13814773/lista-de-itens-para-o-anivers%C3%A1rio-do-senhor-alfabeto",
-    #"https://wordwall.net/pt/resource/3555591/atividade-de-n%C3%BAmeros-e-quantidades"
+    # "https://wordwall.net/pt/resource/3958938/acerte-o-nome-das-figuras-vogais",
+    # "https://wordwall.net/pt/resource/13814773/lista-de-itens-para-o-anivers%C3%A1rio-do-senhor-alfabeto",
+    # "https://wordwall.net/pt/resource/3555591/atividade-de-n%C3%BAmeros-e-quantidades"
  
     # lista nova da Tanea Infantil 5B 29-09-2026
-    #https://wordwall.net/pt-br/community/percep%C3%A7%C3%A3o-visual
-    #https://wordwall.net/pt/resource/18203503/portugu%C3%AAs-do-1%C2%BA-ao-5%C2%BA-ano/atividade-1-ano
-    #https://wordwall.net/pt/resource/57777162/l%C3%ADngua-portuguesa/alfabetiza%C3%A7%C3%A3o
-    #https://wordwall.net/pt/resource/4977748/alfabetiza%C3%A7%C3%A3o
-    #https://wordwall.net/pt/resource/4553388/alfabetiza%C3%A7%C3%A3o
+    # https://wordwall.net/pt-br/community/percep%C3%A7%C3%A3o-visual
+    # https://wordwall.net/pt/resource/18203503/portugu%C3%AAs-do-1%C2%BA-ao-5%C2%BA-ano/atividade-1-ano
+    # https://wordwall.net/pt/resource/57777162/l%C3%ADngua-portuguesa/alfabetiza%C3%A7%C3%A3o
+    # https://wordwall.net/pt/resource/4977748/alfabetiza%C3%A7%C3%A3o
+    # https://wordwall.net/pt/resource/4553388/alfabetiza%C3%A7%C3%A3o
 
     # lista da Tanea Infantil 5B 20-10-2026
     # "https://wordwall.net/pt/resource/88269528/sequ%C3%AAncia-num%C3%A9rica-at%C3%A9-50",
@@ -54,9 +54,9 @@ $urls = @(
     # "https://wordwall.net/pt/resource/15889447/n%C3%BAmeros-de-0-at%C3%A9-30"
 
     # lista da Tanea Infantil 5B 10-11-2026
-    "https://wordwall.net/pt/resource/30094640/matem%C3%A1tica/jogo-das-somas-dos-dedinhos",
-    "https://wordwall.net/pt/resource/4457116/jogo-de-subtra%C3%A7%C3%A3o",
-    "https://wordwall.net/pt/resource/15888345/vamos-brincar-de-formar-palavras"
+    # "https://wordwall.net/pt/resource/30094640/matem%C3%A1tica/jogo-das-somas-dos-dedinhos",
+    # "https://wordwall.net/pt/resource/4457116/jogo-de-subtra%C3%A7%C3%A3o",
+    # "https://wordwall.net/pt/resource/15888345/vamos-brincar-de-formar-palavras"
 
     # Aula 06-10-2026 (Tanea Infantil 5B)
     # "https://wordwall.net/pt/resource/27200428/l%C3%ADngua-portuguesa/desembaralhe-as-letras-animais",
