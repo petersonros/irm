@@ -93,8 +93,12 @@ $urls = @(
     # "https://wordwall.net/pt/resource/5709592/vamos-fazer-contas"
 
     # 10-11-2026 (Soraia primeiro ano B)
-    "https://www.digipuzzle.net/animals/collection/puzzles/clutter_images_texts_pt.htm?language=portuguese&linkback=../../../pt/jogoseducativos/palavras/index.htm",
-    "https://www.digipuzzle.net/animals/collection/puzzles/wordquiz_shadows_pt.htm?language=portuguese&linkback=../../../pt/jogoseducativos/palavras/index.htm"
+    # "https://www.digipuzzle.net/animals/collection/puzzles/clutter_images_texts_pt.htm?language=portuguese&linkback=../../../pt/jogoseducativos/palavras/index.htm",
+    # "https://www.digipuzzle.net/animals/collection/puzzles/wordquiz_shadows_pt.htm?language=portuguese&linkback=../../../pt/jogoseducativos/palavras/index.htm"
+
+    # 12-11-2026 (Cintia primeiro ano A)
+    "https://wordwall.net/pt/resource/21931322/meses-do-ano",
+    "https://wordwall.net/pt/resource/8361281/1-ano-natal"
 )
 
 # Detectar navegador

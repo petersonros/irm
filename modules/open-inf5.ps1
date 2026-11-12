@@ -53,6 +53,11 @@ $urls = @(
     # "https://wordwall.net/pt/resource/3748150/formas",
     # "https://wordwall.net/pt/resource/15889447/n%C3%BAmeros-de-0-at%C3%A9-30"
 
+    # lista da Tanea Infantil 5B 10-11-2026
+    "https://wordwall.net/pt/resource/30094640/matem%C3%A1tica/jogo-das-somas-dos-dedinhos",
+    "https://wordwall.net/pt/resource/4457116/jogo-de-subtra%C3%A7%C3%A3o",
+    "https://wordwall.net/pt/resource/15888345/vamos-brincar-de-formar-palavras"
+
     # Aula 06-10-2026 (Tanea Infantil 5B)
     # "https://wordwall.net/pt/resource/27200428/l%C3%ADngua-portuguesa/desembaralhe-as-letras-animais",
     # "https://wordwall.net/pt/resource/38551133/animais-em-ingl%C3%AAs/animais-1ano",
