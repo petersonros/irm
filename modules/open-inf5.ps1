@@ -54,9 +54,9 @@ $urls = @(
     # "https://wordwall.net/pt/resource/15889447/n%C3%BAmeros-de-0-at%C3%A9-30"
 
     # lista da Tanea Infantil 5B 10-11-2026
-    # "https://wordwall.net/pt/resource/30094640/matem%C3%A1tica/jogo-das-somas-dos-dedinhos",
-    # "https://wordwall.net/pt/resource/4457116/jogo-de-subtra%C3%A7%C3%A3o",
-    # "https://wordwall.net/pt/resource/15888345/vamos-brincar-de-formar-palavras"
+    "https://wordwall.net/pt/resource/30094640/matem%C3%A1tica/jogo-das-somas-dos-dedinhos",
+    "https://wordwall.net/pt/resource/4457116/jogo-de-subtra%C3%A7%C3%A3o",
+    "https://wordwall.net/pt/resource/15888345/vamos-brincar-de-formar-palavras"
 
     # Aula 06-10-2026 (Tanea Infantil 5B)
     # "https://wordwall.net/pt/resource/27200428/l%C3%ADngua-portuguesa/desembaralhe-as-letras-animais",
@@ -65,10 +65,10 @@ $urls = @(
     # "https://wordwall.net/pt/resource/12313686/percep%C3%A7%C3%A3o-visual"
 
     # Aula 20-10-2026 (Tanea Infantil 5B)
-    "https://wordwall.net/pt/resource/3381604/caca-palavras-animais",
-    "https://wordwall.net/pt/resource/5375507/n%C3%BAmeros-de-1-a-10/jogo-da-mem%C3%B3ria-de-0-a-10",
-    "https://wordwall.net/pt/resource/19290429/l%C3%ADngua-portuguesa/sequ%C3%AAncia-do-b-esteira",
-    "https://wordwall.net/pt/resource/24213757/alfabetiza%C3%A7%C3%A3o/1%C2%BA-ano-vamos-somar"
+    # "https://wordwall.net/pt/resource/3381604/caca-palavras-animais",
+    # "https://wordwall.net/pt/resource/5375507/n%C3%BAmeros-de-1-a-10/jogo-da-mem%C3%B3ria-de-0-a-10",
+    # "https://wordwall.net/pt/resource/19290429/l%C3%ADngua-portuguesa/sequ%C3%AAncia-do-b-esteira",
+    # "https://wordwall.net/pt/resource/24213757/alfabetiza%C3%A7%C3%A3o/1%C2%BA-ano-vamos-somar"
 )
 
 # Detectar navegador
