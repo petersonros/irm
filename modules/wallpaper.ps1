@@ -9,7 +9,7 @@ $wallpapers = @(
     # "Festa Junina              | festa-junina.png"
     # "Dia dos Pais              | dia-dos-pais.png"
     # "Dia das Crianças          | dia-das-criancas.png"
-    # "Natal                     | natal.png"
+    "Natal                     | natal.png"
 )
 
 $baseUrl = "https://raw.githubusercontent.com/petersonros/irm/main/wallpapers"
