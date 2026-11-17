@@ -49,16 +49,21 @@ $urls = @(
     # "https://wordwall.net/pt/resource/5240422/s%C3%ADlabas-simples",
     # "https://wordwall.net/pt/resource/4293574/s%C3%ADlabas-simples",
     # "https://wordwall.net/pt/resource/14601065/silabas-simples",
-    # "https://wordwall.net/pt/resource/25169898/organize-o-alfabeto",
+    # "https://wordwall.net/pt/resource/25169898/organize-o-alfabeto"
+
+    # lista da Tanea Infantil 5B 17-11-2026
+    # "https://wordwall.net/pt/resource/23316012/subtra%C3%A7%C3%A3o-1-ano",
+    # "https://wordwall.net/pt/resource/33354360/rimas/jogo-do-rimas",
+    # "https://wordwall.net/pt/resource/54013928/jogo-da-memoria/jogo-de-memoria",
+    # "https://wordwall.net/pt/resource/4420006/alimenta%C3%A7%C3%A3o-saud%C3%A1vel",
+    # "https://wordwall.net/pt/resource/4420083/acerte-a-toupeira-com-o-alimento-n%C3%A3o-saud%C3%A1vel-jogo-dos"
+
+    # Aula Tanea Infantil 5B 17-11-2026
+    # "https://wordwall.net/pt/resource/30094640/matem%C3%A1tica/jogo-das-somas-dos-dedinhos",
+    # "https://wordwall.net/pt/resource/4457116/jogo-de-subtra%C3%A7%C3%A3o",
+    # "https://wordwall.net/pt/resource/15888345/vamos-brincar-de-formar-palavras",
     # "https://wordwall.net/pt/resource/3748150/formas",
     # "https://wordwall.net/pt/resource/15889447/n%C3%BAmeros-de-0-at%C3%A9-30"
-
-    # lista da Tanea Infantil 5B 10-11-2026
-    "https://wordwall.net/pt/resource/30094640/matem%C3%A1tica/jogo-das-somas-dos-dedinhos",
-    "https://wordwall.net/pt/resource/4457116/jogo-de-subtra%C3%A7%C3%A3o",
-    "https://wordwall.net/pt/resource/15888345/vamos-brincar-de-formar-palavras",
-    "https://wordwall.net/pt/resource/3748150/formas",
-    "https://wordwall.net/pt/resource/15889447/n%C3%BAmeros-de-0-at%C3%A9-30"
 
     # Aula 06-10-2026 (Tanea Infantil 5B)
     # "https://wordwall.net/pt/resource/27200428/l%C3%ADngua-portuguesa/desembaralhe-as-letras-animais",
