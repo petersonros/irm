@@ -22,10 +22,11 @@ irm https://raw.githubusercontent.com/petersonros/irm/main/cli.ps1 -Command open
 ```
 /
 ├── cli.ps1              # Ponto de entrada — menu interativo + execução direta
-└── modules/
-    ├── clean.ps1        # Limpa dados dos navegadores (histórico, cookies, senhas)
-    ├── open.ps1         # Abre Chrome com URLs pré-definidas em abas separadas
-    └── wallpaper.ps1    # Baixa e aplica o papel de parede do Colégio Conquista
+├── modules/
+│   ├── clean.ps1        # Limpa dados dos navegadores (histórico, cookies, senhas)
+│   ├── open.ps1         # Abre Chrome com URLs pré-definidas em abas separadas
+│   └── wallpaper.ps1    # Submenu para aplicar um papel de parede da coleção
+└── wallpapers/          # Coleção de papéis de parede (PNG, nomes sem acento)
 ```
 
 ## Documentação

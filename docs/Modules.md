@@ -182,18 +182,33 @@ irm https://raw.githubusercontent.com/petersonros/irm/main/modules/fix.ps1 | iex
 
 ## modules/wallpaper.ps1
 
-Baixa o papel de parede `WP-Colégio-Conquista.png` (raiz do repositório) e o aplica ao usuário logado.
+Aplica um papel de parede da coleção em `/wallpapers` ao usuário logado.
+
+**Coleção:** a lista fica no topo do módulo, no formato `"Rótulo | arquivo.png"` (mesmo padrão do `open.ps1`):
+
+```powershell
+$wallpapers = @(
+    "Colégio Conquista (padrão) | conquista.png"
+    "Dia das Crianças          | dia-das-criancas.png"
+)
+```
+
+**Para adicionar um wallpaper:**
+1. Coloque o PNG em `/wallpapers` com nome sem acentos e sem espaços (ex.: `dia-das-criancas.png`)
+2. Acrescente (ou descomente) a linha correspondente em `$wallpapers`
+
+**Fluxo:**
 
 | Etapa | Ação |
 |---|---|
-| 1 | Baixa a imagem para `C:\Users\Public\Pictures\wallpaper-conquista.png` |
-| 2 | Grava `Wallpaper`, `WallpaperStyle=10` (Preencher) e `TileWallpaper=0` em `HKCU:\Control Panel\Desktop` |
-| 3 | Aplica imediatamente via `SystemParametersInfo(SPI_SETDESKWALLPAPER)` |
+| 1 | Com um único item cadastrado, aplica direto; com vários, mostra submenu numerado (`[0]` volta) |
+| 2 | Baixa a imagem para `C:\Users\Public\Pictures\conquista-<arquivo>.png` |
+| 3 | Grava `Wallpaper`, `WallpaperStyle=10` (Preencher) e `TileWallpaper=0` em `HKCU:\Control Panel\Desktop` |
+| 4 | Aplica imediatamente via `SystemParametersInfo(SPI_SETDESKWALLPAPER)` |
 
 **Comportamento:**
 - Não exige Administrador
 - Aplica somente ao usuário que está executando o PowerShell — rode logado como `aluno` para mudar o wallpaper do aluno
-- Para trocar a imagem, substitua o PNG no repositório mantendo o mesmo nome (ou ajuste `$wallpaperUrl` no módulo)
 
 **Exemplo de uso direto:**
 ```powershell

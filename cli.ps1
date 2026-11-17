@@ -43,7 +43,7 @@ function Show-Help {
     Write-Host "  open-i5  Abre as URLs do Infantil 5"
     Write-Host "  setup    Configura a máquina: cria usuários aluno/admin e desativa Pichau"
     Write-Host "  fix      Corrige usuários em estado inconsistente após falha do setup"
-    Write-Host "  wallpaper Baixa e aplica o papel de parede do Colégio Conquista"
+    Write-Host "  wallpaper Escolhe e aplica um papel de parede da coleção"
     Write-Host ""
     Write-Host "Exemplos:" -ForegroundColor Yellow
     Write-Host "  ... -Command clean"
