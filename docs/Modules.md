@@ -180,6 +180,28 @@ irm https://raw.githubusercontent.com/petersonros/irm/main/modules/fix.ps1 | iex
 
 ---
 
+## modules/wallpaper.ps1
+
+Baixa o papel de parede `WP-Colégio-Conquista.png` (raiz do repositório) e o aplica ao usuário logado.
+
+| Etapa | Ação |
+|---|---|
+| 1 | Baixa a imagem para `C:\Users\Public\Pictures\wallpaper-conquista.png` |
+| 2 | Grava `Wallpaper`, `WallpaperStyle=10` (Preencher) e `TileWallpaper=0` em `HKCU:\Control Panel\Desktop` |
+| 3 | Aplica imediatamente via `SystemParametersInfo(SPI_SETDESKWALLPAPER)` |
+
+**Comportamento:**
+- Não exige Administrador
+- Aplica somente ao usuário que está executando o PowerShell — rode logado como `aluno` para mudar o wallpaper do aluno
+- Para trocar a imagem, substitua o PNG no repositório mantendo o mesmo nome (ou ajuste `$wallpaperUrl` no módulo)
+
+**Exemplo de uso direto:**
+```powershell
+irm https://raw.githubusercontent.com/petersonros/irm/main/modules/wallpaper.ps1 | iex
+```
+
+---
+
 ## modules.ps1
 
 Arquivo reservado para uso futuro. Pode ser usado para carregar definições compartilhadas entre módulos (funções utilitárias, constantes, etc.).
