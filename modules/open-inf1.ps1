@@ -97,8 +97,8 @@ $urls = @(
     # "https://www.digipuzzle.net/animals/collection/puzzles/wordquiz_shadows_pt.htm?language=portuguese&linkback=../../../pt/jogoseducativos/palavras/index.htm"
 
     # 12-11-2026 (Cintia primeiro ano A)
-    "https://wordwall.net/pt/resource/21931322/meses-do-ano",
-    "https://wordwall.net/pt/resource/8361281/1-ano-natal"
+    # "https://wordwall.net/pt/resource/21931322/meses-do-ano",
+    # "https://wordwall.net/pt/resource/8361281/1-ano-natal"
 
     # 17-11-2026 (Soraia primeiro ano B)
     "https://www.digipuzzle.net/minigames/mozaics/mozaics_copy_christmas.htm?language=portuguese&linkback=../../pt/jogoseducativos/natal/index.htm",
