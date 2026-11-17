@@ -1,3 +1,23 @@
+# ============================================================
+# MÓDULO DESATIVADO — NÃO EXECUTAR
+# ============================================================
+# Este script causou perda total de acesso administrativo numa máquina
+# (exigiu formatação). Problemas conhecidos:
+#   - fix.ps1 apaga Pichau/admin ANTES de garantir o novo admin; se a criação
+#     falhar, sai antes de ativar o Administrador embutido -> nenhum admin.
+#   - setup.ps1 cria C:\Users\aluno e o NTUSER.DAT manualmente antes do
+#     primeiro login -> permissões erradas e perfil temporário.
+#   - New-LocalUser não adiciona a conta ao grupo "Usuários".
+#   - Administrador embutido ativado sem senha.
+# O código abaixo foi mantido só como referência. Não remova esta trava
+# sem reescrever o fluxo (desativar em vez de apagar, conta de emergência
+# primeiro, não criar perfil à mão, adicionar 'aluno' ao grupo Usuários).
+Write-Host ""
+Write-Host "  Este modulo foi DESATIVADO por seguranca (risco de perder o acesso administrativo)." -ForegroundColor Red
+Write-Host "  Nenhuma alteracao foi feita na maquina." -ForegroundColor Yellow
+Write-Host ""
+return
+
 # =========================
 # VERIFICAÇÃO DE PRIVILÉGIOS
 # =========================

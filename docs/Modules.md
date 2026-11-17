@@ -12,7 +12,7 @@ Cada arquivo em `/modules` é um script PowerShell independente. Pode ser chamad
 
 | Parâmetro | Tipo | Descrição |
 |---|---|---|
-| `-Command` | string | Nome do módulo a executar (`clean`, `open`, `open-i1`…`open-i5`, `setup`, `fix`) |
+| `-Command` | string | Nome do módulo a executar (`clean`, `open`, `open-i1`…`open-i5`, `wallpaper`) |
 | `-Help` | switch | Exibe uso, comandos disponíveis e exemplos |
 
 **Exemplos:**
@@ -37,8 +37,7 @@ irm https://raw.githubusercontent.com/petersonros/irm/main/cli.ps1 -Help | iex
 | 5 | Executa `open-inf5.ps1` |
 | 6 | Executa `open.ps1` |
 | 0 | Executa `clean.ps1` |
-| 7 | Executa `setup.ps1` |
-| 8 | Executa `fix.ps1` |
+| W | Executa `wallpaper.ps1` |
 | 9 | Sair |
 
 ---
@@ -103,6 +102,8 @@ irm https://raw.githubusercontent.com/petersonros/irm/main/modules/open.ps1 | ie
 
 ## modules/setup.ps1
 
+> ⚠️ **DESATIVADO.** Removido do `cli.ps1` e travado no início do script (sai sem alterar nada). Causou perda total de acesso administrativo numa máquina. O conteúdo abaixo descreve o comportamento antigo e fica só como referência.
+
 **Papel:** Configura uma máquina do laboratório do zero — cria os usuários `aluno` e `admin`, migra o auto-login e desativa a conta `Pichau`.
 
 **Requisito:** deve ser executado com privilégios de administrador. O script verifica isso no início e aborta com mensagem clara se não estiver elevado.
@@ -144,6 +145,8 @@ irm https://raw.githubusercontent.com/petersonros/irm/main/modules/setup.ps1 | i
 ---
 
 ## modules/fix.ps1
+
+> ⚠️ **DESATIVADO.** Removido do `cli.ps1` e travado no início do script (sai sem alterar nada). Causou perda total de acesso administrativo numa máquina. O conteúdo abaixo descreve o comportamento antigo e fica só como referência.
 
 **Papel:** Recupera máquinas que ficaram em estado inconsistente após uma falha do `setup.ps1` — situação típica: `aluno` existe e está no grupo Administradores, mas os demais usuários estão corrompidos ou em estado indefinido.
 

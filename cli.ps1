@@ -17,8 +17,6 @@ function Show-Menu {
     Write-Host "  [6]" -ForegroundColor Green -NoNewline; Write-Host " Pesquisa de satisfação"
     Write-Host ""
     Write-Host "  [0]" -ForegroundColor Red -NoNewline; Write-Host " Limpar navegadores"
-    Write-Host "  [7]" -ForegroundColor Magenta -NoNewline; Write-Host " Configurar máquina"
-    Write-Host "  [8]" -ForegroundColor Yellow  -NoNewline; Write-Host " Corrigir usuários"
     Write-Host "  [W]" -ForegroundColor Blue -NoNewline; Write-Host " Aplicar papel de parede"
     Write-Host "  [9]" -ForegroundColor DarkGray -NoNewline; Write-Host " Sair"
     Write-Host ""
@@ -41,8 +39,6 @@ function Show-Help {
     Write-Host "  open-i3  Abre as URLs do Infantil 3"
     Write-Host "  open-i4  Abre as URLs do Infantil 4"
     Write-Host "  open-i5  Abre as URLs do Infantil 5"
-    Write-Host "  setup    Configura a máquina: cria usuários aluno/admin e desativa Pichau"
-    Write-Host "  fix      Corrige usuários em estado inconsistente após falha do setup"
     Write-Host "  wallpaper Escolhe e aplica um papel de parede da coleção"
     Write-Host ""
     Write-Host "Exemplos:" -ForegroundColor Yellow
@@ -75,8 +71,6 @@ $commands = @{
     "open-i3" = "$base/open-inf3.ps1"
     "open-i4" = "$base/open-inf4.ps1"
     "open-i5" = "$base/open-inf5.ps1"
-    "setup"   = "$base/setup.ps1"
-    "fix"     = "$base/fix.ps1"
     "wallpaper" = "$base/wallpaper.ps1"
 }
 
@@ -117,8 +111,6 @@ do {
         "5" { Run-Module $commands["open-i5"] }
         "6" { Run-Module $commands["open"] }
         "0" { Run-Module $commands["clean"] }
-        "7" { Run-Module $commands["setup"] }
-        "8" { Run-Module $commands["fix"] }
         "w" { Run-Module $commands["wallpaper"] }
     }
 

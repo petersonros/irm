@@ -8,8 +8,8 @@
 - [x] `clean.ps1` exibe resumo do que foi removido ao final
 - [x] `open.ps1` detecta Chrome → Edge → navegador padrão, nessa ordem
 - [x] `open.ps1` encerra o navegador se já estiver aberto antes de usar `--new-window`
-- [x] `setup.ps1` cria usuários `aluno` (sem senha, perfil temporário) e `admin`, migra auto-login do Pichau e desativa a conta
-- [x] `fix.ps1` recupera máquinas em estado inconsistente: remove usuários corrompidos, recria `admin`, remove `aluno` do grupo Administradores e reaplica auto-login
+- [x] `setup.ps1` cria usuários `aluno` (sem senha, perfil temporário) e `admin`, migra auto-login do Pichau e desativa a conta — **desativado** (ver `Modules.md`)
+- [x] `fix.ps1` recupera máquinas em estado inconsistente: remove usuários corrompidos, recria `admin`, remove `aluno` do grupo Administradores e reaplica auto-login — **desativado** (ver `Modules.md`)
 
 ## Pendências
 
