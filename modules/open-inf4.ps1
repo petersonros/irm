@@ -14,17 +14,18 @@ $urls = @(
     # "https://wordwall.net/pt/resource/21805313/n%C3%BAmeros-letras-e-objetos"
 
     # 24-09-2026 (Dione Infantil 4)
-    "https://wordwall.net/pt/resource/17128941/jogo-da-mem%C3%B3ria-dinossauro",
+    "https://www.digipuzzle.net/christmas/cartoons/puzzles/memory.htm?language=portuguese&linkback=../../../pt/jogoseducativos/natal/index.htm",
     "https://www.digipuzzle.net/minigames/draw/mysterypictures_alphabet.htm?language=portuguese&linkback=../../pt/jogoseducativos/alfabeto/index.htm#google_vignette",
     "https://www.digipuzzle.net/digipuzzle/animals/puzzles/puzzle_jigsaw.htm?language=english&linkback=../../../main/animals/index.htm#google_vignette",
     # "https://www.digipuzzle.net/digipuzzle/autumn/puzzles/lines.htm?language=english&linkback=../../../education/autumn/index.htm",
     # "https://www.digipuzzle.net/minigames/decorate/purplehorse/purplehorse.htm?language=english&linkback=../../../education/games/index.htm",
     # "https://www.digipuzzle.net/digipuzzle/autumn/puzzles/lines.htm?language=german&linkback=../../../de/lernspiele/herbst/index.htm",
     # "https://www.digipuzzle.net/digipuzzle/halloween/puzzles/lines.htm?language=german&linkback=../../../de/lernspiele/halloween/index.htm",
-    "https://www.digipuzzle.net/digipuzzle/halloween/puzzles/lines.htm?language=german&linkback=../../../de/lernspiele/halloween/index.htm",
+    "https://www.digipuzzle.net/christmas/cartoons/puzzles/jigsaw.htm?language=portuguese&linkback=../../../pt/jogoseducativos/natal/index.htm",
     "https://www.digipuzzle.net/minigames/decorate/mathgirl/mathgirl_multiplications.htm?language=portuguese&linkback=../../../pt/jogoseducativos/matematica-multiplicacao/index.htm",
-    "https://www.digipuzzle.net/digipuzzle/halloween/puzzles/tictactoe.htm?language=german&linkback=../../../de/lernspiele/halloween/index.htm"
-    "https://www.digipuzzle.net/minigames/decorate/potatoheads/potatoheads.htm?language=english&linkback=../../../education/games/index.htm"
+    "https://www.digipuzzle.net/christmas/gingerbread/puzzles/lines.htm?language=portuguese&linkback=../../../pt/jogoseducativos/natal/index.htm",
+    # "https://www.digipuzzle.net/digipuzzle/halloween/puzzles/tictactoe.htm?language=german&linkback=../../../de/lernspiele/halloween/index.htm"
+    "https://www.digipuzzle.net/minigames/decorate/christmastree/christmastree.htm?language=portuguese&linkback=../../../pt/jogoseducativos/natal/index.htm"
 
 )
 
