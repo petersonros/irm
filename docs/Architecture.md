@@ -12,7 +12,7 @@ Máquina do laboratório
    cli.ps1  (ponto de entrada)
         │
         ├── modules/clean.ps1   (limpeza de navegadores)
-        └── modules/open.ps1    (abertura de URLs no Chrome)
+        └── modules/open.ps1    (abre a aula da turma ← data/turmas/<turma>.json)
 ```
 
 ## Fluxo de Execução
@@ -37,13 +37,12 @@ Máquina do laboratório
 
 ## Limitações Atuais
 
-- URLs abertas pelos `open*.ps1` ainda são fixas no código-fonte (migração para `data/turmas/` em andamento)
 - Não há autenticação ou controle de quem executa os scripts
 - Requer que o Chrome esteja instalado como `chrome.exe` no PATH ou em localização padrão
 
 ## Dados das Aulas
 
-Os links das aulas estão sendo movidos do código para `data/turmas/<turma>.json` (um arquivo por turma, com histórico). Formato, regras de escolha da aula e notas de implementação: [Dados.md](Dados.md).
+Os links das aulas ficam em `data/turmas/<turma>.json` (um arquivo por turma, com histórico). Formato, regras de escolha da aula e notas de implementação: [Dados.md](Dados.md).
 
 ## Integração Futura com sala-informatica
 

@@ -2,8 +2,6 @@
 
 Os links das aulas ficam em arquivos JSON, um por turma, em `data/turmas/`. Os scripts leem esses arquivos; para preparar uma aula, você só edita o JSON.
 
-> **Estado atual:** todas as opções de turma do `cli.ps1` leem daqui. Os `open-inf*.ps1` antigos não são mais usados e serão removidos (etapa 5 do [Roadmap](Roadmap.md)). **Links novos vão só nos JSON.**
-
 ## Arquivos
 
 ```

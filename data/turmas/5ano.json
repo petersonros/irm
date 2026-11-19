@@ -6,6 +6,7 @@
   "aulas": [
     {
       "data": "2026-11-19",
+      "professora": "Mariana",
       "sala": "5º ano B",
       "links": [
         {

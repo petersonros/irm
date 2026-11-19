@@ -28,6 +28,7 @@ irm https://raw.githubusercontent.com/petersonros/irm/main/cli.ps1 -Help | iex
 ```
 
 **Opções do menu:** as turmas chamam `open.ps1 -Turma <turma>`, que lê `data/turmas/<turma>.json`.
+
 | Opção | Ação |
 |---|---|
 | 1 | 1º ano (`1ano`) |
@@ -38,17 +39,6 @@ irm https://raw.githubusercontent.com/petersonros/irm/main/cli.ps1 -Help | iex
 | 6 | Pesquisa de satisfação (`pesquisa`) |
 | 7 | 4º ano (`4ano`) |
 | 8 | 5º ano (`5ano`) |
-| 0 | Executa `clean.ps1` |
-| W | Executa `wallpaper.ps1` |
-| 9 | Sair |
-
----|---|
-| 1 | Executa `open-inf1.ps1` |
-| 2 | Executa `open-inf2.ps1` |
-| 3 | Executa `open-inf3.ps1` |
-| 4 | Executa `open-inf4.ps1` |
-| 5 | Executa `open-inf5.ps1` |
-| 6 | Executa `open.ps1` |
 | 0 | Executa `clean.ps1` |
 | W | Executa `wallpaper.ps1` |
 | 9 | Sair |

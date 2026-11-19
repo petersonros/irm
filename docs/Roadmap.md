@@ -18,9 +18,9 @@
 - [x] Etapa 2 — 177 links migrados dos `.ps1` para `data/turmas/*.json`, com histórico
 - [x] Etapa 3 — `open.ps1` único que recebe a turma, baixa o JSON e escolhe a aula pela data de hoje (campo opcional `modo` adicionado ao contrato)
 - [x] Etapa 4 — `cli.ps1` chamando o módulo único por turma (novas opções [7] 4º ano e [8] 5º ano)
-- [ ] Etapa 5 — remover `open-inf*.ps1` e atualizar a documentação
+- [x] Etapa 5 — remover `open-inf*.ps1` e atualizar a documentação
 
-> Desde a etapa 4, links novos vão só nos `data/turmas/*.json`. Os `open-inf*.ps1` ficam no repositório até a etapa 5 apenas como reserva para voltar atrás.
+> Concluído em 2026-11-19. Os `open-inf*.ps1` removidos continuam no histórico do git (commit `cc06e59` e anteriores), se for preciso consultar.
 
 ---
 
@@ -43,7 +43,10 @@
 
 ## Ideias para Versões Futuras
 
-- **Perfis de aula:** Diferentes conjuntos de URLs para diferentes turmas ou disciplinas
+- **Cadastro de aula mais rápido no JSON:** hoje cada aula nova é um bloco inteiro, enquanto antes era uma linha por link no `.ps1`. Ideias:
+  - aceitar links como texto simples no JSON (`"links": ["https://…", "Rótulo | https://…"]`), além do formato com `label`/`url`
+  - snippet do VS Code (`.vscode/*.code-snippets`): digitar `aula` + Tab gera o bloco já com a data de hoje
+  - no futuro, o formulário do sala-informatica elimina a edição manual
 - **Log de execução:** Registrar quando e em qual máquina o script foi executado (útil para auditoria)
 - **Agendamento automático:** Tarefa agendada no Windows que roda o `clean.ps1` ao desligar
 
