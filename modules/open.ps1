@@ -7,6 +7,9 @@
 #   irm <url>/modules/open.ps1 | iex      # pergunta a turma
 #
 # Teste local, sem precisar de push: defina $env:IRM_DADOS com o caminho da pasta data\turmas.
+#
+# Ao abrir os links com sucesso, marca $global:IRM_AmbientePronto = $true
+# (o cli.ps1 usa isso para fechar o PowerShell).
 param(
     [string]$Turma,
     [string]$Data
@@ -172,9 +175,9 @@ function Show-LinksMenu {
         elseif ($choice -match '^[Tt]$') {
             Write-Host "🚀 Abrindo todos os links..." -ForegroundColor Cyan
             Open-AllUrls $links
-            foreach ($link in $links) { $link.Opened = $true }
             Write-Host "✅ Ambiente pronto!"
-            Start-Sleep -Seconds 1
+            $global:IRM_AmbientePronto = $true
+            break
         }
         elseif ($choice -match '^[Vv]$') {
             break
@@ -235,4 +238,5 @@ if ($dados.modo -eq "menu") {
     Write-Host "🚀 Abrindo $($dados.nome): $(Format-Aula $aula)" -ForegroundColor Cyan
     Open-AllUrls $links
     Write-Host "✅ Ambiente pronto!"
+    $global:IRM_AmbientePronto = $true
 }

@@ -27,21 +27,23 @@ irm https://raw.githubusercontent.com/petersonros/irm/main/cli.ps1 -Command clea
 irm https://raw.githubusercontent.com/petersonros/irm/main/cli.ps1 -Help | iex
 ```
 
-**Opções do menu:** as turmas chamam `open.ps1 -Turma <turma>`, que lê `data/turmas/<turma>.json`.
+**Opções do menu:** as turmas chamam `open.ps1 -Turma <turma>`, que lê `data/turmas/<turma>.json`. A numeração sai da ordem da lista `$turmas` no topo do `cli.ps1`; para incluir uma turma, crie o JSON e acrescente uma linha nessa lista.
 
 | Opção | Ação |
 |---|---|
-| 1 | 1º ano (`1ano`) |
-| 2 | 2º ano (`2ano`) |
-| 3 | 3º ano (`3ano`) |
-| 4 | Infantil 4 (`inf4`) |
-| 5 | Infantil 5 (`inf5`) |
-| 6 | Pesquisa de satisfação (`pesquisa`) |
-| 7 | 4º ano (`4ano`) |
-| 8 | 5º ano (`5ano`) |
+| 1 | Infantil 4 (`inf4`) |
+| 2 | Infantil 5 (`inf5`) |
+| 3 | 1º ano (`1ano`) |
+| 4 | 2º ano (`2ano`) |
+| 5 | 3º ano (`3ano`) |
+| 6 | 4º ano (`4ano`) |
+| 7 | 5º ano (`5ano`) |
+| 8 | Pesquisa de satisfação (`pesquisa`) — sempre o número seguinte à última turma |
 | 0 | Executa `clean.ps1` |
 | W | Executa `wallpaper.ps1` |
-| 9 | Sair |
+| S | Sair |
+
+**Fecha sozinho:** quando os links de uma turma abrem com sucesso, o `cli.ps1` mostra "Ambiente pronto!" e fecha o PowerShell 2 segundos depois. Se der erro, ou se você voltar com `[V]`, o menu continua. Na pesquisa, abrir um link por vez não fecha; só `[T]` (abrir todos) fecha.
 
 ---
 
@@ -99,6 +101,7 @@ irm https://raw.githubusercontent.com/petersonros/irm/main/modules/clean.ps1 | i
 - Detecta Chrome → Edge → navegador padrão do sistema, nessa ordem
 - Links com `"ativo": false` são ignorados
 - Erro de rede, turma inexistente ou JSON inválido: mostra a mensagem e volta, sem travar
+- Ao abrir os links com sucesso, marca `$global:IRM_AmbientePronto = $true` (o `cli.ps1` usa isso para fechar o PowerShell)
 - `$env:IRM_DADOS` aponta para uma pasta local de JSON (para testar antes do push)
 
 **Exemplos de uso direto:**

@@ -22,7 +22,7 @@ Máquina do laboratório
 2. `cli.ps1` exibe menu numerado
 3. Usuário escolhe uma opção
 4. `cli.ps1` chama `irm <url-do-módulo> | iex` para o módulo correspondente
-5. O módulo executa e retorna ao menu
+5. O módulo executa e retorna ao menu. Quando os links de uma turma abrem com sucesso, o PowerShell fecha sozinho
 
 ### Modo direto
 1. Usuário roda com parâmetro: `... -Command clean`

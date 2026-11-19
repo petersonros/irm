@@ -3,24 +3,50 @@ param(
     [switch]$Help
 )
 
+# URLs dos módulos (RAW do GitHub)
+$base = "https://raw.githubusercontent.com/petersonros/irm/main/modules"
+
+$commands = @{
+    "clean"     = "$base/clean.ps1"
+    "open"      = "$base/open.ps1"
+    "wallpaper" = "$base/wallpaper.ps1"
+}
+
+# Turmas, na ordem do menu. Cada uma lê data/turmas/<Id>.json pelo open.ps1.
+# Para incluir uma turma: crie o JSON e acrescente uma linha aqui (o número do menu sai da posição).
+$turmas = @(
+    [PSCustomObject]@{ Id = "inf4"; Nome = "Infantil 4" }
+    [PSCustomObject]@{ Id = "inf5"; Nome = "Infantil 5" }
+    [PSCustomObject]@{ Id = "1ano"; Nome = "1º ano" }
+    [PSCustomObject]@{ Id = "2ano"; Nome = "2º ano" }
+    [PSCustomObject]@{ Id = "3ano"; Nome = "3º ano" }
+    [PSCustomObject]@{ Id = "4ano"; Nome = "4º ano" }
+    [PSCustomObject]@{ Id = "5ano"; Nome = "5º ano" }
+)
+$pesquisa = [PSCustomObject]@{ Id = "pesquisa"; Nome = "Pesquisa de satisfação" }
+
+# Nomes antigos de -Command, mantidos por compatibilidade
+$aliases = @{
+    "open-i1" = "1ano"; "open-i2" = "2ano"; "open-i3" = "3ano"
+    "open-i4" = "inf4"; "open-i5" = "inf5"
+}
+
 function Show-Menu {
     Clear-Host
     Write-Host ""
     Write-Host "  ==== CONQUISTA CLI ====" -ForegroundColor Cyan
+    Write-Host ("  Hoje: {0}" -f (Get-Date -Format 'dd-MM-yyyy')) -ForegroundColor DarkGray
     Write-Host ""
-    Write-Host "  [4]" -ForegroundColor Cyan -NoNewline; Write-Host " Abrir URLs — Infantil 4"
-    Write-Host "  [5]" -ForegroundColor Cyan -NoNewline; Write-Host " Abrir URLs — Infantil 5"
-    Write-Host "  [1]" -ForegroundColor Cyan -NoNewline; Write-Host " Abrir URLs — 1º ano"
-    Write-Host "  [2]" -ForegroundColor Cyan -NoNewline; Write-Host " Abrir URLs — 2º ano"
-    Write-Host "  [3]" -ForegroundColor Cyan -NoNewline; Write-Host " Abrir URLs — 3º ano"
-    Write-Host "  [7]" -ForegroundColor Cyan -NoNewline; Write-Host " Abrir URLs — 4º ano"
-    Write-Host "  [8]" -ForegroundColor Cyan -NoNewline; Write-Host " Abrir URLs — 5º ano"
+    Write-Host "  Aula do dia" -ForegroundColor Yellow
+    for ($i = 0; $i -lt $turmas.Count; $i++) {
+        Write-Host ("  [{0}]" -f ($i + 1)) -ForegroundColor Cyan -NoNewline; Write-Host " $($turmas[$i].Nome)"
+    }
     Write-Host ""
-    Write-Host "  [6]" -ForegroundColor Green -NoNewline; Write-Host " Pesquisa de satisfação"
-    Write-Host ""
+    Write-Host "  Outros" -ForegroundColor Yellow
+    Write-Host ("  [{0}]" -f ($turmas.Count + 1)) -ForegroundColor Green -NoNewline; Write-Host " $($pesquisa.Nome)"
     Write-Host "  [0]" -ForegroundColor Red -NoNewline; Write-Host " Limpar navegadores"
-    Write-Host "  [W]" -ForegroundColor Blue -NoNewline; Write-Host " Aplicar papel de parede"
-    Write-Host "  [9]" -ForegroundColor DarkGray -NoNewline; Write-Host " Sair"
+    Write-Host "  [W]" -ForegroundColor Blue -NoNewline; Write-Host " Papel de parede"
+    Write-Host "  [S]" -ForegroundColor DarkGray -NoNewline; Write-Host " Sair"
     Write-Host ""
 }
 
@@ -34,21 +60,15 @@ function Show-Help {
     Write-Host "  irm <url>/cli.ps1 -Help | iex            # esta ajuda"
     Write-Host ""
     Write-Host "Comandos disponíveis:" -ForegroundColor Yellow
-    Write-Host "  clean    Fecha Chrome/Edge e remove histórico, cookies, cache, senhas e autofill"
+    Write-Host "  clean          Fecha Chrome/Edge e remove histórico, cookies, cache, senhas e autofill"
+    Write-Host "  wallpaper      Escolhe e aplica um papel de parede da coleção"
     Write-Host "  open           Pergunta a turma e abre a aula do dia"
-    Write-Host "  open-1ano      Abre a aula do dia do 1º ano   (antigo open-i1)"
-    Write-Host "  open-2ano      Abre a aula do dia do 2º ano   (antigo open-i2)"
-    Write-Host "  open-3ano      Abre a aula do dia do 3º ano   (antigo open-i3)"
-    Write-Host "  open-4ano      Abre a aula do dia do 4º ano"
-    Write-Host "  open-5ano      Abre a aula do dia do 5º ano"
-    Write-Host "  open-inf4      Abre a aula do dia do Infantil 4 (antigo open-i4)"
-    Write-Host "  open-inf5      Abre a aula do dia do Infantil 5 (antigo open-i5)"
-    Write-Host "  open-pesquisa  Pesquisa de satisfação"
-    Write-Host "  wallpaper Escolhe e aplica um papel de parede da coleção"
+    foreach ($t in ($turmas + $pesquisa)) {
+        Write-Host ("  {0,-14} {1}" -f "open-$($t.Id)", $t.Nome)
+    }
     Write-Host ""
     Write-Host "Exemplos:" -ForegroundColor Yellow
     Write-Host "  ... -Command clean"
-    Write-Host "  ... -Command open"
     Write-Host "  ... -Command open-1ano"
     Write-Host ""
 }
@@ -64,37 +84,23 @@ function Run-Module {
             Invoke-RestMethod $url | Invoke-Expression
         }
     } catch {
-    Write-Host ""
-    Write-Host "Erro ao executar módulo:" -ForegroundColor Red
-    Write-Host $_.Exception.Message -ForegroundColor Yellow
-}
-}
-
-# URLs dos módulos (RAW do GitHub)
-$base = "https://raw.githubusercontent.com/petersonros/irm/main/modules"
-
-$commands = @{
-    "clean"     = "$base/clean.ps1"
-    "open"      = "$base/open.ps1"
-    "wallpaper" = "$base/wallpaper.ps1"
+        Write-Host ""
+        Write-Host "Erro ao executar módulo:" -ForegroundColor Red
+        Write-Host $_.Exception.Message -ForegroundColor Yellow
+    }
 }
 
-# Turmas: todas usam o open.ps1, que lê data/turmas/<turma>.json
-$turmas = @{
-    "open-1ano"     = "1ano"
-    "open-2ano"     = "2ano"
-    "open-3ano"     = "3ano"
-    "open-4ano"     = "4ano"
-    "open-5ano"     = "5ano"
-    "open-inf4"     = "inf4"
-    "open-inf5"     = "inf5"
-    "open-pesquisa" = "pesquisa"
-    # nomes antigos, mantidos por compatibilidade
-    "open-i1"       = "1ano"
-    "open-i2"       = "2ano"
-    "open-i3"       = "3ano"
-    "open-i4"       = "inf4"
-    "open-i5"       = "inf5"
+# Abre a aula da turma. Se os links abriram, fecha o PowerShell.
+function Open-Turma {
+    param ($id)
+
+    $global:IRM_AmbientePronto = $false   # o open.ps1 marca $true quando abre os links
+    Run-Module $commands["open"] $id
+    if ($global:IRM_AmbientePronto) {
+        Write-Host "   Fechando o PowerShell..." -ForegroundColor DarkGray
+        Start-Sleep -Seconds 2
+        [Environment]::Exit(0)
+    }
 }
 
 # =========================
@@ -109,38 +115,40 @@ if ($Help) {
 # EXECUÇÃO DIRETA
 # =========================
 if ($Command) {
-    if ($turmas.ContainsKey($Command)) {
-        Run-Module $commands["open"] $turmas[$Command]
-        exit
+    $id = $null
+    if ($Command -like "open-*") {
+        $sufixo = $Command.Substring(5)
+        if ($aliases.ContainsKey($Command)) { $id = $aliases[$Command] }
+        elseif (($turmas + $pesquisa) | Where-Object { $_.Id -eq $sufixo }) { $id = $sufixo }
+    }
+
+    if ($id) {
+        Open-Turma $id
     } elseif ($commands.ContainsKey($Command)) {
         Run-Module $commands[$Command]
-        exit
     } else {
         Write-Host "Comando inválido: $Command" -ForegroundColor Red
         Write-Host "Use -Help para ver os comandos disponíveis." -ForegroundColor DarkYellow
-        exit
     }
+    exit
 }
 
 # =========================
 # MODO INTERATIVO
 # =========================
-do {
+while ($true) {
     Show-Menu
-    $op = Read-Host "  Escolha"
+    $op = (Read-Host "  Escolha").Trim()
 
-    switch ($op) {
-        "1" { Run-Module $commands["open"] "1ano" }
-        "2" { Run-Module $commands["open"] "2ano" }
-        "3" { Run-Module $commands["open"] "3ano" }
-        "4" { Run-Module $commands["open"] "inf4" }
-        "5" { Run-Module $commands["open"] "inf5" }
-        "6" { Run-Module $commands["open"] "pesquisa" }
-        "7" { Run-Module $commands["open"] "4ano" }
-        "8" { Run-Module $commands["open"] "5ano" }
-        "0" { Run-Module $commands["clean"] }
-        "w" { Run-Module $commands["wallpaper"] }
+    if ($op -match '^[Ss]$') { break }
+
+    if ($op -match '^\d+$' -and [int]$op -ge 1 -and [int]$op -le $turmas.Count) {
+        Open-Turma $turmas[[int]$op - 1].Id
     }
+    elseif ($op -eq [string]($turmas.Count + 1)) { Open-Turma $pesquisa.Id }
+    elseif ($op -eq "0")      { Run-Module $commands["clean"] }
+    elseif ($op -match '^[Ww]$') { Run-Module $commands["wallpaper"] }
+    else { continue }
 
-    if ($op -ne "9") { Pause }
-} while ($op -ne "9")
+    Pause
+}
