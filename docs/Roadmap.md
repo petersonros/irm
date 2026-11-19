@@ -17,10 +17,10 @@
 - [x] Etapa 1 — contrato v1 definido (`data/schema/turma.schema.json`) e documentado (`docs/Dados.md`)
 - [x] Etapa 2 — 177 links migrados dos `.ps1` para `data/turmas/*.json`, com histórico
 - [x] Etapa 3 — `open.ps1` único que recebe a turma, baixa o JSON e escolhe a aula pela data de hoje (campo opcional `modo` adicionado ao contrato)
-- [ ] Etapa 4 — `cli.ps1` chamando o módulo único por turma
+- [x] Etapa 4 — `cli.ps1` chamando o módulo único por turma (novas opções [7] 4º ano e [8] 5º ano)
 - [ ] Etapa 5 — remover `open-inf*.ps1` e atualizar a documentação
 
-> Até a etapa 4, os links novos das turmas devem continuar indo nos `open-inf*.ps1` (são eles que o menu chama). Na etapa 4, conferir se algo foi adicionado neles depois de 2026-11-19 e passar para os JSON.
+> Desde a etapa 4, links novos vão só nos `data/turmas/*.json`. Os `open-inf*.ps1` ficam no repositório até a etapa 5 apenas como reserva para voltar atrás.
 
 ---
 

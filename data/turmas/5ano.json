@@ -5,6 +5,16 @@
   "nome": "5º ano",
   "aulas": [
     {
+      "data": "2026-11-19",
+      "sala": "5º ano B",
+      "links": [
+        {
+          "label": "Sistema esquelético (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/17189585/sistema-esquel%C3%A9tico"
+        }
+      ]
+    },
+    {
       "data": "2026-10-01",
       "professora": "Mariana",
       "sala": "5º ano B",

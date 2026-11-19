@@ -13,6 +13,8 @@ function Show-Menu {
     Write-Host "  [1]" -ForegroundColor Cyan -NoNewline; Write-Host " Abrir URLs — 1º ano"
     Write-Host "  [2]" -ForegroundColor Cyan -NoNewline; Write-Host " Abrir URLs — 2º ano"
     Write-Host "  [3]" -ForegroundColor Cyan -NoNewline; Write-Host " Abrir URLs — 3º ano"
+    Write-Host "  [7]" -ForegroundColor Cyan -NoNewline; Write-Host " Abrir URLs — 4º ano"
+    Write-Host "  [8]" -ForegroundColor Cyan -NoNewline; Write-Host " Abrir URLs — 5º ano"
     Write-Host ""
     Write-Host "  [6]" -ForegroundColor Green -NoNewline; Write-Host " Pesquisa de satisfação"
     Write-Host ""
@@ -33,26 +35,34 @@ function Show-Help {
     Write-Host ""
     Write-Host "Comandos disponíveis:" -ForegroundColor Yellow
     Write-Host "  clean    Fecha Chrome/Edge e remove histórico, cookies, cache, senhas e autofill"
-    Write-Host "  open     Submenu com as URLs da aula: abre uma a uma ou todas de uma vez"
-    Write-Host "  open-i1  Abre as URLs do Infantil 1"
-    Write-Host "  open-i2  Abre as URLs do Infantil 2"
-    Write-Host "  open-i3  Abre as URLs do Infantil 3"
-    Write-Host "  open-i4  Abre as URLs do Infantil 4"
-    Write-Host "  open-i5  Abre as URLs do Infantil 5"
+    Write-Host "  open           Pergunta a turma e abre a aula do dia"
+    Write-Host "  open-1ano      Abre a aula do dia do 1º ano   (antigo open-i1)"
+    Write-Host "  open-2ano      Abre a aula do dia do 2º ano   (antigo open-i2)"
+    Write-Host "  open-3ano      Abre a aula do dia do 3º ano   (antigo open-i3)"
+    Write-Host "  open-4ano      Abre a aula do dia do 4º ano"
+    Write-Host "  open-5ano      Abre a aula do dia do 5º ano"
+    Write-Host "  open-inf4      Abre a aula do dia do Infantil 4 (antigo open-i4)"
+    Write-Host "  open-inf5      Abre a aula do dia do Infantil 5 (antigo open-i5)"
+    Write-Host "  open-pesquisa  Pesquisa de satisfação"
     Write-Host "  wallpaper Escolhe e aplica um papel de parede da coleção"
     Write-Host ""
     Write-Host "Exemplos:" -ForegroundColor Yellow
     Write-Host "  ... -Command clean"
     Write-Host "  ... -Command open"
-    Write-Host "  ... -Command open-i1"
+    Write-Host "  ... -Command open-1ano"
     Write-Host ""
 }
 
 function Run-Module {
-    param ($url)
+    param ($url, $Turma)
 
     try {
-        Invoke-RestMethod $url | Invoke-Expression
+        if ($Turma) {
+            # irm | iex não repassa parâmetros: monta um scriptblock para passar -Turma
+            & ([scriptblock]::Create((Invoke-RestMethod $url))) -Turma $Turma
+        } else {
+            Invoke-RestMethod $url | Invoke-Expression
+        }
     } catch {
     Write-Host ""
     Write-Host "Erro ao executar módulo:" -ForegroundColor Red
@@ -64,14 +74,27 @@ function Run-Module {
 $base = "https://raw.githubusercontent.com/petersonros/irm/main/modules"
 
 $commands = @{
-    "clean"   = "$base/clean.ps1"
-    "open"    = "$base/open.ps1"
-    "open-i1" = "$base/open-inf1.ps1"
-    "open-i2" = "$base/open-inf2.ps1"
-    "open-i3" = "$base/open-inf3.ps1"
-    "open-i4" = "$base/open-inf4.ps1"
-    "open-i5" = "$base/open-inf5.ps1"
+    "clean"     = "$base/clean.ps1"
+    "open"      = "$base/open.ps1"
     "wallpaper" = "$base/wallpaper.ps1"
+}
+
+# Turmas: todas usam o open.ps1, que lê data/turmas/<turma>.json
+$turmas = @{
+    "open-1ano"     = "1ano"
+    "open-2ano"     = "2ano"
+    "open-3ano"     = "3ano"
+    "open-4ano"     = "4ano"
+    "open-5ano"     = "5ano"
+    "open-inf4"     = "inf4"
+    "open-inf5"     = "inf5"
+    "open-pesquisa" = "pesquisa"
+    # nomes antigos, mantidos por compatibilidade
+    "open-i1"       = "1ano"
+    "open-i2"       = "2ano"
+    "open-i3"       = "3ano"
+    "open-i4"       = "inf4"
+    "open-i5"       = "inf5"
 }
 
 # =========================
@@ -86,7 +109,10 @@ if ($Help) {
 # EXECUÇÃO DIRETA
 # =========================
 if ($Command) {
-    if ($commands.ContainsKey($Command)) {
+    if ($turmas.ContainsKey($Command)) {
+        Run-Module $commands["open"] $turmas[$Command]
+        exit
+    } elseif ($commands.ContainsKey($Command)) {
         Run-Module $commands[$Command]
         exit
     } else {
@@ -104,12 +130,14 @@ do {
     $op = Read-Host "  Escolha"
 
     switch ($op) {
-        "1" { Run-Module $commands["open-i1"] }
-        "2" { Run-Module $commands["open-i2"] }
-        "3" { Run-Module $commands["open-i3"] }
-        "4" { Run-Module $commands["open-i4"] }
-        "5" { Run-Module $commands["open-i5"] }
-        "6" { Run-Module $commands["open"] }
+        "1" { Run-Module $commands["open"] "1ano" }
+        "2" { Run-Module $commands["open"] "2ano" }
+        "3" { Run-Module $commands["open"] "3ano" }
+        "4" { Run-Module $commands["open"] "inf4" }
+        "5" { Run-Module $commands["open"] "inf5" }
+        "6" { Run-Module $commands["open"] "pesquisa" }
+        "7" { Run-Module $commands["open"] "4ano" }
+        "8" { Run-Module $commands["open"] "5ano" }
         "0" { Run-Module $commands["clean"] }
         "w" { Run-Module $commands["wallpaper"] }
     }

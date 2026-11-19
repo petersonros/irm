@@ -12,7 +12,7 @@ Cada arquivo em `/modules` é um script PowerShell independente. Pode ser chamad
 
 | Parâmetro | Tipo | Descrição |
 |---|---|---|
-| `-Command` | string | Nome do módulo a executar (`clean`, `open`, `open-i1`…`open-i5`, `wallpaper`) |
+| `-Command` | string | `clean`, `wallpaper`, `open` (pergunta a turma) ou `open-<turma>`: `open-1ano`, `open-2ano`, `open-3ano`, `open-4ano`, `open-5ano`, `open-inf4`, `open-inf5`, `open-pesquisa`. Os nomes antigos `open-i1`…`open-i5` continuam aceitos |
 | `-Help` | switch | Exibe uso, comandos disponíveis e exemplos |
 
 **Exemplos:**
@@ -27,9 +27,22 @@ irm https://raw.githubusercontent.com/petersonros/irm/main/cli.ps1 -Command clea
 irm https://raw.githubusercontent.com/petersonros/irm/main/cli.ps1 -Help | iex
 ```
 
-**Opções do menu:**
+**Opções do menu:** as turmas chamam `open.ps1 -Turma <turma>`, que lê `data/turmas/<turma>.json`.
 | Opção | Ação |
 |---|---|
+| 1 | 1º ano (`1ano`) |
+| 2 | 2º ano (`2ano`) |
+| 3 | 3º ano (`3ano`) |
+| 4 | Infantil 4 (`inf4`) |
+| 5 | Infantil 5 (`inf5`) |
+| 6 | Pesquisa de satisfação (`pesquisa`) |
+| 7 | 4º ano (`4ano`) |
+| 8 | 5º ano (`5ano`) |
+| 0 | Executa `clean.ps1` |
+| W | Executa `wallpaper.ps1` |
+| 9 | Sair |
+
+---|---|
 | 1 | Executa `open-inf1.ps1` |
 | 2 | Executa `open-inf2.ps1` |
 | 3 | Executa `open-inf3.ps1` |
