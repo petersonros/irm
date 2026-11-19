@@ -1,0 +1,44 @@
+{
+  "$schema": "../schema/turma.schema.json",
+  "versao": 1,
+  "turma": "pesquisa",
+  "nome": "Pesquisa de satisfação",
+  "modo": "menu",
+  "aulas": [
+    {
+      "data": "2026-11-03",
+      "professora": "Viviam",
+      "sala": "6º ao 8º ano",
+      "links": [
+        {
+          "label": "Pesquisa de Satisfação — 6º ano — Manhã",
+          "url": "https://forms.gle/ruQjDHdSsyxN72cN7"
+        },
+        {
+          "label": "Pesquisa de Satisfação — 6º ano — Tarde",
+          "url": "https://forms.gle/SCCteGorax3ANu8w7"
+        },
+        {
+          "label": "Pesquisa de Satisfação — 7º ano — Manhã",
+          "url": "https://forms.gle/t8MmqwWKxwUp6uq9A"
+        },
+        {
+          "label": "Pesquisa de Satisfação — 7º ano — Tarde",
+          "url": "https://forms.gle/Cd9tnQJztPY3cPKr8"
+        },
+        {
+          "label": "Pesquisa de Satisfação — 8º ano — Manhã",
+          "url": "https://forms.gle/P3PPTyfhvp3ZMG5Z9"
+        },
+        {
+          "label": "Pesquisa de Satisfação — 8º ano — Tarde",
+          "url": "https://forms.gle/KYm6AZHnvGmoVkR58"
+        },
+        {
+          "label": "Pesquisa de Satisfação —",
+          "url": "https://petersonros.github.io/irm/"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,299 @@
+{
+  "$schema": "../schema/turma.schema.json",
+  "versao": 1,
+  "turma": "inf5",
+  "nome": "Infantil 5",
+  "aulas": [
+    {
+      "data": "2026-11-17",
+      "professora": "Tanea",
+      "sala": "Infantil 5B",
+      "links": [
+        {
+          "label": "Jogo das somas dos dedinhos (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/30094640/matem%C3%A1tica/jogo-das-somas-dos-dedinhos"
+        },
+        {
+          "label": "Jogo de subtração (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/4457116/jogo-de-subtra%C3%A7%C3%A3o"
+        },
+        {
+          "label": "Vamos brincar de formar palavras (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/15888345/vamos-brincar-de-formar-palavras"
+        },
+        {
+          "label": "Formas (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/3748150/formas"
+        },
+        {
+          "label": "Números de 0 até 30 (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/15889447/n%C3%BAmeros-de-0-at%C3%A9-30"
+        }
+      ]
+    },
+    {
+      "data": "2026-11-17",
+      "professora": "Tanea",
+      "sala": "Infantil 5B",
+      "obs": "Lista sugerida pela professora",
+      "links": [
+        {
+          "label": "Subtração 1 ano (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/23316012/subtra%C3%A7%C3%A3o-1-ano"
+        },
+        {
+          "label": "Jogo do rimas (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/33354360/rimas/jogo-do-rimas"
+        },
+        {
+          "label": "Jogo de memoria (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/54013928/jogo-da-memoria/jogo-de-memoria"
+        },
+        {
+          "label": "Alimentação saudável (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/4420006/alimenta%C3%A7%C3%A3o-saud%C3%A1vel"
+        },
+        {
+          "label": "Acerte a toupeira com o alimento não saudável jogo dos (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/4420083/acerte-a-toupeira-com-o-alimento-n%C3%A3o-saud%C3%A1vel-jogo-dos"
+        }
+      ]
+    },
+    {
+      "data": "2026-10-20",
+      "professora": "Tanea",
+      "sala": "Infantil 5B",
+      "links": [
+        {
+          "label": "Caca palavras animais (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/3381604/caca-palavras-animais"
+        },
+        {
+          "label": "Jogo da memória de 0 a 10 (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/5375507/n%C3%BAmeros-de-1-a-10/jogo-da-mem%C3%B3ria-de-0-a-10"
+        },
+        {
+          "label": "Sequência do b esteira (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/19290429/l%C3%ADngua-portuguesa/sequ%C3%AAncia-do-b-esteira"
+        },
+        {
+          "label": "1º ano vamos somar (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/24213757/alfabetiza%C3%A7%C3%A3o/1%C2%BA-ano-vamos-somar"
+        }
+      ]
+    },
+    {
+      "data": "2026-10-20",
+      "professora": "Tanea",
+      "sala": "Infantil 5B",
+      "obs": "Lista sugerida pela professora",
+      "links": [
+        {
+          "label": "Sequência numérica até 50 (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/88269528/sequ%C3%AAncia-num%C3%A9rica-at%C3%A9-50"
+        },
+        {
+          "label": "Sílabas simples (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/5240422/s%C3%ADlabas-simples"
+        },
+        {
+          "label": "Sílabas simples (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/4293574/s%C3%ADlabas-simples"
+        },
+        {
+          "label": "Silabas simples (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/14601065/silabas-simples"
+        },
+        {
+          "label": "Organize o alfabeto (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/25169898/organize-o-alfabeto"
+        }
+      ]
+    },
+    {
+      "data": "2026-10-06",
+      "professora": "Tanea",
+      "sala": "Infantil 5B",
+      "links": [
+        {
+          "label": "Desembaralhe as letras animais (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/27200428/l%C3%ADngua-portuguesa/desembaralhe-as-letras-animais"
+        },
+        {
+          "label": "Animais 1ano (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/38551133/animais-em-ingl%C3%AAs/animais-1ano"
+        },
+        {
+          "label": "Atividades 1º ano alfabetização (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/17438307/atividades-1%C2%BA-ano-alfabetiza%C3%A7%C3%A3o"
+        },
+        {
+          "label": "Percepção visual (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/12313686/percep%C3%A7%C3%A3o-visual"
+        }
+      ]
+    },
+    {
+      "data": "2026-09-29",
+      "professora": "Tanea",
+      "sala": "Infantil 5B",
+      "obs": "Lista sugerida pela professora",
+      "links": [
+        {
+          "label": "Percepção visual (Wordwall)",
+          "url": "https://wordwall.net/pt-br/community/percep%C3%A7%C3%A3o-visual"
+        },
+        {
+          "label": "Atividade 1 ano (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/18203503/portugu%C3%AAs-do-1%C2%BA-ao-5%C2%BA-ano/atividade-1-ano"
+        },
+        {
+          "label": "Alfabetização (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/57777162/l%C3%ADngua-portuguesa/alfabetiza%C3%A7%C3%A3o"
+        },
+        {
+          "label": "Alfabetização (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/4977748/alfabetiza%C3%A7%C3%A3o"
+        },
+        {
+          "label": "Alfabetização (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/4553388/alfabetiza%C3%A7%C3%A3o"
+        }
+      ]
+    },
+    {
+      "data": "2026-09-23",
+      "professora": "Patricia",
+      "sala": "Infantil 5A",
+      "links": [
+        {
+          "label": "Acerte o nome das figuras vogais (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/3958938/acerte-o-nome-das-figuras-vogais"
+        },
+        {
+          "label": "Lista de itens para o aniversário do senhor alfabeto (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/13814773/lista-de-itens-para-o-anivers%C3%A1rio-do-senhor-alfabeto"
+        },
+        {
+          "label": "Atividade de números e quantidades (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/3555591/atividade-de-n%C3%BAmeros-e-quantidades"
+        }
+      ]
+    },
+    {
+      "data": "2026-09-22",
+      "professora": "Tanea",
+      "sala": "Infantil 5B",
+      "links": [
+        {
+          "label": "Letras e números (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/4980262/letras-e-n%C3%BAmeros"
+        },
+        {
+          "label": "Alfabetização (Wordwall)",
+          "url": "https://www.wordwall.net/pt/resource/17969963/alfabetiza%C3%A7%C3%A3o"
+        },
+        {
+          "label": "Atividade de números e quantidades (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/3555591/atividade-de-n%C3%BAmeros-e-quantidades"
+        },
+        {
+          "label": "Lista de itens para o aniversário do senhor alfabeto (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/13814773/lista-de-itens-para-o-anivers%C3%A1rio-do-senhor-alfabeto"
+        },
+        {
+          "label": "Acerte o nome das figuras vogais (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/3958938/acerte-o-nome-das-figuras-vogais"
+        }
+      ]
+    },
+    {
+      "data": "2026-09-15",
+      "links": [
+        {
+          "label": "Letras e números (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/4980262/letras-e-n%C3%BAmeros"
+        },
+        {
+          "label": "Números letras e objetos (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/21805313/n%C3%BAmeros-letras-e-objetos"
+        },
+        {
+          "label": "Reconhecimento de números 1 ao 30 (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/4144752/reconhecimento-de-n%C3%BAmeros-1-ao-30"
+        },
+        {
+          "label": "Sílabas (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/6341502/s%C3%ADlabas"
+        }
+      ]
+    },
+    {
+      "data": "2026-09-08",
+      "links": [
+        {
+          "label": "Acerte o nome das figuras vogais (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/3958938/acerte-o-nome-das-figuras-vogais"
+        },
+        {
+          "label": "Lista de itens para o aniversário do senhor alfabeto (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/13814773/lista-de-itens-para-o-anivers%C3%A1rio-do-senhor-alfabeto"
+        },
+        {
+          "label": "Contagem (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/11937169/contagem"
+        },
+        {
+          "label": "Letras e números (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/4980262/letras-e-n%C3%BAmeros"
+        }
+      ]
+    },
+    {
+      "data": null,
+      "obs": "Lista antiga sem data (migrada de open-inf5.ps1)",
+      "links": [
+        {
+          "label": "O alfabeto (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/13739343/o-alfabeto"
+        },
+        {
+          "label": "Complete o alfabeto (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/7896115/complete-o-alfabeto"
+        },
+        {
+          "label": "Sequência lógica pintura (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/4008719/sequ%C3%AAncia-l%C3%B3gica-pintura"
+        },
+        {
+          "label": "Pintura (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/6516234/pintura"
+        },
+        {
+          "label": "Vamos escrever o seu nome (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/14753080/vamos-escrever-o-seu-nome"
+        },
+        {
+          "label": "O alfabeto (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/16067454/o-alfabeto"
+        },
+        {
+          "label": "Dessembaralhando o alfabeto (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/24159303/dessembaralhando-o-alfabeto"
+        },
+        {
+          "label": "Par e ímpar (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/12268466/par-e-%C3%ADmpar"
+        },
+        {
+          "label": "Jogo da memória o som das consoantes (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/13456792/jogo-da-mem%C3%B3ria-o-som-das-consoantes"
+        },
+        {
+          "label": "Números e quantidades até 20 (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/21662290/matem%C3%A1tica/n%C3%BAmeros-e-quantidades-at%C3%A9-20"
+        }
+      ]
+    }
+  ]
+}

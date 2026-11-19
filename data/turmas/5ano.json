@@ -1,0 +1,72 @@
+{
+  "$schema": "../schema/turma.schema.json",
+  "versao": 1,
+  "turma": "5ano",
+  "nome": "5º ano",
+  "aulas": [
+    {
+      "data": "2026-10-01",
+      "professora": "Mariana",
+      "sala": "5º ano B",
+      "links": [
+        {
+          "label": "5ano sistema cardiovascular (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/12131645/5ano-sistema-cardiovascular"
+        },
+        {
+          "label": "Sistema cardiovascular (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/113054138/sistema-cardiovascular"
+        }
+      ]
+    },
+    {
+      "data": "2026-09-19",
+      "professora": "Geovana",
+      "sala": "5º ano D",
+      "links": [
+        {
+          "label": "Sistema respiratório (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/3327204/sistema-respirat%C3%B3rio"
+        },
+        {
+          "label": "Sistema respiratório (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/6663282/sistema-respirat%C3%B3rio"
+        }
+      ]
+    },
+    {
+      "data": "2026-09-17",
+      "professora": "Mariana",
+      "sala": "5º ano B",
+      "links": [
+        {
+          "label": "Sistema respiratório (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/3327204/sistema-respirat%C3%B3rio"
+        },
+        {
+          "label": "Sistema respiratório (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/6663282/sistema-respirat%C3%B3rio"
+        }
+      ]
+    },
+    {
+      "data": "2026-09-03",
+      "professora": "Mariana",
+      "sala": "5º ano B",
+      "links": [
+        {
+          "label": "Canva",
+          "url": "https://canva.link/g3mmon84gw06myl"
+        },
+        {
+          "label": "Sistema digestório (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/12879527/sistema-digest%C3%B3rio"
+        },
+        {
+          "label": "Sistema digestório (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/4132309/sistema-digest%C3%B3rio"
+        }
+      ]
+    }
+  ]
+}

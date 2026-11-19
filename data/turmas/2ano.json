@@ -1,0 +1,25 @@
+{
+  "$schema": "../schema/turma.schema.json",
+  "versao": 1,
+  "turma": "2ano",
+  "nome": "2º ano",
+  "aulas": [
+    {
+      "data": "2026-09-09",
+      "links": [
+        {
+          "label": "Tangram animals (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/minigames/tangram/tangram_animals.htm?language=portuguese&linkback=../../pt/jogoseducativos/jogos/index.htm"
+        },
+        {
+          "label": "Genially",
+          "url": "https://view.genially.com/6053423d73b6bb0daafb567b"
+        },
+        {
+          "label": "Tangram shapes (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/minigames/tangram/tangram_shapes.htm?language=portuguese&linkback=../../pt/jogoseducativos/jogos/index.htm"
+        }
+      ]
+    }
+  ]
+}

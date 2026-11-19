@@ -24,8 +24,11 @@ irm https://raw.githubusercontent.com/petersonros/irm/main/cli.ps1 -Command open
 ├── cli.ps1              # Ponto de entrada — menu interativo + execução direta
 ├── modules/
 │   ├── clean.ps1        # Limpa dados dos navegadores (histórico, cookies, senhas)
-│   ├── open.ps1         # Abre Chrome com URLs pré-definidas em abas separadas
+│   ├── open.ps1         # Abre os links da aula de uma turma (lê data/turmas/*.json)
 │   └── wallpaper.ps1    # Submenu para aplicar um papel de parede da coleção
+├── data/
+│   ├── schema/          # Contrato JSON das aulas (turma.schema.json)
+│   └── turmas/          # Links das aulas por turma, com histórico (1ano.json, inf4.json…)
 └── wallpapers/          # Coleção de papéis de parede (PNG, nomes sem acento)
 ```
 
@@ -35,6 +38,7 @@ irm https://raw.githubusercontent.com/petersonros/irm/main/cli.ps1 -Command open
 |---|---|
 | [ARCHITECTURE.md](docs/ARCHITECTURE.md) | Como os scripts se relacionam e o fluxo de execução |
 | [MODULES.md](docs/MODULES.md) | Referência detalhada de cada módulo |
+| [Dados.md](docs/Dados.md) | Formato dos JSON de aulas e como preparar uma aula |
 | [ROADMAP.md](docs/ROADMAP.md) | Funcionalidades planejadas e visão futura |
 
 ## Contexto

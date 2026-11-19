@@ -13,52 +13,31 @@
 
 ## Pendências
 
-Sem pendências no momento.
+### Links das aulas em JSON
+- [x] Etapa 1 — contrato v1 definido (`data/schema/turma.schema.json`) e documentado (`docs/Dados.md`)
+- [x] Etapa 2 — 177 links migrados dos `.ps1` para `data/turmas/*.json`, com histórico
+- [x] Etapa 3 — `open.ps1` único que recebe a turma, baixa o JSON e escolhe a aula pela data de hoje (campo opcional `modo` adicionado ao contrato)
+- [ ] Etapa 4 — `cli.ps1` chamando o módulo único por turma
+- [ ] Etapa 5 — remover `open-inf*.ps1` e atualizar a documentação
+
+> Até a etapa 4, os links novos das turmas devem continuar indo nos `open-inf*.ps1` (são eles que o menu chama). Na etapa 4, conferir se algo foi adicionado neles depois de 2026-11-19 e passar para os JSON.
 
 ---
 
 ## Visão Futura
 
-### URLs Dinâmicas via sala-informatica
+### Links das aulas pelo sala-informatica
 
-**Objetivo:** A professora cola a URL no agendamento da aula. Quando o script roda no laboratório, ele busca automaticamente a URL do dia — sem necessidade de editar código.
+**Objetivo:** a professora cola os links no agendamento da aula, e o lab passa a abri-los sem ninguém editar arquivo à mão, mantendo o projeto 100% no GitHub.
 
 **Como funcionaria:**
-1. No `sala-informatica`, ao criar ou aprovar um agendamento, o campo "URL da aula" é salvo no banco de dados
-2. Uma rota pública da API (`/api/lab/urls-do-dia`) retorna as URLs dos agendamentos aprovados para o dia atual
-3. O `open.ps1` faz `Invoke-RestMethod` nessa URL antes de abrir o Chrome
-
-**Exemplo de implementação no open.ps1:**
-```powershell
-$apiUrl = "https://sala-informatica.vercel.app/api/lab/urls-do-dia"
-
-try {
-    $data = Invoke-RestMethod -Uri $apiUrl
-    $urls = $data.urls
-} catch {
-    # Fallback para URLs fixas se a API estiver indisponível
-    $urls = @(
-        "https://app.portalsaseducacao.com.br/entrar/",
-        "https://www.digipuzzle.net/pt/jogoseducativos/"
-    )
-}
-```
+1. A página de agendamento tem um campo de links
+2. Ao salvar, o `sala-informatica` faz commit no `data/turmas/<turma>.json` via API do GitHub (contrato v1, ver [Dados.md](Dados.md))
+3. As máquinas do lab continuam lendo o JSON pelo raw do GitHub, sem nenhuma mudança no `irm`
 
 **Dependências:**
-- Implementar endpoint `GET /api/lab/urls-do-dia` no `sala-informatica`
-- Adicionar campo `url_aula` no model `Agendamento` (Prisma)
-- A rota deve ser pública (sem autenticação) pois as máquinas do lab não têm sessão
-
-**Formato do JSON esperado:**
-```json
-{
-  "data": "2026-04-07",
-  "urls": [
-    "https://app.portalsaseducacao.com.br/entrar/",
-    "https://www.digipuzzle.net/pt/jogoseducativos/"
-  ]
-}
-```
+- Etapas 3–5 da pendência "Links das aulas em JSON" concluídas
+- Token fine-grained do GitHub (*Contents: read and write* só neste repositório), guardado no servidor do `sala-informatica`
 
 ---
 

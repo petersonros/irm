@@ -1,0 +1,114 @@
+{
+  "$schema": "../schema/turma.schema.json",
+  "versao": 1,
+  "turma": "inf4",
+  "nome": "Infantil 4",
+  "aulas": [
+    {
+      "data": "2026-09-24",
+      "professora": "Dione",
+      "sala": "Infantil 4",
+      "links": [
+        {
+          "label": "Memory (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/christmas/cartoons/puzzles/memory.htm?language=portuguese&linkback=../../../pt/jogoseducativos/natal/index.htm"
+        },
+        {
+          "label": "Mysterypictures alphabet (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/minigames/draw/mysterypictures_alphabet.htm?language=portuguese&linkback=../../pt/jogoseducativos/alfabeto/index.htm#google_vignette"
+        },
+        {
+          "label": "Puzzle jigsaw (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/digipuzzle/animals/puzzles/puzzle_jigsaw.htm?language=english&linkback=../../../main/animals/index.htm#google_vignette"
+        },
+        {
+          "label": "Lines (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/digipuzzle/autumn/puzzles/lines.htm?language=english&linkback=../../../education/autumn/index.htm",
+          "ativo": false
+        },
+        {
+          "label": "Purplehorse (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/minigames/decorate/purplehorse/purplehorse.htm?language=english&linkback=../../../education/games/index.htm",
+          "ativo": false
+        },
+        {
+          "label": "Lines (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/digipuzzle/autumn/puzzles/lines.htm?language=german&linkback=../../../de/lernspiele/herbst/index.htm",
+          "ativo": false
+        },
+        {
+          "label": "Lines (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/digipuzzle/halloween/puzzles/lines.htm?language=german&linkback=../../../de/lernspiele/halloween/index.htm",
+          "ativo": false
+        },
+        {
+          "label": "Jigsaw (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/christmas/cartoons/puzzles/jigsaw.htm?language=portuguese&linkback=../../../pt/jogoseducativos/natal/index.htm"
+        },
+        {
+          "label": "Mathgirl multiplications (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/minigames/decorate/mathgirl/mathgirl_multiplications.htm?language=portuguese&linkback=../../../pt/jogoseducativos/matematica-multiplicacao/index.htm"
+        },
+        {
+          "label": "Lines (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/christmas/gingerbread/puzzles/lines.htm?language=portuguese&linkback=../../../pt/jogoseducativos/natal/index.htm"
+        },
+        {
+          "label": "Tictactoe (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/digipuzzle/halloween/puzzles/tictactoe.htm?language=german&linkback=../../../de/lernspiele/halloween/index.htm",
+          "ativo": false
+        },
+        {
+          "label": "Christmastree (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/minigames/decorate/christmastree/christmastree.htm?language=portuguese&linkback=../../../pt/jogoseducativos/natal/index.htm"
+        }
+      ]
+    },
+    {
+      "data": null,
+      "obs": "Lista antiga sem data (migrada de open-inf4.ps1)",
+      "links": [
+        {
+          "label": "Jogo da memória animais (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/25820616/jogo-da-mem%C3%B3ria-animais"
+        },
+        {
+          "label": "Jogo da memória dinossauro (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/17128941/jogo-da-mem%C3%B3ria-dinossauro"
+        },
+        {
+          "label": "Jogo da memória sítio do (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/17070730/percep%C3%A7%C3%A3o-e-mem%C3%B3ria/jogo-da-mem%C3%B3ria-s%C3%ADtio-do"
+        },
+        {
+          "label": "Jogo da memória animais (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/4044063/jogo-da-mem%C3%B3ria-animais"
+        },
+        {
+          "label": "Jogos da memória animais (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/32416546/educa%C3%A7%C3%A3o-e-treinamento/jogos-da-mem%C3%B3ria-animais"
+        },
+        {
+          "label": "Mysterypictures alphabet (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/minigames/draw/mysterypictures_alphabet.htm?language=portuguese&linkback=../../pt/jogoseducativos/alfabeto/index.htm"
+        },
+        {
+          "label": "Puzzle jigsaw (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/animals/monkeys/puzzles/puzzle_jigsaw.htm?language=english&linkback=../../../main/animals/index.htm"
+        },
+        {
+          "label": "Puzzle jigsaw (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/digipuzzle/animals/puzzles/puzzle_jigsaw.htm?language=english&linkback=../../../main/animals/index.htm"
+        },
+        {
+          "label": "Letras e números (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/4980262/letras-e-n%C3%BAmeros"
+        },
+        {
+          "label": "Números letras e objetos (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/21805313/n%C3%BAmeros-letras-e-objetos"
+        }
+      ]
+    }
+  ]
+}

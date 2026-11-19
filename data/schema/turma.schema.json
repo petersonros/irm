@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/petersonros/irm/main/data/schema/turma.schema.json",
+  "title": "Aulas de uma turma — conquista-cli",
+  "description": "Contrato v1. Vale para os arquivos em data/turmas/, editados à mão ou gravados pelo sala-informatica via API do GitHub.",
+  "type": "object",
+  "required": [
+    "versao",
+    "turma",
+    "nome",
+    "aulas"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "versao": {
+      "description": "Versão do contrato. Só muda se o formato mudar de forma incompatível.",
+      "const": 1
+    },
+    "turma": {
+      "description": "Identificador usado pelo script (igual ao nome do arquivo, sem .json).",
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "nome": {
+      "description": "Nome exibido no menu.",
+      "type": "string",
+      "minLength": 1
+    },
+    "modo": {
+      "description": "Como abrir os links da aula escolhida. \"todos\" (padrão): abre tudo de uma vez numa janela nova. \"menu\": submenu para abrir um por um (ex.: pesquisa, cada máquina abre um formulário).",
+      "enum": [
+        "todos",
+        "menu"
+      ],
+      "default": "todos"
+    },
+    "aulas": {
+      "description": "Aulas da turma, da mais recente para a mais antiga. Nova aula entra no topo.",
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/aula"
+      }
+    }
+  },
+  "$defs": {
+    "aula": {
+      "type": "object",
+      "required": [
+        "data",
+        "links"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "data": {
+          "description": "Dia da aula (AAAA-MM-DD). O script abre sozinho a aula com a data de hoje. null = lista sem data (só aparece no menu de escolha).",
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "professora": {
+          "type": "string"
+        },
+        "sala": {
+          "description": "Ex.: \"1º ano A\". Diferencia aulas da mesma turma no mesmo dia.",
+          "type": "string"
+        },
+        "obs": {
+          "type": "string"
+        },
+        "links": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/link"
+          }
+        }
+      }
+    },
+    "link": {
+      "type": "object",
+      "required": [
+        "url"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "label": {
+          "description": "Texto mostrado no submenu. Se faltar, o script mostra a própria URL.",
+          "type": "string"
+        },
+        "url": {
+          "type": "string",
+          "pattern": "^https?://"
+        },
+        "ativo": {
+          "description": "false = o link fica guardado, mas não é aberto. Padrão: true.",
+          "type": "boolean",
+          "default": true
+        }
+      }
+    }
+  }
+}

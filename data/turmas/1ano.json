@@ -1,0 +1,422 @@
+{
+  "$schema": "../schema/turma.schema.json",
+  "versao": 1,
+  "turma": "1ano",
+  "nome": "1º ano",
+  "aulas": [
+    {
+      "data": "2026-11-19",
+      "professora": "Cintia",
+      "sala": "1º ano A",
+      "links": [
+        {
+          "label": "Adivinha adivinha esta palavrinha (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/9648877/adivinha-adivinha-esta-palavrinha"
+        },
+        {
+          "label": "Gráfico (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/17600787/gr%C3%A1fico"
+        }
+      ]
+    },
+    {
+      "data": "2026-11-17",
+      "professora": "Soraia",
+      "sala": "1º ano B",
+      "links": [
+        {
+          "label": "Mozaics copy christmas (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/minigames/mozaics/mozaics_copy_christmas.htm?language=portuguese&linkback=../../pt/jogoseducativos/natal/index.htm"
+        },
+        {
+          "label": "Wordsearch pt (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/christmas/decorations/puzzles/wordsearch_pt.htm?language=portuguese&linkback=../../../pt/jogoseducativos/natal/index.htm"
+        },
+        {
+          "label": "Jigsaw (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/christmas/cartoons/puzzles/jigsaw.htm?language=portuguese&linkback=../../../pt/jogoseducativos/natal/index.htm"
+        },
+        {
+          "label": "Memory (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/christmas/cartoons/puzzles/memory.htm?language=portuguese&linkback=../../../pt/jogoseducativos/natal/index.htm"
+        },
+        {
+          "label": "Lines (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/christmas/gingerbread/puzzles/lines.htm?language=portuguese&linkback=../../../pt/jogoseducativos/natal/index.htm"
+        }
+      ]
+    },
+    {
+      "data": "2026-11-12",
+      "professora": "Cintia",
+      "sala": "1º ano A",
+      "links": [
+        {
+          "label": "Meses do ano (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/21931322/meses-do-ano"
+        },
+        {
+          "label": "1 ano natal (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/8361281/1-ano-natal"
+        }
+      ]
+    },
+    {
+      "data": "2026-11-10",
+      "professora": "Soraia",
+      "sala": "1º ano B",
+      "links": [
+        {
+          "label": "Clutter images texts pt (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/animals/collection/puzzles/clutter_images_texts_pt.htm?language=portuguese&linkback=../../../pt/jogoseducativos/palavras/index.htm"
+        },
+        {
+          "label": "Wordquiz shadows pt (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/animals/collection/puzzles/wordquiz_shadows_pt.htm?language=portuguese&linkback=../../../pt/jogoseducativos/palavras/index.htm"
+        }
+      ]
+    },
+    {
+      "data": "2026-11-05",
+      "professora": "Cintia",
+      "sala": "1º ano A",
+      "links": [
+        {
+          "label": "Associa as frases ao desenho (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/12028737/associa-as-frases-ao-desenho"
+        },
+        {
+          "label": "Vamos fazer contas (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/5709592/vamos-fazer-contas"
+        }
+      ]
+    },
+    {
+      "data": "2026-10-30",
+      "professora": "Andreia",
+      "sala": "1º ano C",
+      "links": [
+        {
+          "label": "Wordwall — atividades do professor 7548259",
+          "url": "https://wordwall.net/pt/teacher/7548259"
+        },
+        {
+          "label": "Jogos (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/17006917/jogos"
+        }
+      ]
+    },
+    {
+      "data": "2026-10-29",
+      "professora": "Cintia",
+      "sala": "1º ano A",
+      "links": [
+        {
+          "label": "Associa as frases ao desenho (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/12028737/associa-as-frases-ao-desenho"
+        },
+        {
+          "label": "Vamos fazer contas (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/5709592/vamos-fazer-contas"
+        }
+      ]
+    },
+    {
+      "data": "2026-10-22",
+      "professora": "Cintia",
+      "sala": "1º ano A",
+      "links": [
+        {
+          "label": "Ortografias brcrdrtrgrdr (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/17744387/ortografias-brcrdrtrgrdr"
+        },
+        {
+          "label": "Jogo de rimar (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/23237180/jogo-de-rimar"
+        },
+        {
+          "label": "Português leitura de palavras ii (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/32502986/portugu%C3%AAs-leitura-de-palavras-ii"
+        }
+      ]
+    },
+    {
+      "data": "2026-10-20",
+      "professora": "Soraia",
+      "sala": "1º ano B",
+      "links": [
+        {
+          "label": "Trem da soma (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/11938969/trem-da-soma"
+        },
+        {
+          "label": "O pato e o sapo (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/35337918/fonoaudiologia-educacional/o-pato-e-o-sapo"
+        },
+        {
+          "label": "Surda sonora (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/34981773/alfabetiza%C3%A7%C3%A3o/surda-sonora"
+        }
+      ]
+    },
+    {
+      "data": "2026-10-08",
+      "professora": "Cintia",
+      "sala": "1º ano A",
+      "links": [
+        {
+          "label": "Números por extenso (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/13653718/n%C3%BAmeros-por-extenso"
+        },
+        {
+          "label": "Números por extenso (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/36375146/matem%C3%A1tica/n%C3%BAmeros-por-extenso"
+        },
+        {
+          "label": "Números por extenso (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/3866318/n%C3%BAmeros-por-extenso"
+        }
+      ]
+    },
+    {
+      "data": "2026-10-06",
+      "professora": "Andreia",
+      "sala": "1º ano C",
+      "links": [
+        {
+          "label": "Connectpieces wordinword pt (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/digipuzzle/kids/puzzles/connectpieces_wordinword_pt.htm?language=portuguese&linkback=../../../pt/jogoseducativos/palavras/index.htm#google_vignette"
+        },
+        {
+          "label": "Memory wildanimals pt (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/minigames/mathmemory/memory_wildanimals_pt.htm?language=portuguese&linkback=../../pt/jogoseducativos/palavras/index.htm"
+        },
+        {
+          "label": "Jogo da memória animais da selva (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/74359025/ci%C3%AAncias/jogo-da-mem%C3%B3ria-animais-da-selva"
+        },
+        {
+          "label": "Palavras simples 1ano (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/32011829/portuguese-language/palavras-simples-1ano"
+        }
+      ]
+    },
+    {
+      "data": "2026-10-06",
+      "professora": "Soraia",
+      "sala": "1º ano B",
+      "links": [
+        {
+          "label": "Connectpieces wordinword pt (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/digipuzzle/kids/puzzles/connectpieces_wordinword_pt.htm?language=portuguese&linkback=../../../pt/jogoseducativos/palavras/index.htm#google_vignette"
+        },
+        {
+          "label": "Memory wildanimals pt (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/minigames/mathmemory/memory_wildanimals_pt.htm?language=portuguese&linkback=../../pt/jogoseducativos/palavras/index.htm"
+        },
+        {
+          "label": "Jogo da memória animais da selva (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/74359025/ci%C3%AAncias/jogo-da-mem%C3%B3ria-animais-da-selva"
+        },
+        {
+          "label": "Palavras simples 1ano (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/32011829/portuguese-language/palavras-simples-1ano"
+        }
+      ]
+    },
+    {
+      "data": "2026-10-01",
+      "professora": "Cintia",
+      "sala": "1º ano A",
+      "links": [
+        {
+          "label": "Aee leitura e compreensão frases (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/4474837/aee-leitura-e-compreens%C3%A3o-frases"
+        },
+        {
+          "label": "Português completar frases (Wordwall)",
+          "url": "https://wordwall.net/es/resource/8500928/portugu%C3%AAs-completar-frases"
+        },
+        {
+          "label": "Leitura de frases 1ano (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/16831120/leitura-de-frases-1ano"
+        },
+        {
+          "label": "Frases simples (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/15603114/frases-simples"
+        }
+      ]
+    },
+    {
+      "data": "2026-09-24",
+      "professora": "Cintia",
+      "sala": "1º ano A",
+      "links": [
+        {
+          "label": "Dúzia e meia dúzia (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/21978075/d%C3%BAzia-e-meia-d%C3%BAzia"
+        },
+        {
+          "label": "Lh nh ch 2º ano (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/26444444/lh-nh-ch-2%C2%BA-ano"
+        }
+      ]
+    },
+    {
+      "data": "2026-09-22",
+      "professora": "Soraia",
+      "sala": "1º ano B",
+      "links": [
+        {
+          "label": "Quiz alfabetização 1 ano (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/8243546/quiz-alfabetiza%C3%A7%C3%A3o-1-ano"
+        },
+        {
+          "label": "Jogo de rimar (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/23237180/jogo-de-rimar"
+        },
+        {
+          "label": "Interpretação de tabelas e gráficos (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/14239519/interpreta%C3%A7%C3%A3o-de-tabelas-e-gr%C3%A1ficos"
+        },
+        {
+          "label": "Completa as frases (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/1052057/completa-as-frases"
+        }
+      ]
+    },
+    {
+      "data": "2026-09-18",
+      "professora": "Andreia",
+      "sala": "1º ano C",
+      "links": [
+        {
+          "label": "Finderrors texts pt mn (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/minigames/flashmath/finderrors_texts_pt_mn.htm?language=portuguese&linkback=../../pt/jogoseducativos/palavras/index.htm"
+        },
+        {
+          "label": "Photosearch (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/kids/animalcartoons/puzzles/photosearch.htm?language=portuguese&linkback=../../../pt/jogoseducativos/jogos/index.htm"
+        }
+      ]
+    },
+    {
+      "data": "2026-09-17",
+      "professora": "Cintia",
+      "sala": "1º ano A",
+      "links": [
+        {
+          "label": "Leitura (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/4081465/leitura"
+        },
+        {
+          "label": "Complete as frases (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/75023720/portuguesa/complete-as-frases"
+        },
+        {
+          "label": "Pareamento de frases imagens (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/3398369/pareamento-de-frases-imagens"
+        },
+        {
+          "label": "Completar frases (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/19448684/completar-frases"
+        }
+      ]
+    },
+    {
+      "data": "2026-09-15",
+      "professora": "Soraia",
+      "sala": "1º ano B",
+      "links": [
+        {
+          "label": "Avião acertando a soma (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/14357894/avi%C3%A3o-acertando-a-soma"
+        },
+        {
+          "label": "Interpretação de frases (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/77901051/leitura/interpreta%C3%A7%C3%A3o-de-frases"
+        },
+        {
+          "label": "Organizar frases fonema s (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/51829825/organizar-frases-fonema-s"
+        },
+        {
+          "label": "Soma (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/3648364/soma"
+        },
+        {
+          "label": "Organizar as frases fonema sz (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/36730359/fonemas/organizar-as-frases-fonema-sz"
+        }
+      ]
+    },
+    {
+      "data": "2026-09-11",
+      "professora": "Andreia",
+      "sala": "1º ano C",
+      "links": [
+        {
+          "label": "Findtheletter pt (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/minigames/findtheletter/findtheletter_pt.htm?language=portuguese&linkback=../../pt/jogoseducativos/alfabeto/index.htm"
+        },
+        {
+          "label": "Clutter animal skins (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/digipuzzle/animals/puzzles/clutter_animal_skins.htm?language=portuguese&linkback=../../../pt/jogoseducativos/jogos/index.htm"
+        },
+        {
+          "label": "Clutter (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/digipuzzle/animals/puzzles/clutter.htm?language=portuguese&linkback=../../../pt/jogoseducativos/jogos/index.htm"
+        }
+      ]
+    },
+    {
+      "data": "2026-09-10",
+      "professora": "Cintia",
+      "sala": "1º ano C",
+      "obs": "Soraia (1º ano B) quer algo parecido",
+      "links": [
+        {
+          "label": "Leitura de frases (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/116240486/leitura-de-frases"
+        },
+        {
+          "label": "Leitura (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/4081465/leitura"
+        },
+        {
+          "label": "Leitura de frases 1ano (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/16831120/leitura-de-frases-1ano"
+        },
+        {
+          "label": "Interpretação de frases (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/77901051/leitura/interpreta%C3%A7%C3%A3o-de-frases"
+        }
+      ]
+    },
+    {
+      "data": "2026-09-03",
+      "links": [
+        {
+          "label": "Hiddenobjects (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/digipuzzle/kids/puzzles/hiddenobjects.htm?language=portuguese&linkback=../../../pt/jogoseducativos/palavras/index.htm"
+        },
+        {
+          "label": "Codegrid images shapes (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/minigames/codegrid/codegrid_images_shapes.htm?language=portuguese&linkback=../../pt/jogoseducativos/ciencias/index.htm"
+        },
+        {
+          "label": "M ou n eccavp (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/4191449/m-ou-n-eccavp"
+        },
+        {
+          "label": "Finderrors texts pt mn (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/minigames/flashmath/finderrors_texts_pt_mn.htm?language=portuguese&linkback=../../pt/jogoseducativos/palavras/index.htm"
+        },
+        {
+          "label": "Photosearch (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/kids/animalcartoons/puzzles/photosearch.htm?language=portuguese&linkback=../../../pt/jogoseducativos/jogos/index.htm"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "$schema": "../schema/turma.schema.json",
+  "versao": 1,
+  "turma": "4ano",
+  "nome": "4º ano",
+  "aulas": [
+    {
+      "data": "2026-10-30",
+      "professora": "Valeria",
+      "sala": "4º ano A",
+      "links": [
+        {
+          "label": "Area na malha (Escola Games)",
+          "url": "https://www.escolagames.com.br/jogos/area-na-malha"
+        },
+        {
+          "label": "Área e perímetro 2 (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/13375400/%C3%A1rea-e-per%C3%ADmetro-2"
+        },
+        {
+          "label": "Área e perímetro (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/5554007/%C3%A1rea-e-per%C3%ADmetro"
+        },
+        {
+          "label": "Área e perímetro 4º ano (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/14049177/%C3%A1rea-e-per%C3%ADmetro-4%C2%BA-ano"
+        },
+        {
+          "label": "Perímetro área e volume (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/16134834/per%C3%ADmetro-%C3%A1rea-e-volume"
+        },
+        {
+          "label": "Área e perímetro (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/24494762/%C3%A1rea-e-per%C3%ADmetro"
+        },
+        {
+          "label": "PhET — modelo de área",
+          "url": "https://phet.colorado.edu/sims/html/area-model-introduction/latest/area-model-introduction_all.html?locale=pt_BR"
+        }
+      ]
+    },
+    {
+      "data": "2026-09-18",
+      "professora": "Valeria",
+      "sala": "4º ano A",
+      "links": [
+        {
+          "label": "Frações equivalentes 4º ano (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/58283470/fra%C3%A7%C3%B5es-equivalentes-4%C2%BA-ano"
+        },
+        {
+          "label": "Fração 4º ano (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/21796051/fra%C3%A7%C3%A3o-4%C2%BA-ano"
+        },
+        {
+          "label": "Frações equivalentes 4 ano (Wordwall)",
+          "url": "https://wordwall.net/resource/100202594/matem%C3%A1tica/fra%C3%A7%C3%B5es-equivalentes-4-ano"
+        },
+        {
+          "label": "Frações equivalentes 4º ano (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/101360367/fra%C3%A7%C3%B5es-equivalentes-4%C2%BA-ano"
+        },
+        {
+          "label": "Fração equivalente 4º ano (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/35993201/fra%C3%A7%C3%A3o-equivalente-4%C2%BA-ano"
+        }
+      ]
+    }
+  ]
+}

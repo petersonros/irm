@@ -1,0 +1,26 @@
+{
+  "$schema": "../schema/turma.schema.json",
+  "versao": 1,
+  "turma": "3ano",
+  "nome": "3º ano",
+  "aulas": [
+    {
+      "data": null,
+      "obs": "Lista antiga sem data (migrada de open-inf3.ps1)",
+      "links": [
+        {
+          "label": "Alfabetização (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/4038708/alfabetiza%C3%A7%C3%A3o"
+        },
+        {
+          "label": "Mozaics alphabet (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/minigames/mozaics/mozaics_alphabet.htm?language=portuguese&linkback=../../pt/jogoseducativos/alfabeto/index.htm"
+        },
+        {
+          "label": "Tangram animals (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/minigames/tangram/tangram_animals.htm?language=portuguese&linkback=../../pt/jogoseducativos/jogos/index.htm"
+        }
+      ]
+    }
+  ]
+}

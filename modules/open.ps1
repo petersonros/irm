@@ -1,66 +1,85 @@
-# URLs da aula
-# Cada item pode ser só a URL ou "Rótulo | URL" (o rótulo aparece no submenu)
-$urls = @(
-    # 03-09-2026 (Mariana 5 ano B)
-    # "https://canva.link/g3mmon84gw06myl",
-    # "https://wordwall.net/pt/resource/12879527/sistema-digest%C3%B3rio",
-    # "https://wordwall.net/pt/resource/4132309/sistema-digest%C3%B3rio",
-
-    # 17-09-2026 (Mariana 5 ano B)
-    #"https://wordwall.net/pt/resource/3327204/sistema-respirat%C3%B3rio",
-    #"https://wordwall.net/pt/resource/6663282/sistema-respirat%C3%B3rio"
-
-    # 18-09-2026 (Valeria 4 ano A)
-    #"https://wordwall.net/pt/resource/58283470/fra%C3%A7%C3%B5es-equivalentes-4%C2%BA-ano",
-    #"https://wordwall.net/pt/resource/21796051/fra%C3%A7%C3%A3o-4%C2%BA-ano",
-    #"https://wordwall.net/resource/100202594/matem%C3%A1tica/fra%C3%A7%C3%B5es-equivalentes-4-ano",
-    #"https://wordwall.net/pt/resource/101360367/fra%C3%A7%C3%B5es-equivalentes-4%C2%BA-ano",
-    #"https://wordwall.net/pt/resource/35993201/fra%C3%A7%C3%A3o-equivalente-4%C2%BA-ano"
-
-    # 19-09-2026 (Geovana 5 ano D)
-    # "https://wordwall.net/pt/resource/3327204/sistema-respirat%C3%B3rio",
-    # "https://wordwall.net/pt/resource/6663282/sistema-respirat%C3%B3rio"
-
-    # 01-10-2026 (Mariana 5 ano B)
-    # "https://wordwall.net/pt/resource/12131645/5ano-sistema-cardiovascular",
-    # "https://wordwall.net/pt/resource/113054138/sistema-cardiovascular"
-
-    # 30-10-2026 (Valeria 4 ano A)
-    # "https://www.escolagames.com.br/jogos/area-na-malha",
-    # "https://wordwall.net/pt/resource/13375400/%C3%A1rea-e-per%C3%ADmetro-2",
-    # "https://wordwall.net/pt/resource/5554007/%C3%A1rea-e-per%C3%ADmetro",
-    # "https://wordwall.net/pt/resource/14049177/%C3%A1rea-e-per%C3%ADmetro-4%C2%BA-ano",
-    # "https://wordwall.net/pt/resource/16134834/per%C3%ADmetro-%C3%A1rea-e-volume",
-    # "https://wordwall.net/pt/resource/24494762/%C3%A1rea-e-per%C3%ADmetro"
-    # "https://phet.colorado.edu/sims/html/area-model-introduction/latest/area-model-introduction_all.html?locale=pt_BR"
-
-    # 2026-11-03 Viviam
-    "Pesquisa de Satisfação — 6º ano — Manhã | https://forms.gle/ruQjDHdSsyxN72cN7",
-    "Pesquisa de Satisfação — 6º ano — Tarde | https://forms.gle/SCCteGorax3ANu8w7",
-    "Pesquisa de Satisfação — 7º ano — Manhã | https://forms.gle/t8MmqwWKxwUp6uq9A",
-    "Pesquisa de Satisfação — 7º ano — Tarde | https://forms.gle/Cd9tnQJztPY3cPKr8",
-    "Pesquisa de Satisfação — 8º ano — Manhã | https://forms.gle/P3PPTyfhvp3ZMG5Z9",
-    "Pesquisa de Satisfação — 8º ano — Tarde | https://forms.gle/KYm6AZHnvGmoVkR58",
-    "Pesquisa de Satisfação — | https://petersonros.github.io/irm/"
-    
+# Abre os links da aula de uma turma.
+# Os links ficam em data/turmas/<turma>.json (formato em docs/Dados.md).
+#
+# Uso:
+#   & ([scriptblock]::Create((irm <url>/modules/open.ps1))) -Turma 1ano
+#   & ([scriptblock]::Create((irm <url>/modules/open.ps1))) -Turma 1ano -Data 2026-11-17
+#   irm <url>/modules/open.ps1 | iex      # pergunta a turma
+#
+# Teste local, sem precisar de push: defina $env:IRM_DADOS com o caminho da pasta data\turmas.
+param(
+    [string]$Turma,
+    [string]$Data
 )
 
-# Separar rótulo e URL ("Rótulo | URL" ou só "URL")
-$links = @(foreach ($item in $urls) {
-    $parts = $item -split '\s*\|\s*', 2
-    if ($parts.Count -eq 2) {
-        [PSCustomObject]@{ Label = $parts[0]; Url = $parts[1]; Opened = $false }
-    } else {
-        [PSCustomObject]@{ Label = $item; Url = $item; Opened = $false }
-    }
-})
+$fonte = "https://raw.githubusercontent.com/petersonros/irm/main/data/turmas"
 
-if ($links.Count -eq 0) {
-    Write-Host "Nenhuma URL ativa na lista." -ForegroundColor Yellow
-    return
+# =========================
+# DADOS
+# =========================
+function Get-DadosTurma {
+    param ($id)
+
+    if ($env:IRM_DADOS) {
+        $path = Join-Path $env:IRM_DADOS "$id.json"
+        return (Get-Content -LiteralPath $path -Raw -Encoding UTF8 -ErrorAction Stop | ConvertFrom-Json)
+    }
+
+    # O raw do GitHub serve .json como text/plain: chega como texto e precisa ser convertido
+    $resp = Invoke-RestMethod -Uri "$fonte/$id.json" -UseBasicParsing
+    if ($resp -is [string]) { $resp = $resp | ConvertFrom-Json }
+    return $resp
 }
 
-# Detectar navegador
+function Format-Aula {
+    param ($aula)
+
+    if ($aula.data) {
+        $texto = ([datetime]::ParseExact($aula.data, 'yyyy-MM-dd', $null)).ToString('dd-MM-yyyy')
+    } else {
+        $texto = "sem data"
+    }
+
+    if ($aula.professora -and $aula.sala) { $texto += " — $($aula.professora) ($($aula.sala))" }
+    elseif ($aula.professora)             { $texto += " — $($aula.professora)" }
+    elseif ($aula.sala)                   { $texto += " — $($aula.sala)" }
+
+    $ativos = @($aula.links | Where-Object { $_.ativo -ne $false }).Count
+    $texto += " · $ativos link" + $(if ($ativos -ne 1) { "s" } else { "" })
+    if ($aula.obs) { $texto += " · $($aula.obs)" }
+    return $texto
+}
+
+# Menu de escolha quando não dá para decidir pela data. Devolve a aula ou $null (voltar).
+function Select-Aula {
+    param ($titulo, $opcoes)
+
+    while ($true) {
+        Clear-Host
+        Write-Host ""
+        Write-Host "  ==== $($dados.nome) ====" -ForegroundColor Cyan
+        Write-Host ""
+        Write-Host "  $titulo" -ForegroundColor Yellow
+        Write-Host ""
+        for ($i = 0; $i -lt $opcoes.Count; $i++) {
+            Write-Host ("  [{0}]" -f ($i + 1)) -ForegroundColor Green -NoNewline
+            Write-Host (" {0}" -f (Format-Aula $opcoes[$i]))
+        }
+        Write-Host ""
+        Write-Host "  [V]" -ForegroundColor DarkGray -NoNewline; Write-Host " Voltar"
+        Write-Host ""
+
+        $choice = (Read-Host "  Escolha").Trim()
+        if ($choice -match '^[Vv]$') { return $null }
+        if ($choice -match '^\d+$' -and [int]$choice -ge 1 -and [int]$choice -le $opcoes.Count) {
+            return $opcoes[[int]$choice - 1]
+        }
+    }
+}
+
+# =========================
+# NAVEGADOR
+# =========================
 $browser = $null
 $processName = $null
 if (Get-Command chrome.exe -ErrorAction SilentlyContinue) {
@@ -83,8 +102,10 @@ function Open-SingleUrl {
     }
 }
 
-# Comportamento original: fecha o navegador e abre todas na mesma janela, em ordem
+# Fecha o navegador e abre todas na mesma janela, em ordem
 function Open-AllUrls {
+    param ($links)
+
     if (-not $browser) {
         foreach ($link in $links) {
             Start-Process $link.Url
@@ -108,56 +129,110 @@ function Open-AllUrls {
     }
 }
 
-function Show-OpenMenu {
-    Clear-Host
-    Write-Host ""
-    Write-Host "  ==== URLs da Pesquisa ====" -ForegroundColor Cyan
-    Write-Host ""
-    for ($i = 0; $i -lt $links.Count; $i++) {
-        $mark  = if ($links[$i].Opened) { "✓" } else { " " }
-        $color = if ($links[$i].Opened) { "DarkGray" } else { "White" }
-        Write-Host ("  [{0}]" -f ($i + 1)) -ForegroundColor Green -NoNewline
-        Write-Host (" {0} {1}" -f $mark, $links[$i].Label) -ForegroundColor $color
+# Submenu para abrir um por um (modo "menu")
+function Show-LinksMenu {
+    param ($titulo, $links)
+
+    while ($true) {
+        Clear-Host
+        Write-Host ""
+        Write-Host "  ==== $titulo ====" -ForegroundColor Cyan
+        Write-Host ""
+        for ($i = 0; $i -lt $links.Count; $i++) {
+            $mark  = if ($links[$i].Opened) { "✓" } else { " " }
+            $color = if ($links[$i].Opened) { "DarkGray" } else { "White" }
+            Write-Host ("  [{0}]" -f ($i + 1)) -ForegroundColor Green -NoNewline
+            Write-Host (" {0} {1}" -f $mark, $links[$i].Label) -ForegroundColor $color
+        }
+        Write-Host ""
+        Write-Host "  [Enter]" -ForegroundColor Cyan -NoNewline; Write-Host " Abrir o próximo da lista"
+        Write-Host "  [T]" -ForegroundColor Cyan -NoNewline; Write-Host " Abrir todos de uma vez"
+        Write-Host "  [V]" -ForegroundColor DarkGray -NoNewline; Write-Host " Voltar"
+        Write-Host ""
+
+        $choice = (Read-Host "  Escolha").Trim()
+
+        if ($choice -eq "") {
+            $next = $links | Where-Object { -not $_.Opened } | Select-Object -First 1
+            if ($next) {
+                Write-Host "🚀 Abrindo: $($next.Label)" -ForegroundColor Cyan
+                Open-SingleUrl $next.Url
+                $next.Opened = $true
+            } else {
+                Write-Host "Todos os links já foram abertos." -ForegroundColor Yellow
+                Start-Sleep -Seconds 1
+            }
+        }
+        elseif ($choice -match '^\d+$' -and [int]$choice -ge 1 -and [int]$choice -le $links.Count) {
+            $link = $links[[int]$choice - 1]
+            Write-Host "🚀 Abrindo: $($link.Label)" -ForegroundColor Cyan
+            Open-SingleUrl $link.Url
+            $link.Opened = $true
+        }
+        elseif ($choice -match '^[Tt]$') {
+            Write-Host "🚀 Abrindo todos os links..." -ForegroundColor Cyan
+            Open-AllUrls $links
+            foreach ($link in $links) { $link.Opened = $true }
+            Write-Host "✅ Ambiente pronto!"
+            Start-Sleep -Seconds 1
+        }
+        elseif ($choice -match '^[Vv]$') {
+            break
+        }
     }
-    Write-Host ""
-    Write-Host "  [Enter]" -ForegroundColor Cyan -NoNewline; Write-Host " Abrir o próximo da lista"
-    Write-Host "  [T]" -ForegroundColor Cyan -NoNewline; Write-Host " Abrir todos de uma vez"
-    Write-Host "  [V]" -ForegroundColor DarkGray -NoNewline; Write-Host " Voltar"
-    Write-Host ""
 }
 
 # =========================
-# SUBMENU
+# FLUXO
 # =========================
-while ($true) {
-    Show-OpenMenu
-    $choice = (Read-Host "  Escolha").Trim()
+if (-not $Turma) {
+    $Turma = (Read-Host "  Turma (ex.: 1ano, inf4, pesquisa)").Trim().ToLower()
+    if (-not $Turma) { return }
+}
 
-    if ($choice -eq "") {
-        $next = $links | Where-Object { -not $_.Opened } | Select-Object -First 1
-        if ($next) {
-            Write-Host "🚀 Abrindo: $($next.Label)" -ForegroundColor Cyan
-            Open-SingleUrl $next.Url
-            $next.Opened = $true
-        } else {
-            Write-Host "Todos os links já foram abertos." -ForegroundColor Yellow
-            Start-Sleep -Seconds 1
-        }
+try {
+    $dados = Get-DadosTurma $Turma
+    if (-not $dados -or -not $dados.nome) { throw "Arquivo vazio ou fora do formato (ver docs/Dados.md)." }
+} catch {
+    Write-Host ""
+    Write-Host "Não foi possível carregar a turma '$Turma'." -ForegroundColor Red
+    Write-Host $_.Exception.Message -ForegroundColor Yellow
+    return
+}
+
+$aulas = @($dados.aulas)
+if ($aulas.Count -eq 0) {
+    Write-Host "Nenhuma aula cadastrada para $($dados.nome)." -ForegroundColor Yellow
+    return
+}
+
+$hoje = if ($Data) { $Data } else { Get-Date -Format 'yyyy-MM-dd' }
+$doDia = @($aulas | Where-Object { $_.data -eq $hoje })
+
+if ($doDia.Count -eq 1) {
+    $aula = $doDia[0]
+} elseif ($doDia.Count -gt 1) {
+    $aula = Select-Aula "Há $($doDia.Count) aulas hoje. Qual abrir?" $doDia
+} else {
+    $aula = Select-Aula "Nenhuma aula cadastrada para hoje. Últimas aulas:" @($aulas | Select-Object -First 10)
+}
+if (-not $aula) { return }
+
+$links = @(foreach ($l in $aula.links) {
+    if ($l.ativo -ne $false) {
+        $label = if ($l.label) { $l.label } else { $l.url }
+        [PSCustomObject]@{ Label = $label; Url = $l.url; Opened = $false }
     }
-    elseif ($choice -match '^\d+$' -and [int]$choice -ge 1 -and [int]$choice -le $links.Count) {
-        $link = $links[[int]$choice - 1]
-        Write-Host "🚀 Abrindo: $($link.Label)" -ForegroundColor Cyan
-        Open-SingleUrl $link.Url
-        $link.Opened = $true
-    }
-    elseif ($choice -match '^[Tt]$') {
-        Write-Host "🚀 Abrindo todas as URLs da aula..." -ForegroundColor Cyan
-        Open-AllUrls
-        foreach ($link in $links) { $link.Opened = $true }
-        Write-Host "✅ Ambiente pronto!"
-        Start-Sleep -Seconds 1
-    }
-    elseif ($choice -match '^[Vv]$') {
-        break
-    }
+})
+if ($links.Count -eq 0) {
+    Write-Host "Essa aula não tem links ativos." -ForegroundColor Yellow
+    return
+}
+
+if ($dados.modo -eq "menu") {
+    Show-LinksMenu $dados.nome $links
+} else {
+    Write-Host "🚀 Abrindo $($dados.nome): $(Format-Aula $aula)" -ForegroundColor Cyan
+    Open-AllUrls $links
+    Write-Host "✅ Ambiente pronto!"
 }

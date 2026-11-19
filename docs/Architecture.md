@@ -37,26 +37,14 @@ Máquina do laboratório
 
 ## Limitações Atuais
 
-- URLs abertas pelo `open.ps1` são fixas no código-fonte
+- URLs abertas pelos `open*.ps1` ainda são fixas no código-fonte (migração para `data/turmas/` em andamento)
 - Não há autenticação ou controle de quem executa os scripts
 - Requer que o Chrome esteja instalado como `chrome.exe` no PATH ou em localização padrão
 
+## Dados das Aulas
+
+Os links das aulas estão sendo movidos do código para `data/turmas/<turma>.json` (um arquivo por turma, com histórico). Formato, regras de escolha da aula e notas de implementação: [Dados.md](Dados.md).
+
 ## Integração Futura com sala-informatica
 
-O sistema de agendamento (`sala-informatica`) poderá expor um endpoint público retornando as URLs do dia em JSON. O `open.ps1` consultaria esse endpoint antes de abrir o navegador, eliminando a necessidade de editar o script manualmente.
-
-Formato esperado do JSON:
-
-```json
-{
-  "urls": [
-    "https://app.portalsaseducacao.com.br/entrar/",
-    "https://www.digipuzzle.net/pt/jogoseducativos/"
-  ]
-}
-```
-
-Endpoint sugerido (a implementar no sala-informatica):
-```
-GET /api/lab/urls-do-dia
-```
+O projeto continua rodando só a partir do GitHub. O sistema de agendamento (`sala-informatica`) **escreve** nos arquivos `data/turmas/*.json` via API do GitHub (um commit por alteração); as máquinas do lab continuam lendo do raw do GitHub, sem saber de onde veio a edição. Detalhes em [Dados.md](Dados.md#integração-futura-com-o-sala-informatica).

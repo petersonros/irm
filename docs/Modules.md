@@ -74,27 +74,36 @@ irm https://raw.githubusercontent.com/petersonros/irm/main/modules/clean.ps1 | i
 
 ## modules/open.ps1
 
-**Papel:** Mostra um submenu com as URLs da aula para abri-las uma a uma ou todas de uma vez.
+**Papel:** abre os links da aula de uma turma. Os links vêm de `data/turmas/<turma>.json` (formato em [Dados.md](Dados.md)).
 
-**Submenu:**
-- `[1..N]` abre aquele link específico em uma nova aba (sem fechar o navegador)
-- `[Enter]` abre o próximo link ainda não aberto (links abertos ficam marcados com ✓)
-- `[T]` abre todos de uma vez (comportamento antigo: encerra o navegador e abre tudo em uma janela nova, em ordem)
-- `[V]` volta ao menu principal
+**Parâmetros:**
+
+| Parâmetro | Descrição |
+|---|---|
+| `-Turma` | Identificador da turma (`1ano`, `inf4`, `pesquisa`…). Se faltar, o script pergunta |
+| `-Data` | Força a data usada na escolha da aula (`AAAA-MM-DD`). Padrão: hoje |
+
+**Escolha da aula:**
+- Uma aula com a data de hoje: abre direto
+- Duas ou mais aulas hoje: menu para escolher entre elas
+- Nenhuma aula hoje: menu com as 10 aulas mais recentes (`[V]` volta)
+
+**Abertura (campo `modo` da turma):**
+- `todos` (padrão): fecha o navegador e abre todos os links ativos numa janela nova, em ordem
+- `menu`: submenu com `[1..N]` (abre um link), `[Enter]` (próximo não aberto, marcado com ✓), `[T]` (todos) e `[V]` (voltar)
 
 **Comportamento:**
 - Detecta Chrome → Edge → navegador padrão do sistema, nessa ordem
-- Cada item da lista pode ser só a URL ou `"Rótulo | URL"` — o rótulo é o que aparece no submenu
-- URLs fixas no código-fonte (ver roadmap para a versão dinâmica via API)
+- Links com `"ativo": false` são ignorados
+- Erro de rede, turma inexistente ou JSON inválido: mostra a mensagem e volta, sem travar
+- `$env:IRM_DADOS` aponta para uma pasta local de JSON (para testar antes do push)
 
-**URLs configuradas atualmente:**
-```
-https://app.portalsaseducacao.com.br/entrar/
-https://www.digipuzzle.net/pt/jogoseducativos/
-```
-
-**Exemplo de uso direto:**
+**Exemplos de uso direto:**
 ```powershell
+# Com parâmetros (irm | iex não repassa parâmetros, por isso o scriptblock)
+& ([scriptblock]::Create((irm https://raw.githubusercontent.com/petersonros/irm/main/modules/open.ps1))) -Turma 1ano
+
+# Sem parâmetros: pergunta a turma
 irm https://raw.githubusercontent.com/petersonros/irm/main/modules/open.ps1 | iex
 ```
 
