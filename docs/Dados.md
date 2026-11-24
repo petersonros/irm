@@ -28,6 +28,9 @@ data/
   "turma": "1ano",
   "nome": "1º ano",
   "modo": "todos",
+  "sugestoes": [
+    { "label": "Alfabeto (Wordwall)", "url": "https://...", "sugerido": "2026-11-17", "professora": "Cintia" }
+  ],
   "aulas": [
     {
       "data": "2026-11-19",
@@ -56,6 +59,9 @@ data/
 | `aulas[].links[].url` | sim | Começa com `http://` ou `https://` |
 | `aulas[].links[].label` | não | Texto do submenu; se faltar, mostra a URL |
 | `aulas[].links[].ativo` | não | `false` guarda o link sem abrir. Padrão `true` |
+| `sugestoes[]` | não | Links sugeridos e ainda não usados. Mesmo formato dos links de aula |
+| `….sugerido` | não | Dia em que a professora sugeriu o link (`AAAA-MM-DD`). Não é a data da aula |
+| `….professora` (no link) | não | Quem sugeriu o link |
 
 ## Como preparar uma aula
 
@@ -66,15 +72,23 @@ data/
 
 Aulas antigas não precisam ser apagadas nem comentadas: elas são o histórico.
 
+## Links sugeridos para uso futuro
+
+Os links que a professora sugere, mas que ainda não foram usados, ficam numa lista só, `sugestoes`, no topo do arquivo. Cada link guarda o próprio `sugerido` (data da sugestão) e `professora`.
+
+Para usar numa aula, **recorte** a linha do link de `sugestoes` e cole em `links` da aula. `sugerido` e `professora` podem ir junto: o script os ignora nas aulas.
+
 ## Como o script escolhe a aula
 
 Fluxo no lab: você roda o `irm` e escolhe a turma no menu. Em seguida:
 
 | Situação | O que acontece |
 |---|---|
-| Exatamente **uma** aula com a data de hoje | Abre direto essa aula |
-| **Duas ou mais** aulas hoje (ex.: salas A e B) | Mostra a escolha entre elas |
-| **Nenhuma** aula hoje | Mostra as últimas aulas da turma para escolher |
+| Exatamente **uma** aula com a data de hoje | Mostra a aula e a professora: `[Enter]` abre, `[O]` vai para as outras aulas. Se a turma não tiver mais nada cadastrado, abre direto |
+| **Duas ou mais** aulas hoje | Pergunta de **qual professora** abrir (e depois qual aula, se a professora tiver mais de uma) |
+| **Nenhuma** aula hoje | Mostra as últimas 10 aulas da turma para escolher |
+
+Na lista de aulas: `[M]` mostra mais 10 antigas, `[P]` filtra por professora e `[S]` abre as sugestões uma a uma. Aulas de qualquer data podem ser abertas de novo, então uma professora que repete os links não precisa de aula nova.
 
 Links com `"ativo": false` nunca são abertos. Para forçar outra data (por exemplo, para testar uma aula preparada para amanhã), use `-Data AAAA-MM-DD` (ver [Modules.md](Modules.md#modulesopenps1)).
 

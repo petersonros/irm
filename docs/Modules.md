@@ -89,9 +89,9 @@ irm https://raw.githubusercontent.com/petersonros/irm/main/modules/clean.ps1 | i
 | `-Data` | Força a data usada na escolha da aula (`AAAA-MM-DD`). Padrão: hoje |
 
 **Escolha da aula:**
-- Uma aula com a data de hoje: abre direto
-- Duas ou mais aulas hoje: menu para escolher entre elas
-- Nenhuma aula hoje: menu com as 10 aulas mais recentes (`[V]` volta)
+- Uma aula com a data de hoje: mostra qual é; `[Enter]` abre e `[O]` vai para as outras aulas. Abre direto se `-Data` foi informado ou se não há mais nada na turma
+- Duas ou mais aulas hoje: pergunta de qual professora abrir (e depois qual aula, se a professora tiver mais de uma)
+- Nenhuma aula hoje (ou `[O]`): lista de 10 em 10, com `[M]` mais antigas, `[P]` filtrar por professora, `[S]` sugestões ainda não usadas e `[V]` voltar
 
 **Abertura (campo `modo` da turma):**
 - `todos` (padrão): fecha o navegador e abre todos os links ativos numa janela nova, em ordem

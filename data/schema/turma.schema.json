@@ -37,6 +37,13 @@
       ],
       "default": "todos"
     },
+    "sugestoes": {
+      "description": "Links que as professoras sugeriram e que ainda não foram usados. Não têm data de aula e nunca abrem sozinhos: ficam em [S] no menu da turma.",
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/link"
+      }
+    },
     "aulas": {
       "description": "Aulas da turma, da mais recente para a mais antiga. Nova aula entra no topo.",
       "type": "array",
@@ -63,6 +70,7 @@
           "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
         },
         "professora": {
+          "description": "Se houver aulas de professoras diferentes no mesmo dia, o script pergunta qual abrir.",
           "type": "string"
         },
         "sala": {
@@ -100,6 +108,15 @@
           "description": "false = o link fica guardado, mas não é aberto. Padrão: true.",
           "type": "boolean",
           "default": true
+        },
+        "sugerido": {
+          "description": "Dia em que a professora sugeriu o link (AAAA-MM-DD). Não é a data da aula. Pode ficar no link quando ele vai para uma aula.",
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "professora": {
+          "description": "Quem sugeriu o link.",
+          "type": "string"
         }
       }
     }

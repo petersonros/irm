@@ -53,10 +53,38 @@ function Format-Aula {
     return $texto
 }
 
-# Menu de escolha quando não dá para decidir pela data. Devolve a aula ou $null (voltar).
-function Select-Aula {
-    param ($titulo, $opcoes)
+function Get-NomeProfessora {
+    param ($aula)
 
+    if (-not $aula.professora) { return "Sem professora" }
+    return $aula.professora
+}
+
+# Uma opção por professora + sala, na ordem em que aparecem
+function Get-Professoras {
+    param ($lista)
+
+    $vistos = @{}
+    foreach ($a in $lista) {
+        $nome = Get-NomeProfessora $a
+        $chave = "$nome|$($a.sala)"
+        if ($vistos.ContainsKey($chave)) { continue }
+        $vistos[$chave] = $true
+        $rotulo = $nome
+        if ($a.sala) { $rotulo += " ($($a.sala))" }
+        [PSCustomObject]@{
+            Rotulo = $rotulo
+            Aulas  = @($lista | Where-Object { (Get-NomeProfessora $_) -eq $nome -and "$($_.sala)" -eq "$($a.sala)" })
+        }
+    }
+}
+
+# Menu numerado. Devolve o índice escolhido, a letra de um dos extras ou "V".
+# $extras: lista de @("Letra", "texto"). "Enter" também é aceito como letra.
+function Read-Opcao {
+    param ($titulo, $textos, $extras)
+
+    $textos = @($textos)
     while ($true) {
         Clear-Host
         Write-Host ""
@@ -64,19 +92,93 @@ function Select-Aula {
         Write-Host ""
         Write-Host "  $titulo" -ForegroundColor Yellow
         Write-Host ""
-        for ($i = 0; $i -lt $opcoes.Count; $i++) {
+        for ($i = 0; $i -lt $textos.Count; $i++) {
             Write-Host ("  [{0}]" -f ($i + 1)) -ForegroundColor Green -NoNewline
-            Write-Host (" {0}" -f (Format-Aula $opcoes[$i]))
+            Write-Host " $($textos[$i])"
         }
         Write-Host ""
+        foreach ($e in $extras) {
+            Write-Host "  [$($e[0])]" -ForegroundColor Cyan -NoNewline; Write-Host " $($e[1])"
+        }
         Write-Host "  [V]" -ForegroundColor DarkGray -NoNewline; Write-Host " Voltar"
         Write-Host ""
 
-        $choice = (Read-Host "  Escolha").Trim()
-        if ($choice -match '^[Vv]$') { return $null }
-        if ($choice -match '^\d+$' -and [int]$choice -ge 1 -and [int]$choice -le $opcoes.Count) {
-            return $opcoes[[int]$choice - 1]
+        $choice = (Read-Host "  Escolha").Trim().ToUpper()
+        if ($choice -eq "V") { return "V" }
+        if ($choice -match '^\d{1,4}$' -and [int]$choice -ge 1 -and [int]$choice -le $textos.Count) {
+            return ([int]$choice - 1)
         }
+        if ($choice -eq "") { $choice = "ENTER" }
+        foreach ($e in $extras) {
+            if ($choice -eq $e[0].ToUpper()) { return $e[0] }
+        }
+    }
+}
+
+# Aulas do dia. Com mais de uma, pergunta a professora (e depois a aula, se ela tiver mais de uma).
+# Devolve a aula, "O" (outras aulas) ou "V".
+function Select-AulaDoDia {
+    param ($lista, $temOutras)
+
+    $lista = @($lista)
+    $extras = @()
+    if ($temOutras) { $extras += , @("O", "Outras aulas (antigas, outra professora, sugestões)") }
+
+    while ($true) {
+        if ($lista.Count -eq 1) {
+            $r = Read-Opcao "Aula de hoje: $(Format-Aula $lista[0])" @() (@(, @("Enter", "Abrir esta aula")) + $extras)
+            if ($r -eq "Enter") { return $lista[0] }
+            return $r
+        }
+
+        $profs = @(Get-Professoras $lista)
+        if ($profs.Count -eq 1) {
+            $r = Read-Opcao "Há $($lista.Count) aulas hoje. Qual abrir?" @($lista | ForEach-Object { Format-Aula $_ }) $extras
+            if ($r -is [int]) { return $lista[$r] }
+            return $r
+        }
+
+        $r = Read-Opcao "Há $($lista.Count) aulas hoje. De qual professora?" @($profs | ForEach-Object { $_.Rotulo }) $extras
+        if ($r -isnot [int]) { return $r }
+        $dela = @($profs[$r].Aulas)
+        if ($dela.Count -eq 1) { return $dela[0] }
+        $q = Read-Opcao "$($profs[$r].Rotulo): qual aula abrir?" @($dela | ForEach-Object { Format-Aula $_ }) @()
+        if ($q -is [int]) { return $dela[$q] }
+    }
+}
+
+# Todas as aulas, 10 por vez, com filtro por professora. Devolve a aula, "S" (sugestões) ou "V".
+function Select-Aula {
+    param ($titulo, $lista, $sugestoes)
+
+    $lista = @($lista)
+    $profs = @(Get-Professoras $lista)
+    $filtro = $null
+    $mostrar = 10
+
+    while ($true) {
+        $base = $lista
+        $cab = $titulo
+        if ($filtro) { $base = @($filtro.Aulas); $cab = "Aulas de $($filtro.Rotulo):" }
+        $visiveis = @($base | Select-Object -First $mostrar)
+
+        $extras = @()
+        if ($base.Count -gt $visiveis.Count) { $extras += , @("M", "Mais antigas (faltam $($base.Count - $visiveis.Count))") }
+        if ($filtro)               { $extras += , @("P", "Mostrar todas as professoras") }
+        elseif ($profs.Count -gt 1) { $extras += , @("P", "Filtrar por professora") }
+        if (@($sugestoes).Count -gt 0) { $extras += , @("S", "Sugestões ainda não usadas ($(@($sugestoes).Count))") }
+
+        $r = Read-Opcao $cab @($visiveis | ForEach-Object { Format-Aula $_ }) $extras
+        if ($r -is [int]) { return $visiveis[$r] }
+        if ($r -eq "M") { $mostrar += 10; continue }
+        if ($r -eq "P") {
+            $mostrar = 10
+            if ($filtro) { $filtro = $null; continue }
+            $q = Read-Opcao "De qual professora?" @($profs | ForEach-Object { $_.Rotulo }) @()
+            if ($q -is [int]) { $filtro = $profs[$q] }
+            continue
+        }
+        return $r
     }
 }
 
@@ -188,6 +290,8 @@ function Show-LinksMenu {
 # =========================
 # FLUXO
 # =========================
+$global:IRM_AmbientePronto = $false
+
 if (-not $Turma) {
     $Turma = (Read-Host "  Turma (ex.: 1ano, inf4, pesquisa)").Trim().ToLower()
     if (-not $Turma) { return }
@@ -203,23 +307,53 @@ try {
     return
 }
 
-$aulas = @($dados.aulas)
-if ($aulas.Count -eq 0) {
+$aulas = @($dados.aulas | Where-Object { $_ })
+$sugestoes = @($dados.sugestoes | Where-Object { $_ -and $_.ativo -ne $false } | ForEach-Object {
+    $label = if ($_.label) { $_.label } else { $_.url }
+    $origem = @()
+    if ($_.sugerido)   { $origem += ([datetime]::ParseExact($_.sugerido, 'yyyy-MM-dd', $null)).ToString('dd-MM-yyyy') }
+    if ($_.professora) { $origem += $_.professora }
+    if ($origem.Count -gt 0) { $label += " · $($origem -join ' · ')" }
+    [PSCustomObject]@{ Label = $label; Url = $_.url; Opened = $false }
+})
+if ($aulas.Count -eq 0 -and $sugestoes.Count -eq 0) {
     Write-Host "Nenhuma aula cadastrada para $($dados.nome)." -ForegroundColor Yellow
     return
 }
 
 $hoje = if ($Data) { $Data } else { Get-Date -Format 'yyyy-MM-dd' }
 $doDia = @($aulas | Where-Object { $_.data -eq $hoje })
+$temOutras = ($aulas.Count -gt $doDia.Count) -or ($sugestoes.Count -gt 0)
 
-if ($doDia.Count -eq 1) {
+$aula = $null
+if ($doDia.Count -eq 1 -and ($Data -or -not $temOutras)) {
+    # Data pedida no parâmetro, ou nada mais para escolher: abre direto
     $aula = $doDia[0]
-} elseif ($doDia.Count -gt 1) {
-    $aula = Select-Aula "Há $($doDia.Count) aulas hoje. Qual abrir?" $doDia
-} else {
-    $aula = Select-Aula "Nenhuma aula cadastrada para hoje. Últimas aulas:" @($aulas | Select-Object -First 10)
 }
-if (-not $aula) { return }
+
+$tela = if ($doDia.Count -gt 0) { "hoje" } else { "todas" }
+while (-not $aula) {
+    if ($tela -eq "hoje") {
+        $r = Select-AulaDoDia $doDia $temOutras
+        if ($r -eq "O") { $tela = "todas"; continue }
+        if ($r -eq "V") { return }
+        $aula = $r
+    } else {
+        $titulo = if ($doDia.Count -gt 0) { "Todas as aulas:" } else { "Nenhuma aula cadastrada para hoje. Últimas aulas:" }
+        $r = Select-Aula $titulo $aulas $sugestoes
+        if ($r -eq "S") {
+            Show-LinksMenu "$($dados.nome) — Sugestões ainda não usadas" $sugestoes
+            if ($global:IRM_AmbientePronto) { return }
+            continue
+        }
+        if ($r -eq "V") {
+            if ($doDia.Count -eq 0) { return }
+            $tela = "hoje"
+            continue
+        }
+        $aula = $r
+    }
+}
 
 $links = @(foreach ($l in $aula.links) {
     if ($l.ativo -ne $false) {

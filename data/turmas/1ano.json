@@ -5,6 +5,51 @@
   "nome": "1º ano",
   "aulas": [
     {
+      "data": "2026-11-27",
+      "professora": "Andreia",
+      "sala": "1º ano C",
+      "links": [
+        {
+          "label": "Jogo da memória animais da selva (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/74359025/ci%C3%AAncias/jogo-da-mem%C3%B3ria-animais-da-selva"
+        },
+        {
+          "label": "Palavras simples 1ano (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/32011829/portuguese-language/palavras-simples-1ano"
+        }
+      ]
+    },
+    {
+      "data": "2026-11-26",
+      "professora": "Cintia",
+      "sala": "1º ano A",
+      "links": [
+        {
+          "label": "Jogo da memória animais da selva (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/74359025/ci%C3%AAncias/jogo-da-mem%C3%B3ria-animais-da-selva"
+        },
+        {
+          "label": "Palavras simples 1ano (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/32011829/portuguese-language/palavras-simples-1ano"
+        }
+      ]
+    },
+    {
+      "data": "2026-11-24",
+      "professora": "Soraia",
+      "sala": "1º ano B",
+      "links": [
+        {
+          "label": "Jogo da memória animais da selva (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/74359025/ci%C3%AAncias/jogo-da-mem%C3%B3ria-animais-da-selva"
+        },
+        {
+          "label": "Palavras simples 1ano (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/32011829/portuguese-language/palavras-simples-1ano"
+        }
+      ]
+    },
+    {
       "data": "2026-11-19",
       "professora": "Cintia",
       "sala": "1º ano A",

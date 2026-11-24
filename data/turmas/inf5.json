@@ -3,7 +3,168 @@
   "versao": 1,
   "turma": "inf5",
   "nome": "Infantil 5",
+  "sugestoes": [
+    {
+      "label": "Subtração 1 ano (Wordwall)",
+      "url": "https://wordwall.net/pt/resource/23316012/subtra%C3%A7%C3%A3o-1-ano",
+      "sugerido": "2026-11-17",
+      "professora": "Tanea"
+    },
+    {
+      "label": "Jogo do rimas (Wordwall)",
+      "url": "https://wordwall.net/pt/resource/33354360/rimas/jogo-do-rimas",
+      "sugerido": "2026-11-17",
+      "professora": "Tanea"
+    },
+    {
+      "label": "Jogo de memoria (Wordwall)",
+      "url": "https://wordwall.net/pt/resource/54013928/jogo-da-memoria/jogo-de-memoria",
+      "sugerido": "2026-11-17",
+      "professora": "Tanea"
+    },
+    {
+      "label": "Alimentação saudável (Wordwall)",
+      "url": "https://wordwall.net/pt/resource/4420006/alimenta%C3%A7%C3%A3o-saud%C3%A1vel",
+      "sugerido": "2026-11-17",
+      "professora": "Tanea"
+    },
+    {
+      "label": "Acerte a toupeira com o alimento não saudável jogo dos (Wordwall)",
+      "url": "https://wordwall.net/pt/resource/4420083/acerte-a-toupeira-com-o-alimento-n%C3%A3o-saud%C3%A1vel-jogo-dos",
+      "sugerido": "2026-11-17",
+      "professora": "Tanea"
+    },
+    {
+      "label": "Sequência numérica até 50 (Wordwall)",
+      "url": "https://wordwall.net/pt/resource/88269528/sequ%C3%AAncia-num%C3%A9rica-at%C3%A9-50",
+      "sugerido": "2026-10-20",
+      "professora": "Tanea"
+    },
+    {
+      "label": "Sílabas simples (Wordwall)",
+      "url": "https://wordwall.net/pt/resource/5240422/s%C3%ADlabas-simples",
+      "sugerido": "2026-10-20",
+      "professora": "Tanea"
+    },
+    {
+      "label": "Sílabas simples (Wordwall)",
+      "url": "https://wordwall.net/pt/resource/4293574/s%C3%ADlabas-simples",
+      "sugerido": "2026-10-20",
+      "professora": "Tanea"
+    },
+    {
+      "label": "Silabas simples (Wordwall)",
+      "url": "https://wordwall.net/pt/resource/14601065/silabas-simples",
+      "sugerido": "2026-10-20",
+      "professora": "Tanea"
+    },
+    {
+      "label": "Organize o alfabeto (Wordwall)",
+      "url": "https://wordwall.net/pt/resource/25169898/organize-o-alfabeto",
+      "sugerido": "2026-10-20",
+      "professora": "Tanea"
+    },
+    {
+      "label": "Percepção visual (Wordwall)",
+      "url": "https://wordwall.net/pt-br/community/percep%C3%A7%C3%A3o-visual",
+      "sugerido": "2026-09-29",
+      "professora": "Tanea"
+    },
+    {
+      "label": "Atividade 1 ano (Wordwall)",
+      "url": "https://wordwall.net/pt/resource/18203503/portugu%C3%AAs-do-1%C2%BA-ao-5%C2%BA-ano/atividade-1-ano",
+      "sugerido": "2026-09-29",
+      "professora": "Tanea"
+    },
+    {
+      "label": "Alfabetização (Wordwall)",
+      "url": "https://wordwall.net/pt/resource/57777162/l%C3%ADngua-portuguesa/alfabetiza%C3%A7%C3%A3o",
+      "sugerido": "2026-09-29",
+      "professora": "Tanea"
+    },
+    {
+      "label": "Alfabetização (Wordwall)",
+      "url": "https://wordwall.net/pt/resource/4977748/alfabetiza%C3%A7%C3%A3o",
+      "sugerido": "2026-09-29",
+      "professora": "Tanea"
+    },
+    {
+      "label": "Alfabetização (Wordwall)",
+      "url": "https://wordwall.net/pt/resource/4553388/alfabetiza%C3%A7%C3%A3o",
+      "sugerido": "2026-09-29",
+      "professora": "Tanea"
+    }
+  ],
   "aulas": [
+    {
+      "data": "2026-11-25",
+      "professora": "Patricia",
+      "sala": "Infantil 5A",
+      "links": [
+        {
+          "label": "Alfabetização (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/4553388/alfabetiza%C3%A7%C3%A3o"
+        },
+        {
+          "label": "Alfabetização (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/4977748/alfabetiza%C3%A7%C3%A3o"
+        },
+        {
+          "label": "Alfabetização (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/57777162/l%C3%ADngua-portuguesa/alfabetiza%C3%A7%C3%A3o"
+        },
+        {
+          "label": "Atividade 1 ano (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/18203503/portugu%C3%AAs-do-1%C2%BA-ao-5%C2%BA-ano/atividade-1-ano"
+        }
+      ]
+    },
+    {
+      "data": "2026-11-24",
+      "professora": "Sueli",
+      "sala": "Infantil 5C",
+      "links": [
+        {
+          "label": "Alfabetização (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/4553388/alfabetiza%C3%A7%C3%A3o"
+        },
+        {
+          "label": "Alfabetização (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/4977748/alfabetiza%C3%A7%C3%A3o"
+        },
+        {
+          "label": "Alfabetização (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/57777162/l%C3%ADngua-portuguesa/alfabetiza%C3%A7%C3%A3o"
+        },
+        {
+          "label": "Atividade 1 ano (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/18203503/portugu%C3%AAs-do-1%C2%BA-ao-5%C2%BA-ano/atividade-1-ano"
+        }
+      ]
+    },
+    {
+      "data": "2026-11-24",
+      "professora": "Tanea",
+      "sala": "Infantil 5B",
+      "links": [
+        {
+          "label": "Alfabetização (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/4553388/alfabetiza%C3%A7%C3%A3o"
+        },
+        {
+          "label": "Alfabetização (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/4977748/alfabetiza%C3%A7%C3%A3o"
+        },
+        {
+          "label": "Alfabetização (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/57777162/l%C3%ADngua-portuguesa/alfabetiza%C3%A7%C3%A3o"
+        },
+        {
+          "label": "Atividade 1 ano (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/18203503/portugu%C3%AAs-do-1%C2%BA-ao-5%C2%BA-ano/atividade-1-ano"
+        }
+      ]
+    },
     {
       "data": "2026-11-17",
       "professora": "Tanea",
@@ -32,34 +193,6 @@
       ]
     },
     {
-      "data": "2026-11-17",
-      "professora": "Tanea",
-      "sala": "Infantil 5B",
-      "obs": "Lista sugerida pela professora",
-      "links": [
-        {
-          "label": "Subtração 1 ano (Wordwall)",
-          "url": "https://wordwall.net/pt/resource/23316012/subtra%C3%A7%C3%A3o-1-ano"
-        },
-        {
-          "label": "Jogo do rimas (Wordwall)",
-          "url": "https://wordwall.net/pt/resource/33354360/rimas/jogo-do-rimas"
-        },
-        {
-          "label": "Jogo de memoria (Wordwall)",
-          "url": "https://wordwall.net/pt/resource/54013928/jogo-da-memoria/jogo-de-memoria"
-        },
-        {
-          "label": "Alimentação saudável (Wordwall)",
-          "url": "https://wordwall.net/pt/resource/4420006/alimenta%C3%A7%C3%A3o-saud%C3%A1vel"
-        },
-        {
-          "label": "Acerte a toupeira com o alimento não saudável jogo dos (Wordwall)",
-          "url": "https://wordwall.net/pt/resource/4420083/acerte-a-toupeira-com-o-alimento-n%C3%A3o-saud%C3%A1vel-jogo-dos"
-        }
-      ]
-    },
-    {
       "data": "2026-10-20",
       "professora": "Tanea",
       "sala": "Infantil 5B",
@@ -83,34 +216,6 @@
       ]
     },
     {
-      "data": "2026-10-20",
-      "professora": "Tanea",
-      "sala": "Infantil 5B",
-      "obs": "Lista sugerida pela professora",
-      "links": [
-        {
-          "label": "Sequência numérica até 50 (Wordwall)",
-          "url": "https://wordwall.net/pt/resource/88269528/sequ%C3%AAncia-num%C3%A9rica-at%C3%A9-50"
-        },
-        {
-          "label": "Sílabas simples (Wordwall)",
-          "url": "https://wordwall.net/pt/resource/5240422/s%C3%ADlabas-simples"
-        },
-        {
-          "label": "Sílabas simples (Wordwall)",
-          "url": "https://wordwall.net/pt/resource/4293574/s%C3%ADlabas-simples"
-        },
-        {
-          "label": "Silabas simples (Wordwall)",
-          "url": "https://wordwall.net/pt/resource/14601065/silabas-simples"
-        },
-        {
-          "label": "Organize o alfabeto (Wordwall)",
-          "url": "https://wordwall.net/pt/resource/25169898/organize-o-alfabeto"
-        }
-      ]
-    },
-    {
       "data": "2026-10-06",
       "professora": "Tanea",
       "sala": "Infantil 5B",
@@ -130,34 +235,6 @@
         {
           "label": "Percepção visual (Wordwall)",
           "url": "https://wordwall.net/pt/resource/12313686/percep%C3%A7%C3%A3o-visual"
-        }
-      ]
-    },
-    {
-      "data": "2026-09-29",
-      "professora": "Tanea",
-      "sala": "Infantil 5B",
-      "obs": "Lista sugerida pela professora",
-      "links": [
-        {
-          "label": "Percepção visual (Wordwall)",
-          "url": "https://wordwall.net/pt-br/community/percep%C3%A7%C3%A3o-visual"
-        },
-        {
-          "label": "Atividade 1 ano (Wordwall)",
-          "url": "https://wordwall.net/pt/resource/18203503/portugu%C3%AAs-do-1%C2%BA-ao-5%C2%BA-ano/atividade-1-ano"
-        },
-        {
-          "label": "Alfabetização (Wordwall)",
-          "url": "https://wordwall.net/pt/resource/57777162/l%C3%ADngua-portuguesa/alfabetiza%C3%A7%C3%A3o"
-        },
-        {
-          "label": "Alfabetização (Wordwall)",
-          "url": "https://wordwall.net/pt/resource/4977748/alfabetiza%C3%A7%C3%A3o"
-        },
-        {
-          "label": "Alfabetização (Wordwall)",
-          "url": "https://wordwall.net/pt/resource/4553388/alfabetiza%C3%A7%C3%A3o"
         }
       ]
     },
