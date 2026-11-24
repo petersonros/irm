@@ -40,12 +40,24 @@
       "sala": "1º ano B",
       "links": [
         {
-          "label": "Jogo da memória animais da selva (Wordwall)",
-          "url": "https://wordwall.net/pt/resource/74359025/ci%C3%AAncias/jogo-da-mem%C3%B3ria-animais-da-selva"
+          "label": "Natal(Wordwall)",
+          "url": "https://wordwall.net/pt/resource/64428635/l%C3%ADngua-portuguesa/natal"
         },
         {
-          "label": "Palavras simples 1ano (Wordwall)",
-          "url": "https://wordwall.net/pt/resource/32011829/portuguese-language/palavras-simples-1ano"
+          "label": "Natal (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/8361281/1-ano-natal"
+        },
+        {
+          "label": "Natal (Wordwall)",
+          "url": "https://wordwall.net/sv/resource/25825666/alfabetiza%C3%A7%C3%A3o/natal-1"
+        },
+        {
+          "label": "Natal (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/81178048/natal"
+        },
+        {
+          "label": "Natal (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/39284156/natal"
         }
       ]
     },
