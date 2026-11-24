@@ -5,13 +5,118 @@
   "nome": "Infantil 4",
   "aulas": [
     {
-      "data": "2026-09-24",
+      "data": "2024-09-26",
       "professora": "Dione",
-      "sala": "Infantil 4",
+      "sala": "Infantil 4C",
       "links": [
         {
-          "label": "Memory (Digipuzzle)",
+          "label": "Decore a árvore de Natal (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/minigames/decorate/christmastree/christmastree.htm?language=portuguese&linkback=../../../pt/jogoseducativos/natal/index.htm"
+        },
+        {
+          "label": "Mozaicos (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/minigames/mozaics/mozaics_copy_christmas.htm?language=portuguese&linkback=../../pt/jogoseducativos/natal/index.htm"
+        },
+        {
+          "label": "Jogo da memória - Natal (Digipuzzle)",
           "url": "https://www.digipuzzle.net/christmas/cartoons/puzzles/memory.htm?language=portuguese&linkback=../../../pt/jogoseducativos/natal/index.htm"
+        },
+        {
+          "label": "Ligue os pontos (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/christmas/gingerbread/puzzles/lines.htm?language=portuguese&linkback=../../../pt/jogoseducativos/natal/index.htm"
+        },
+        {
+          "label": "Pintura (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/minigames/draw/christmas.htm?language=portuguese&linkback=../../pt/jogoseducativos/natal/index.htm"
+        },
+        {
+          "label": "Jogo da memória - Natal (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/7789021/jogo-da-memoria-natal"
+        },
+        {
+          "label": "Quebra Cabeça - Natal (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/christmas/cartoons/puzzles/jigsaw.htm?language=portuguese&linkback=../../../pt/jogoseducativos/natal/index.htm"
+        }
+      ]
+    },
+    {
+      "data": "2024-09-25",
+      "professora": "Camila",
+      "sala": "Infantil 4A",
+      "links": [
+        {
+          "label": "Decore a árvore de Natal (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/minigames/decorate/christmastree/christmastree.htm?language=portuguese&linkback=../../../pt/jogoseducativos/natal/index.htm"
+        },
+        {
+          "label": "Mozaicos (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/minigames/mozaics/mozaics_copy_christmas.htm?language=portuguese&linkback=../../pt/jogoseducativos/natal/index.htm"
+        },
+        {
+          "label": "Jogo da memória - Natal (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/christmas/cartoons/puzzles/memory.htm?language=portuguese&linkback=../../../pt/jogoseducativos/natal/index.htm"
+        },
+        {
+          "label": "Ligue os pontos (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/christmas/gingerbread/puzzles/lines.htm?language=portuguese&linkback=../../../pt/jogoseducativos/natal/index.htm"
+        },
+        {
+          "label": "Pintura (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/minigames/draw/christmas.htm?language=portuguese&linkback=../../pt/jogoseducativos/natal/index.htm"
+        },
+        {
+          "label": "Jogo da memória - Natal (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/7789021/jogo-da-memoria-natal"
+        },
+        {
+          "label": "Quebra Cabeça - Natal (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/christmas/cartoons/puzzles/jigsaw.htm?language=portuguese&linkback=../../../pt/jogoseducativos/natal/index.htm"
+        }
+      ]
+    },
+    {
+      "data": "2024-09-24",
+      "professora": "Camila",
+      "sala": "Infantil 4B",
+      "links": [
+        {
+          "label": "Decore a árvore de Natal (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/minigames/decorate/christmastree/christmastree.htm?language=portuguese&linkback=../../../pt/jogoseducativos/natal/index.htm"
+        },
+        {
+          "label": "Mozaicos (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/minigames/mozaics/mozaics_copy_christmas.htm?language=portuguese&linkback=../../pt/jogoseducativos/natal/index.htm"
+        },
+        {
+          "label": "Jogo da memória - Natal (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/christmas/cartoons/puzzles/memory.htm?language=portuguese&linkback=../../../pt/jogoseducativos/natal/index.htm"
+        },
+        {
+          "label": "Ligue os pontos (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/christmas/gingerbread/puzzles/lines.htm?language=portuguese&linkback=../../../pt/jogoseducativos/natal/index.htm"
+        },
+        {
+          "label": "Pintura (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/minigames/draw/christmas.htm?language=portuguese&linkback=../../pt/jogoseducativos/natal/index.htm"
+        },
+        {
+          "label": "Jogo da memória - Natal (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/7789021/jogo-da-memoria-natal"
+        },
+        {
+          "label": "Quebra Cabeça - Natal (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/christmas/cartoons/puzzles/jigsaw.htm?language=portuguese&linkback=../../../pt/jogoseducativos/natal/index.htm"
+        }
+      ]
+    },
+    {
+      "data": "2026-09-24",
+      "professora": "Dione",
+      "sala": "Infantil 4C",
+      "links": [
+        {
+          "label": "Decore a árvore de Natal (Digipuzzle)",
+          "url": "https://www.digipuzzle.net/minigames/decorate/christmastree/christmastree.htm?language=portuguese&linkback=../../../pt/jogoseducativos/natal/index.htm"
         },
         {
           "label": "Mysterypictures alphabet (Digipuzzle)",
