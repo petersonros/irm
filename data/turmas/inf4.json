@@ -5,7 +5,7 @@
   "nome": "Infantil 4",
   "aulas": [
     {
-      "data": "2024-09-26",
+      "data": "2026-11-26",
       "professora": "Dione",
       "sala": "Infantil 4C",
       "links": [
@@ -40,7 +40,7 @@
       ]
     },
     {
-      "data": "2024-09-25",
+      "data": "2026-11-25",
       "professora": "Camila",
       "sala": "Infantil 4A",
       "links": [
@@ -75,7 +75,7 @@
       ]
     },
     {
-      "data": "2024-09-24",
+      "data": "2026-11-24",
       "professora": "Camila",
       "sala": "Infantil 4B",
       "links": [
