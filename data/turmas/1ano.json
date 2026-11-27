@@ -10,12 +10,16 @@
       "sala": "1º ano C",
       "links": [
         {
-          "label": "Jogo da memória animais da selva (Wordwall)",
-          "url": "https://wordwall.net/pt/resource/74359025/ci%C3%AAncias/jogo-da-mem%C3%B3ria-animais-da-selva"
+          "label": "Jogo da memória (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/5421540/jogo-da-mem%C3%B3ria-meios-de-comunica%C3%A7%C3%A3o"
         },
         {
           "label": "Palavras simples 1ano (Wordwall)",
           "url": "https://wordwall.net/pt/resource/32011829/portuguese-language/palavras-simples-1ano"
+        },
+        {
+          "label": "Silabas simples (Wordwall)",
+          "url": "https://wordwall.net/pt/resource/114205021/silabas-simples"
         }
       ]
     },
